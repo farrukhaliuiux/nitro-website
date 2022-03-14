@@ -1,0 +1,46 @@
+@import "./importables/fonts";
+@import "./importables/mixins";
+@import "./importables/variables";
+@import "./importables/headings";
+@import "./importables/spacing";
+@import "./importables/buttons";
+@import "./importables/input";
+
+.comingsoon-banner-wrapper {
+  position: relative;
+  height: 100%;
+  .comingsoon-banner {
+    width: 100%;
+    margin: 0 auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 40px;
+    height: 100vh;
+    background-image: url(../images/cs-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 0 32px;
+    text-align: center;
+    h1 {
+      font-size: calc(clamp(24px, 2.7vw + 21px, 66px));
+      font-weight: 700;
+    }
+    p {
+      max-width: 942px;
+      font-size: 32px;
+      line-height: 48px;
+      margin: 0 auto;
+      text-align: center;
+      .change-bg {
+        background-color: var(--Torch-Red);
+        padding: 10px 30px;
+        color: var(--Plain-White);
+        margin: 0 5px;
+      }
+    }
+  }
+}

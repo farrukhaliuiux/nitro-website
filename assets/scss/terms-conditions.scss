@@ -1,0 +1,56 @@
+@import "./importables/fonts";
+@import "./importables/mixins";
+@import "./importables/variables";
+@import "./importables/headings";
+@import "./importables/spacing";
+@import "./importables/buttons";
+
+
+section {
+    &.term-sections {
+        padding: 200px 0;
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            &:first-child {
+                margin-bottom: 40px;
+            }
+        }
+
+        .tc-section {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+
+        h6 {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style: lower-roman;
+            padding-left: 35px;
+            margin-bottom: 30px;
+            li {
+                font-size: 18px;
+                line-height: 1.5;
+                letter-spacing: 1px;
+                & + li {
+                    margin-top: 15px;
+                }
+                &::marker {
+                    font-family: var(--Magistral-Medium);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,568 @@
+@import "./importables/fonts";
+@import "./importables/mixins";
+@import "./importables/variables";
+@import "./importables/headings";
+@import "./importables/spacing";
+@import "./importables/buttons";
+@import "./importables/input";
+
+
+// IDO section
+
+.ido-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(../images/ido-img-mob.png) right bottom no-repeat;
+    padding-top: 120px;
+    background-size: 80%;
+
+    @include medium(min-width) {
+        background: url(../images/ido-image.png) right bottom no-repeat, url(../images/jangla.svg) right center no-repeat;
+        background-size: 80%, 100%;
+        padding: 0;
+        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 200px;
+    }
+    @include large(min-width) {
+        background: url(../images/jangla.svg) right center no-repeat;
+        height: auto;
+        padding: 200px 0 100px;
+    }
+    @include xLarge(min-width) {
+        background: url(../images/ido-image.png) right center no-repeat, url(../images/jangla.svg) right center no-repeat;
+        background-size: 50%, 100%;
+        padding: 0;
+        justify-content: center;
+        height: 100vh;
+    }
+    span.title-borderLine {
+        display: none;
+        @include xLarge(min-width) {
+            display: flex;
+        }
+    }
+    .headings {
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+        @include xLarge(min-width) {
+            text-align: left;
+        }
+        h1 {
+            font-size: 46px;
+            margin-bottom: 40px;
+            @include medium(min-width) {
+                margin-bottom: 40px;
+            }
+            @include xLarge(min-width) {
+                font-size: 90px;
+            }
+        }
+        h4 {
+            font-family: var(--Magistral-Book);
+            font-size: calc(clamp(18px, 1.5vw + 4px, 72px));
+            margin-bottom: 10px;
+            @include medium(min-width) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @include medium(min-width) {
+            margin: 0 auto;
+            max-width: 70%;
+        }
+        @include xLarge(min-width) {
+            justify-content: flex-start;
+            max-width: 100%;
+        }
+        li {
+            a {
+                display: block;
+            }
+            img {
+                max-width: 100%;
+                &.polkastarter-img {
+                    height: 16px;
+                    @include large(min-width) {
+                    height: 20px;
+                    }
+                    @include xLarge(min-width) {
+                    margin-right: 40px;
+                    height: 26px;
+                    }
+                }
+                &.polygen-img {
+                    height: 20px;
+                    @include large(min-width) {
+                    height: 30px;
+                    }
+                    @include xLarge(min-width) {
+                    margin-right: 40px;
+                    height: 36px;
+                    }
+                }
+                &.copper-img {
+                    height: 16px;
+                    @include large(min-width) {
+                    height: 20px;
+                    height: 26px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.nitro-section {
+    padding: calc(clamp(50px, 7vw - 4px , 130px)) 0;
+    &.investor-section {
+        .game-content {
+            .gameOverview-title {
+                margin-bottom: 120px;
+            }
+
+            .investors-grid {
+                .inv-listing {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 80px;
+                    align-items: center;
+                    text-align: center;
+                    @include medium(min-width) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    @include large(min-width) {
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+                    @include xLarge(min-width) {
+                        grid-template-columns: repeat(6, 1fr);
+                    }
+                    li {
+                        img {
+                            filter: grayscale(100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+section {
+    &.team-section {
+        // background: url(../images/jangla.svg) no-repeat top center;
+        padding: calc(clamp(100px, 15.3vw + 8px , 300px)) 0 calc(clamp(100px, 10vw + 8px , 200px));
+        .team-inr-section {
+            @include xLarge(min-width) {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            .team-heading {
+                margin-bottom: 100px;
+                text-align: center;
+                .gameOverview-title {
+                    max-width: 350px;
+                    margin: 0 auto 20px;
+                    .title-borderLine {
+                        &::before {
+                            max-width: 123px;
+                            left: 34%;
+                            transform: translateX(-50%);
+                            @include ipad(min-width) {
+                                left: 37%;
+                            }
+                        }
+                        &::after {
+                            max-width: 211px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
+                    h2 {
+                        font-size: calc(clamp(40px, 2.7vw + 9px, 60px));
+                    }
+                }
+            }
+    
+            .our-team-content {
+                .team-listing {
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-gap: 50px;
+                    grid-row-gap: 50px;
+                    max-width: 400px;
+                    margin: 0 auto;
+                    @include medium(min-width) {
+                        grid-template-columns: repeat(3, 1fr);
+                        max-width: 100%;
+                        margin: 0 auto;
+                    }
+    
+                    @include xLarge(min-width) {
+                        grid-template-columns: repeat(4, 1fr);
+                    }
+                    li {
+                        .team-member {
+                            .tm-image {
+                                margin-bottom: 30px;
+                                width: 100%;
+                            }
+    
+                            .tm-content {
+                                h3 {
+                                    font-size: 20px;
+                                    line-height: 1.3;
+                                    margin-bottom: 8px;
+                                    color: var(--Accordion-Title);
+                                }
+    
+                                p {
+                                    margin: 0 0;
+                                    line-height: 1.3;
+                                    font-size: 14px;
+                                    letter-spacing: 1px;
+                                    // opacity: 0.64;
+                                    color: var(--Accordion-Title);
+                                    &.tm-designasion {
+                                        margin-bottom: 10px;
+                                        color: var(--Gray-color);
+                                        font-size: 16px;
+                                        font-family: var(--Magistral-Medium);
+                                    }
+                                }
+    
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.empowered-section {
+        background: var(--Dark-Black);
+        padding: calc(clamp(100px, 6vw + 5px , 120px)) 0 calc(clamp(100px, 12vw + 10px , 240px));
+        .empowered-inr {
+            .gameOverview-title {
+                max-width: 436px;
+                margin: 0 auto 80px;
+                @include ipad(min-width) {
+                    text-align: left;
+                    max-width: 300px;
+                }
+                @include xLarge(min-width) {
+                    max-width: 350px;
+                    text-align: center;
+                }
+                @include xxLarge(min-width) {
+                    max-width: 436px;
+                }
+                .title-borderLine {
+                    @include xLarge(min-width) {
+                        max-width: 211px;
+                        margin: 0 auto calc(clamp(25px, 1.7vw + 4px, 40px));
+                    }
+                    &::before {
+                        @include ipad(min-width) {
+                            left: 25%;
+                            transform: translateX(-51%);
+                        }
+                        @include xLarge(min-width) {
+                            left: 20%;
+                            transform: translateX(-50%);
+                        }
+                        // @include xxLarge(min-width) {
+                        //     left: 23%;
+                        //     transform: translateX(-50%);
+                        // }
+                    }
+                    &::after {
+                        @include ipad(min-width) {
+                            left: 32%;
+                            transform: translateX(-39%);
+                        }
+                        @include xLarge(min-width) {
+                            left: 19%;
+                            transform: translateX(-28%);
+                        }
+                        // @include xxLarge(min-width) {
+                        //     left: 36%;
+                        //     transform: translateX(-40%);
+                        // }
+                    }
+                }
+                h2 {
+                    color: var(--Plain-White);
+                }
+            }
+
+            .emp-logos {
+                border: 1px solid #dee3eb30;
+                padding: 40px 0;
+                text-align: center;
+                @include ipad(min-width) {
+                    padding: 80px 0;
+                    text-align: left;
+                }
+                .diby-section {
+                    padding: 0 20px 50px;
+                    border-bottom: 1px solid #dee3eb30;
+                    @include ipad(min-width) {
+                        padding: 0 40px 90px;
+                        border-bottom: 1px solid #dee3eb30;
+                    }
+                    @include xLarge(min-width) {
+                        padding: 0 100px 90px;
+                        border-bottom: 1px solid #dee3eb30;
+                    }
+                    .inr-diby {
+                        max-width: 400px;
+                        margin: 0 auto;
+                        @include ipad(min-width) {
+                            max-width: 100%;
+                        }
+                        h3 {
+                            color: var(--Torch-Red);
+                            font-size: 16px;
+                            line-height: 1.3;
+                            margin-bottom: 60px;
+                            width: 100%;
+                            text-transform: uppercase;
+                            @include ipad(min-width) {
+                                margin-bottom: 60px;
+                            }
+                        }
+
+                        .diby-logos-content {
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            align-items: center;
+                            @include ipad(min-width) {
+                                grid-template-columns: 1fr 1fr;
+                                grid-gap: 30px;
+                            }
+                            .hot-wire {
+                                .diby-logos {
+                                    max-width: 100%;
+                                    width: 100%;
+                                    margin-bottom: 50px;
+                                    @include ipad(min-width) {
+                                        max-width: 350px;
+                                        margin-bottom: 0;
+                                    }
+                                    @include xLarge(min-width) {
+                                        max-width: 340px;
+                                        width: 100%;
+                                        margin-bottom: 0px;
+                                    }
+                                    img {
+                                        margin-bottom: 25px;
+                                        max-width: 60%;
+                                        @include ipad(min-width) {
+                                            max-width: 100%;
+                                        }
+                                    }
+                                    p {
+                                        color: var(--Plain-White);
+                                        font-size: 16px;
+                                        line-height: 1.5;
+                                        @include ipad(min-width) {
+                                            font-size: 18px;
+                                            margin: 0 0;
+                                        }
+                                    }
+                                }
+                                &.tk-capital {
+                                    display: grid;
+                                    grid-template-columns: 1fr;
+                                    align-items: center;
+                                    @include ipad(min-width) {
+                                        grid-template-columns: 1fr 1fr;
+                                    }
+                                    .tkxel-logo {
+                                        @include ipad(min-width) {
+                                            padding-right: 30px;
+                                        }
+                                        @include xLarge(min-width) {
+                                            padding-right: 60px;
+                                        }
+                                    }
+                                    .sl2-capital-logo {
+                                        margin-bottom: 0;
+                                        @include ipad(min-width) {
+                                            border-left: 1px solid #DEE3EB30;
+                                            padding-left: 30px;
+                                        }
+                                        @include xLarge(min-width) {
+                                            padding-left: 60px;
+                                        }
+                                    }
+                                }
+                            }
+                            // .tk-capital {
+
+                            // }
+                        }
+                    }
+
+                    &.mmeb-section {
+                        padding: 40px 20px 0px;
+                        border-bottom: 0;
+                        @include ipad(min-width) {
+                            padding: 80px 40px 0px;
+                        }
+                        @include xLarge(min-width) {
+                            padding: 80px 100px 0px;
+                        }
+                        .inr-diby {
+                            max-width: 400px;
+                            margin: 0 auto;
+                            @include ipad(min-width) {
+                                max-width: 100%;
+                            }
+                            h3 {
+                                margin-bottom: 40px;
+                            }
+                            .diby-logos-content {
+                                .hot-wire-logo {
+                                    margin-bottom: 0;
+                                    img {
+                                        @include ipad(min-width) {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                                .tv-content {
+                                    .tv-text {
+                                        img {
+                                            margin-bottom: 0;
+                                        }
+                                        p {
+                                            color: var(--Plain-White);
+                                            font-size: 20px;
+                                            line-height: 1.3;
+                                            @include ipad(min-width) {
+                                                margin-bottom: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.faq-section {
+        .faq-inr-section {
+            .team-heading {
+                text-align: left;
+                margin-bottom: 80px;
+                @include xLarge(min-width) {
+                    margin-bottom: 120px;
+                }
+                .gameOverview-title {
+                    max-width: 100%;
+                    margin: 0 0;
+                    .title-borderLine {
+                        &::before {
+                            left: 0;
+                        }
+                        &::after {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .faq-questions {
+            .faq-wrapper {
+                width: 100%;
+                .faq-accordions {
+                    h3 {
+                        font-size: calc(clamp(18px, 2vw + 10px , 30px));
+                        margin: 30px 0 20px;
+                        &:first-child {
+                            margin: 0px 0 20px;
+                        }
+                    }
+                    .accordion-item {
+                        border: 1px solid var(--Video-Border);
+                        border-left: 0;
+                        border-right: 0;
+                        border-bottom: 0;
+                        background: var(--Transparent-Color);
+                        &:last-child {
+                            border-bottom: 1px;
+                        }
+                        .accordion-header {
+                            button {
+                                &.accordion-button {
+                                    font-family: var(--Magistral-Medium);
+                                    font-size: calc(clamp(20px, 1vw + 3px ,22px));
+                                    line-height: 1.2;
+                                    position: relative;
+                                    transition: all .3s ease;
+                                    color: var(--Border-Black);
+                                    padding: 40px 0;
+                                    background: var(--Transparent-Color);
+                                }
+                                &::after {
+                                    content: none;
+                                }
+                                .accord-plus {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    transition: all .3s ease;
+                                    transform: translate(-50%, -50%);
+                                }
+                                &:not(.collapsed) {
+                                    background-color: transparent;
+                                    box-shadow: none;
+                                    .accord-plus {
+                                        transition: all .3s ease;
+                                        transform: translate(-50%, -50%) rotate(45deg);
+                                        right: 5px;
+                                        top: 50%;
+                                    }
+                                }
+                            }
+                        }
+
+                        .accordion-body {
+                            padding: 0 0 60px;
+                            max-width: 1180px;
+                            margin: 0;
+                            font-size: calc(clamp(16px, 1vw - 1px , 18px));
+                            line-height: 1.6;
+                            color: var(--Border-Black);
+                            ul {
+                                margin: 15px 0 0;
+                                padding-left: 25px;
+                                li {
+                                    list-style: decimal;
+                                    font-size: calc(clamp(16px, 1vw - 1px , 18px));
+                                    &::marker {
+                                        font-family: var(--Magistral-Medium);
+                                        margin-right: 10px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

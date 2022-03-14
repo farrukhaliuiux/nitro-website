@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nitro - Whitepaper</title>
+
+    <!-- BootStrap5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/scss/whitepaper.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#list-example"
+    data-bs-offset="100"
+  >
+    <div class="whitepaper-wrapper">
+      <div class="wp-left-nav">
+        <div class="wp-sidebar-head">
+          <div class="wp-logo">
+            <a href="/index.html"
+              ><img src="/assets/images/nitro-whitepaper-logo.svg" alt="Nitro League"
+            /></a>
+          </div>
+          <!-- <div class="wp-search">
+            <div class="sf-w">
+              <input
+                type="text"
+                class="form-control search-field"
+                placeholder="Search"
+              />
+            </div>
+          </div> -->
+        </div>
+        <nav id="list-example" class="list-group nitro-sidebar-items">
+          <nav class="nav nav-pills flex-column">
+            <a class="nav-link active" href="#overview">1. Overview</a>
+            <a class="nav-link nav-gray-link" href="#game-play">2. Gameplay</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link nav-nav-link ms-3 my-1" href="#gp-lore">2.1 Lore</a>
+              <a class="nav-link nav-nav-link ms-3 my-1" href="#gp-cars">2.2 Cars</a>
+              <nav class="nav nav-pills flex-column">
+                <a class="nav-link nav-nav-link ms-5 my-1" href="#gp-classes">2.2.1 Classes</a>
+                <a class="nav-link nav-nav-link ms-5 my-1" href="#gp-cloning">2.2.2 Cloning</a>
+                <a class="nav-link nav-nav-link ms-5 my-1" href="#gp-upgrades">2.2.3 Upgrades</a>
+              </nav>
+              <a class="nav-link nav-nav-link ms-3 my-1" href="#gp-racing">2.3 Racing</a>
+              <a class="nav-link nav-nav-link ms-3 my-1" href="#gp-garage">2.4 Garage</a>
+              <a class="nav-link nav-nav-link ms-3 my-1" href="#gp-doltsus">2.5 Decentralized Organization & Long-Term Sustainability</a>
+            </nav>
+            <a class="nav-link nav-gray-link" href="#genesis-release">3. Genesis Release</a>
+            <a class="nav-link nav-gray-link" href="#nitro-tokenomics">4. Nitro Tokenomics</a>
+            <a class="nav-link nav-gray-link" href="#technology">5. Technology</a>
+            <a class="nav-link nav-gray-link" href="#team">6. Team</a>
+            <!-- <a class="nav-link" href="#partnership">Partnership</a> -->
+        </nav>
+        </nav>
+        <!-- <div id="list-example" class="list-group nitro-sidebar-items">
+          <a class="nav-link active" href="#overview">Overview</a>
+          <a class="nav-link" href="#game-play">Gameplay</a>
+            <nav class="nav nav-pills flex-column">
+              <a class="nav-link ms-3 my-1" href="#gp-lore">Lore</a>
+              <a class="nav-link ms-3 my-1" href="#gp-cars">Cars</a>
+                <nav class="nav nav-pills flex-column">
+                  <a class="nav-link ms-3 my-1" href="#gp-classes">Classes</a>
+                  <a class="nav-link ms-3 my-1" href="#gp-cloning">Cloning</a>
+                  <a class="nav-link ms-3 my-1" href="#gp-upgrades">Upgrades</a>
+                </nav>
+              <a class="nav-link ms-3 my-1" href="#gp-racing">Racing</a>
+              <a class="nav-link ms-3 my-1" href="#gp-garage">Garage</a>
+              <a class="nav-link ms-3 my-1" href="#gp-doltsus">Decentralized Organization & Long-Term Sustainability</a>
+            </nav>
+          <a class="nav-link" href="#genesis-release">Genesis Release</a>
+          <a class="nav-link" href="#nitro-tokenomics">Nitro Tokenomics</a>
+          <a class="nav-link" href="#technology">Technology</a>
+          <a class="nav-link" href="#team">Team</a>
+          <a class="nav-link" href="#partnership">Partnership</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="nitro-logo">
+      <a href="/">
+        <svg
+          width="60"
+          height="60"
+          viewBox="0 0 60 60"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect width="60" height="60" fill="#FA0339" />
+          <path
+            d="M30.6264 15C22.3552 15 15.627 21.7293 15.627 30.0005C15.627 31.0863 15.7427 32.1458 15.9642 33.1666L16.8956 31.1645C16.8621 30.7806 16.8458 30.3926 16.8458 30.0005C16.8458 26.809 17.9368 23.8674 19.7631 21.5292C19.8443 21.4256 19.9266 21.323 20.0099 21.2224C20.0414 21.1849 20.0718 21.1473 20.1033 21.1107C20.2049 20.9909 20.3095 20.872 20.4162 20.7552C22.9383 17.9711 26.5818 16.2189 30.6264 16.2189C34.6722 16.2189 38.3156 17.9711 40.8387 20.7552H42.4314C39.6828 17.2539 35.4126 15 30.6264 15ZM44.4802 24.2494L43.7499 25.7862C44.1775 27.1148 44.4081 28.5307 44.4081 30.0005C44.4081 37.5993 38.2262 43.7811 30.6264 43.7811C26.5818 43.7811 22.9373 42.0289 20.4152 39.2448H18.8225C21.5701 42.7471 25.8403 45 30.6264 45C38.8976 45 45.627 38.2717 45.627 30.0005C45.627 27.9639 45.2186 26.0218 44.4802 24.2494ZM17.0683 32.4779L16.2415 34.2555C16.6986 35.7994 17.3984 37.2407 18.2973 38.5338H19.8128C18.4436 36.8019 17.4807 34.7349 17.0683 32.4779ZM42.9566 21.4662H41.4411C42.2486 22.487 42.9139 23.6237 43.4096 24.8476L44.0962 23.4022C43.7641 22.7268 43.3832 22.0797 42.9566 21.4662Z"
+            fill="white"
+          />
+          <path
+            d="M20.0108 21.2245L19.958 21.1128H20.1043C20.0728 21.1494 20.0423 21.1869 20.0108 21.2245Z"
+            fill="white"
+          />
+          <path
+            d="M45.0169 21.468L44.0956 23.404L43.409 24.8494L36.8991 38.5356H28.638L25.5857 32.1201L22.51 38.5356H14.25L16.2409 34.2573L17.0677 32.4797L21.3653 23.2456L20.5192 21.468H28.7995L32.768 29.8317L36.7365 21.468H45.0169Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <div class="sections-select-wrapper">
+      <span class="arrow"></span>
+      <select>
+        <option selected value="#overview">1. Overview</option>
+        <option value="#game-play">2. Gameplay
+          <option value="#gp-lore">2.1 Lore</option>
+          <option value="#gp-cars">2.2 Cars
+            <option value="#gp-classes">2.2.1 Classes</option>
+            <option value="#gp-cloning">2.2.2 Cloning</option>
+            <option value="#gp-upgrades">2.2.3 Upgrades</option>
+          </option>
+          <option value="#gp-racing">2.3 Racing</option>
+          <option value="#gp-garage">2.4 Garage</option>
+          <option value="#gp-doltsus">2.5 Decentralized Organization & Long-Term Sustainability</option>
+        </option>
+        <option value="#genesis-release">3. Genesis Release</option>
+        <option value="#nitro-tokenomics">4. Nitro Tokenomics</option>
+        <option value="#technology">5. Technology</option>
+        <option value="#team">6. Team</option>
+        <!-- <option value="#partnership">Partnership</option> -->
+      </select>
+    </div>
+
+    <div class="wp-content-wrapper" tabindex="0">
+      <h1 hidden>Nitro Whitepaper</h1>
+      <section class="overview">
+        <h2 id="overview" class="overview">Overview</h2>
+        <img src="assets/images/whitepaper-images/Main-Banner.png" alt="">
+        <p>Nitro League is a decentralized game metaverse where the community can earn tokens by racing futuristic cars competitively or exploring the many in-game activities casually.</p>
+        <p>Non-Fungible Tokens (NFTs) have gained tremendous popularity among the crypto community since the beginning of 2021, reaching $13 billion in Sales by October 2021. It is being recommended as the number one choice for investment by most financial experts around the globe. The gaming community has been spending on digital assets for decades, and NFTs have become the most logical way for gamers to own their assets, even outside the game. Despite the fact, only about 20% of the NFT assets are game-related, because of how new the NFT marketplace is. Even the NFT games that have been released were produced in unrealistically tight timelines without paying much attention to game quality or logic.</p>
+        <p>The team at Nitro League has been creating games for decades and aims to launch the first-ever high-quality, sustainable, and addictive NFT racing game to hit the market. Our vision is to leverage the true power of blockchain technology by making every aspect of the game decentralized, so the community can hold all the power in the game.</p>
+        <h5>Problems Worth Solving:</h5>
+        <ul>
+          <li>Play To Win: In conventional games, rich players can simply buy items that make them progress in the game faster than poor players. This creates a very unpleasant gaming experience for veterans that are highly skilled but are designed to lose against richer players. The best sports tournaments ensure that the most skilled players around the world compete with each other, not the richest.</li>
+          <li>
+            Improper Balancing Of Characters: Most games release a large number of characters so the players can choose from a large pool of heroes; however, this usually leads to poor balancing between characters. Without proper balancing, the weaker characters will be valued lower and eventually leave no liquidity‌.
+          </li>
+          <li>
+            Barrier To Entry For New Players: Most NFT games do not provide a player hierarchy or rank system that leaves the strong dominating the tournaments. New players have no chance to earn until they have spent enough time and money within the game to master the mechanics
+          </li>
+        </ul>
+      </section>
+
+      <section id="game-play" class="game-play">
+        <h2>Gameplay</h2>
+
+        <iframe width="100%" height="400" src="https://www.youtube.com/embed/7ZyDbpt-7p4"></iframe>
+
+        <div class="wp-main gp-lore">
+          <h3 id="gp-lore">2.1. Lore</h3>
+
+          <h4>The world</h4>
+          <p>The year is 3050. The world has evolved and progressed into a very optimistic future. There were no apocalyptic events in the past. Technology is the best we can envision, which includes buildings, power & energy supply, and preservation of nature (greenery). Public transport vehicles are all self-driving and mostly flying. Land space on earth is usually used for nature (plants, animals, water bodies, etc.)</p>
+
+          <h4>The racing fever</h4>
+          <p>Communities are productive and wealthy with all necessities of life taken care of (food, water, power, education, etc.). People work only to support their hobbies. Needless to say, the most hard-working people are the ones with luxurious hobbies (i.e. collecting cars), and the most well-paid jobs are to fuel these hobbies (i.e. car racing). There are no roads on land like in 2020. Car racing is a sport in 3050 (similar to horse racing in 2020).</p>
+
+          <h4>The city of racing</h4>
+          <p>The city of Ethermoor hosts the biggest racing events in the universe. The ancient city was created by racing enthusiasts and is built to promote the racing craze for the entire universe. Disputes are no longer settled by conflict and war, but rather in the good old fashion way ... racing. Status, power, honor, and wealth are now earned through racing in the grand Nitro arena. In the middle of the city lies the main attraction, the grand racing arena. The best place in the universe to witness innovative cars and thrilling races. Drivers from around the world dream of getting a chance to race at the grand arena.</p>
+
+          <h4>society structure</h4>
+          <p>The known universe in 3050 is ruled by “The Supreme Six”. These 6 nations have managed to live in harmony for centuries with an understanding of each other’s differences. Any disputes that do arise are settled the old fashion way - a well-executed sports tournament. The most popular of these sports is car racing, and the best events are hosted at the city of Ethermoor at the Nitro Arena.</p>
+          <p>The residents of the city are divided into clans that are part of a nation. Nations are known for their unique racing skills and technology. There can be any number of clans in each nation registered by real-world Nitro Elders. To race in the Nitro League, players must join a clan. Players are rewarded a badge (rank system) by the clan-based on their Reputation Points (RP). Players can switch nations or clans at any time; however, switching nations or clans have consequences (like losing nation/clan-specific attribute bonuses and locations).</p>
+          <p>When players win matches, they earn RP from the matches and lose it when they don't perform. If the player reaches a certain tier/rank and stops playing the game, there would be a decay in RP which would be demoting the player’s account to help other active players reach higher tiers.</p>
+        </div>
+
+        <div class="wp-main gp-cars">
+          <h3 id="gp-cars">2.2. Cars</h3>
+          <img src="assets/images/whitepaper-images/Collect-and-Upgrade.png" alt="">
+          <p>Nitro League offers some of the most exotic futuristic NFT cars the world has ever seen. All cars in our game universe are built for racing and can be traded in real-world NFT marketplaces. The designs are inspired by different eras, starting from the year 2020 up to the year 3050.</p>
+          <p>The value of any car can be gauged by its rarity - Common, Uncommon, Rare, Epic, and Legendary. Common cars are cheaper to buy and don't perform as well in races; whereas, rare cars are produced in lesser numbers, are more expensive, and perform better in races.</p>
+          <div class="gp-main gp-classes">
+            <h3 id="gp-classes">2.2.1. Classes</h3>
+            <p>6 main car classes are derived from the unique talent and technologies offered by “the Supreme Six” nations. Each class comes with its unique advantage on the race track giving attribute bonuses for Reputation, Speed, Acceleration, Handling, or Durability</p>
+  
+            <h4>ALPHA CLASS</h4>
+            <p>Produced during the year 2000 to 2020, this class includes 4-wheel vehicles that are street, sports, rally, and drag cars. These are the original designs, the leaders of the pack, that inspired all the models to follow for years to come. The cars in this class have been winning for over a thousand years, breeding confidence, and naturally gaining people's trust. The designs have been extremely charismatic, charming, and intimidating on the race tracks since the beginning. This class is suited for the strong-willed who believe that nothing can stand in their way.</p>
+            <div class="class-rating">
+              <div class="rp-stars">
+                <span>Reputation:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Speed:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Acceleration:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Handling:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Durability:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+  
+            <h4>BETA CLASS</h4>
+            <p>Produced during the year 2021 to 2050, this class includes 4-wheel vehicles that are street, sports, rally, and drag cars. Although very similar to Alpha class vehicles, Beta class vehicles were designed to be safer, stronger, and long-lasting with exceptionally better handling. They are friendlier looking on the race track, and not as intimidating; hence, overshadowed by the reputation of Alpha class. This class is suited for reserved players who believe that defense is their best offense.</p>
+            <div class="class-rating">
+              <div class="rp-stars">
+                <span>Reputation:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Speed:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Acceleration:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Handling:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Durability:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+  
+            <h4>GAMMA CLASS</h4>
+            <p>Produced during the year 2500 to 3050, this class includes 2 to 3 wheel vehicles that are rocket, bike, and bullet-style. These vehicles are made for adventurous journeys and constant exploration. They possess the capability to create their own path on the race tracks due to their slim size and skillful aero-dynamics. The vehicles in this class are fully aware of their surroundings and can make quick moves to stun their opponents. These vehicles are vulnerable to being pushed around by other classes due to their lightweight design. This class is suited for independent players who believe in quick take-offs and always rush to the finish line while keeping their distance from other racers.</p>
+            <div class="class-rating">
+              <div class="rp-stars">
+                <span>Reputation:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Speed:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Acceleration:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Handling:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Durability:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+  
+            <h4>OMEGA CLASS</h4>
+            <p>Produced since the year 3000, this class includes hover vehicles that are street, sports, and muscle cars. This class hasn’t been around for a long time, but it has the fastest vehicles the world has ever seen. The hover cars are the most technologically advanced piece of machinery ever invented and can withstand any criticism from old-timers about having no wheels. Having so much speed does give them a slight disadvantage in terms of their poor handling on the race tracks. With artificial intelligence controlling most functions, the vehicles in this class are the most calculated and evolved on the race track. This class is suited for the self-assured nerds who are driven by performance and enjoy the action more than the rewards.</p>
+            <div class="class-rating">
+              <div class="rp-stars">
+                <span>Reputation:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Speed:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Acceleration:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Handling:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Durability:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+  
+            <h4>DELTA CLASS</h4>
+            <p>Produced since the year 2020, this class includes F1-style vehicles that are 4-wheelers, 3-wheelers, 2-wheelers, and hover cars. These vehicles have been around for as long as the Alpha class and produced up to recent times (year 3050); however, their looks have not been changed very much, making them very deceptive on the race track. They are very agile when racing and can overtake opponents in the blink of an eye. To prove their mad skills; however, they are self-sabotaging by nature. Even the slightest nudge from any other class can make them go flying off the race track. This class is suited for the old-timers who believe that F1 cars are the best thing that ever happened to racing.</p>
+            <div class="class-rating">
+              <div class="rp-stars">
+                <span>Reputation:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Speed:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Acceleration:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Handling:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Durability:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+  
+            <h4>SIGMA CLASS</h4>
+            <p>Produced in the year 3000, this class includes 4-wheel vehicles that are street, sports, rally, muscle, and drag cars. Although fairly new, the reputation of vehicles in this class is a rockstar and is thought to surpass that of Alpha class in the future. Similar to the Omega class, Sigma is also the most technologically advanced class in the world. The vehicles are known for their artificial intelligence providing very calculated and evolved skills on the race tracks. Sigma has come up with some of the most exotic futuristic car designs the world has ever seen, along with the most well-balanced racing attributes. This class is suited for the cunning racers who are confident in their skills and don’t like playing by the rules.</p>
+            <div class="class-rating">
+              <div class="rp-stars">
+                <span>Reputation:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Speed:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Acceleration:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Handling:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <div class="rp-stars">
+                <span>Durability:</span>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+              </div>
+            </div>
+          </div>
+  
+          <div class="gp-main gp-cloning">
+            <h3 id="gp-cloning">2.2.2. Cloning</h3>
+            <p>Fusion Cloning is one of the most sought-after activities in the game. It is performed to produce new unique vehicles in the game which are faster and more valuable than the genesis cars. To produce a fusion clone, the player must own the 2 genesis cars required for cloning, as well as other requirements stated on the blueprints rewarded to the player.</p>
+            <h5>Requirements to Clone a car through Fusion</h5>
+            <ul>
+              <li>Required number of blueprint cards (awarded for races and other activities).</li>
+              <li>Required XP and RP level.</li>
+              <li>2 cars with Max Upgrade Level (blueprint will state which 2 cars can be fused).</li>
+              <li>Car cloning pod. Can be unlocked in the garage.</li>
+              <li>Robot - to operate the cloning pod to fuse the clones of the 2 cars.</li>
+              <li>Credits - the soft currency awarded for races and other activities in the game.</li>
+              <li>Nitro Tokens - the hard currency used by the game.</li>
+              <li>Time - Cloning can take a few days depending on the model.</li>
+            </ul>
+  
+            <h5>Fusion Cloning Result</h5>
+            <ul>
+              <li>The 2 original cars used for cloning will be downgraded to Upgrade Level 1</li>
+              <li>The 1 new car (fusion clone) will be produced of Upgrade Level 1 with basic attributes higher than the 2 parent cars.</li>
+            </ul>
+          </div>
+  
+          <div class="gp-main gp-upgrades">
+            <h3 id="gp-upgrades">2.2.3. Upgrades</h3>
+            <h5>There are 3 types of car upgrades available in the game.</h5>
+            <ul>
+              <li>Parts</li>
+              <li>Decorations</li>
+              <li>Power-ups</li>
+            </ul>
+            <h4>parts</h4>
+            <p>Each car is made up of 8 different performance parts - Engine, Spoiler, Tires/Hover Disks, Breaks, Booster Kit, Hood, Air Intake, and Exhaust. Car parts can be upgraded to give an attribute bonus to the car. Cars with better parts have a higher chance of winning races. Car parts are NFT assets that can be sold separately or bundled with the car. </p>
+  
+            <h4>DECORATIONS</h4>
+            <p>Car decorations can be upgraded to give a reputation bonus to the car, and visual styling/personalization. Cars with better decorations have a higher chance of selling at a better value in the marketplace. Decorations are NFT assets that can be sold separately or bundled with the car.</p>
+            
+            <h4>POWER-UPS</h4>
+            <p>Power-ups (boosters) are consumable items and are used once per race. A player can own many boosters; however, they can only choose to use 2 boosters in a single race.</p>
+  
+          </div>
+        </div>
+
+        <div class="wp-main gp-racing">
+          <h3 id="gp-racing">2.3. Racing</h3>
+          <img src="assets/images/whitepaper-images/Next-Generation-Racing.png" alt="">
+          <h5>The Nitro League offers 3 different racing modes for its community.</h5>
+          <ul>
+            <li>Free-to-Play Mode: Practice your skills and get recognized as a racer.</li>
+            <li>Solo Events: Play-to-Earn as an independent racer.</li>
+            <li>Team Events: Play-to-Earn bigger rewards as a Team.</li>
+          </ul>
+
+          <h4>FREE-TO-PLAY MODE</h4>
+          <h5>TIME TRIALS (singleplayer)</h5>
+          <ul>
+            <li>OBJECTIVE: Players will try to beat each other’s high scores in an Event by racing in a single-player time trial event. Results will be posted on the Event Leaderboard.</li>
+            <li>RACE COST: Does not consume Fuel. </li>
+            <li>SCORING: Players with the fastest lap times will be at the top of the leaderboard.</li>
+            <li>RACE REWARDS: Random chance of winning some credits and small rewards like base colors, boosters, etc.</li>
+            <li>EVENT REWARDS: At the end of the event, players will be shown what they "would have" earned if this was a Pay-to-Play event. Top players on the leaderboard will also gain Reputation points (RP, RC); whereas, the lowest-ranked players lose Reputation points (RP, RC).</li>
+          </ul>
+
+          <h4>Solo Events</h4>
+          <h5>TIME TRIALS (singleplayer)</h5>
+          <ul>
+            <li>OBJECTIVE: Players will try to beat each other’s high scores in an Event by racing in a single-player time trial event. Results will be posted on the Event Leaderboard.</li>
+            <li>RACE COST: Consumes Fuel, and requires a car that is suited for the event.</li>
+            <li>SCORING: Players with the fastest lap times will be at the top of the leaderboard.</li>
+            <li>RACE REWARDS: Credits and small rewards like base colors, boosters, etc.</li>
+            <li>EVENT REWARDS: At the end of the event, top-ranked players have a chance of winning Nitro tokens, credits, fuel, blueprints for specific cars and car parts, boosters, XP. Top players on the leaderboard will also gain Reputation points (RP, RC); whereas, the lowest-ranked players lose Reputation points (RP, RC).</li>
+          </ul>
+
+          <h5>HEAD TO HEAD (multiplayer)</h5>
+          <ul>
+            <li>OBJECTIVE: Players will try to beat each other in multiplayer racing events. Results are displayed on the leaderboard.</li>
+            <li>RACE COST: Consumes Fuel, and requires a car that is suited for the event.</li>
+            <li>SCORING:  Players will gain/lose Reputation (RP) at the end of each race based on their finishing position. The sum of all RP gained/lost from racing in the event will be the player's score on the leaderboard.</li>
+            <li>RACE REWARDS: Credits and small rewards like base colors, boosters, etc.</li>
+            <li>EVENT REWARDS: At the end of the event, top-ranked players have a chance of winning Nitro tokens, credits, fuel, blueprints for specific cars and car parts, boosters, XP. At the end of the Event, top players on the leaderboard will also gain Reputation points (RP, RC); whereas, the lowest-ranked players lose Reputation points (RP, RC).</li>
+          </ul>
+
+          <h4>Team Events</h4>
+          <h5>TIME TRIALS (singleplayer)</h5>
+          <ul>
+            <li>OBJECTIVE: Teams will try to beat each other’s high scores in an Event by individual team members racing in a single-player time trial event. Results will be posted on the event leaderboard.</li>
+            <li>RACE COST: Consumes Fuel, and each member requires a car that is suited for the event. Minimum 15 team members must participate in an event for the team to be ranked.</li>
+            <li>SCORING: The average of the fastest times accomplished by each team member is the team score on the event's leaderboard.</li>
+            <li>RACE REWARDS: Credits and small rewards like base colors, boosters, etc.</li>
+            <li>EVENT REWARDS: At the end of the event, top-ranked players have a chance of winning Nitro tokens, credits, fuel, blueprints for specific cars and car parts, boosters, XP, etc. At the end of the Event, top teams on the leaderboard will also gain Reputation points (RP, RC, RT); whereas, the lowest-ranked players lose Reputation points (RP, RC, RT).</li>
+          </ul>
+
+          <h5>HEAD TO HEAD (multiplayer)</h5>
+          <ul>
+            <li>OBJECTIVE: Teams will try to beat each other in multiplayer racing events. Results are displayed on the leaderboard.</li>
+            <li>RACE COST: Consumes Fuel, and requires a car that is suited for the event. Teams must meet the minimum requirements for the event to participate.</li>
+            <li>SCORING: Players will gain/lose Reputation (RP) at the end of each race based on their finishing position. The combined Reputation gained/lost during event by all team members during the event is the team's score on the leaderboard.</li>
+            <li>RACE REWARDS: Credits and small rewards like base colors, boosters, etc.</li>
+            <li>EVENT REWARDS: At the end of the event, top-ranked players have a chance of winning Nitro tokens, credits, fuel, blueprints for specific cars and car parts, boosters, XP, etc. At the end of the Event, top teams on the leaderboard will also gain Reputation points (RP, RC, RT); whereas, the lowest-ranked players lose Reputation points (RP, RC, RT).</li>
+          </ul>
+          
+        </div>
+
+        <div class="wp-main gp-garage">
+          <h3 id="gp-garage">2.4. Garage</h3>
+          <img src="assets/images/whitepaper-images/garage.png" alt="Garage">
+          <p>The garage is a very high-tech laboratory-type personal futuristic space. It has robotic machinery and digital controls all over. The player will spend most of the time in their garage, which will feature mini-games, car upgrades, store, social activities, notifications, asset showcase, and much more.</p>
+
+          <h5>ACTIVITIES</h5>
+          <ul>
+            <li>MANAGE UPGRADES: Manage your cars and car upgrades (parts, decorations, boosters).</li>
+            <li>MANAGE INVENTORY: Store assets (parts, fuel, etc) in inventory. Inventory items are not visible in the garage (tucked away in a cupboard), but there is an inventory menu to view all the assets.</li>
+            <li>NFT CAR PARKING: Manage your NFT car collection in the garage parking slots, which can be upgraded to add more slots.</li>
+            <li>NFT ASSET DISPLAYS: Other NFT assets (car parts, etc.) are showcased on fancy displays, and also accessible through the inventory menu.</li>
+            <li>MANAGE ROBOT: Get a robot companion in the garage who will help you out with various tasks in the garage.</li>
+            <li>NAVIGATION MENUS: Click on futuristic monitors to open up different menus to view information for racer profile, car, club, leaderboard, achievements, etc.</li>
+            <li>VISIT FRIENDS: Invite friends to view your garage and assets, and hang out in their garage online and leave them a rating.</li>
+            <li>BUY BIGGER GARAGE: You can buy a new NFT garage (with more parking slots and shelf space).</li>
+          </ul>
+          
+        </div>
+
+        <div class="wp-main gp-doltsus">
+          <h3 id="gp-doltsus">2.5. Decentralized Organization & Long-Term Sustainability</h3>
+          <p>The Nitro team's vision is to make the ownership of Nitro metaverse truly decentralized with respect to technology, authority, and economy. Nitro holders will be able to participate in key economic decisions by staking their tokens in the ecosystem.</p>
+
+          <p>Nitro League is a platform providing NFT assets that the players can own in the real world. Unlike conventional gaming, where the game assets do not hold any real-world value, Nitro assets can be traded freely on any marketplace outside of the game. Aside from NFT assets, players are awarded credits and Nitro tokens for performing well in friendly racing competitions using their NFT cars. Players spend a great deal of time and money acquiring their favorite assets, and the beauty of NFT assets is that no matter what happens to the game or the developer, the player remains the rightful owner of the NFT assets and tokens which can never be monopolized by the game developer.</p>
+
+          <p>Nitro League is a skill-based game with unlimited possibilities for expansion to provide endless entertainment to the gaming community. Nitro League presents an open-world metaverse with beautiful landscapes and structures as far as the eye can see. As the game community grows, players will be able to freely roam around in different cities and own garages, tracks, factories, and land. Our vision is to leverage the true power of blockchain technology to make every aspect of the game decentralized so the community can hold all the power in the game. Players will be able to create and host racing events and other activities and broadcast them online for a real-world sporting experience. Nitro League will also invite sponsors and advertisers to help support the developers in the continued delivery of high-quality, fresh, and exciting content to expand the Nitro metaverse.</p>
+
+        </div>
+
+      </section>
+
+      <section class="genesis-release">
+        <h2 id="genesis-release">3. Genesis Release</h2>
+        <p>Genesis cars are the first batch of 5,000 NFT cars released by the Nitro factory. 4,200 of these cars will be on sale on the Terra Virtua marketplace soon. Genesis car holders will get special benefits starting with early access to the game's Beta version, as well as access to the premium loot box rewards.</p>
+
+        <h5>Allocation of 5,000 Genesis cars released</h5>
+        <ul>
+          <li>Sale - 4,200</li>
+          <li>Presale rewards & giveaways - 100</li>
+          <li>In game contests - 100</li>
+          <li>Influencers - 600</li>
+        </ul>
+      </section>
+
+      <section class="nitro-tokenomics">
+        <h2 id="nitro-tokenomics">4. Nitro Tokenomics</h2>
+        <h6>TOTAL SUPPLY: 1,000,000,000 Nitro Tokens</h6>
+      </section>
+
+      <section id="technology" class="technology">
+        <h2>5. Technology</h2>
+        <h3>COMING SOON</h3>
+      </section>
+
+      <section id="team" class="team">
+        <h2>6. Team</h2>
+
+        <h3>Zaynab Tucker</h3>
+        <h5>Chief Executive Officer</h5>
+        <p>A successful leader with 20+ years of experience in working across the technology, media, and financial sectors. A history of driving digital transformation and growth for Fortune 500 companies like HSBC, Mastercard, VISA, and Emirates Group.</p>
+
+        <h3>Rizwan Siddiqui</h3>
+        <h5>Chief Creative Officer</h5>
+        <p>Founding member of an award-winning gaming studio that has crossed 1M+ downloads/day. As a product designer and marketer, he has built digital products and campaigns for companies including NBC Universal, P&G, Barclays, Toyota, and  Manchester United.</p>
+
+        <h3>Haseeb Khan</h3>
+        <h5>Chief Technology Officer</h5>
+        <p>Haseeb has been rated as one of the top technologists and chief software architects in the region. Having worked with several start-ups as CTO as well as delivered large-scale enterprise and consumer platforms. Delivered projects for companies including Yahoo!, AOL, Intuit, Groupon, ABB, and WSJ to name a few.</p>
+      </section>
+
+      <!-- <section id="partnership" class="partnership">
+        <h2>7. Partnership</h2>
+      </section> -->
+
+    </div>
+    <!-- Minified Jquery Script CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BootStrap5 Script CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/white-paper-script.js"></script>
+  </body>
+</html>

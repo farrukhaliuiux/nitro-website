@@ -1,0 +1,45 @@
+@import "./mixins";
+@import "./fonts";
+
+button {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: var(--Transparent-Color);
+    &:focus {
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+.btn {
+    background-color: var(--Torch-Red);
+    height: 48px;
+    text-transform: uppercase;
+    line-height: 48px;
+    padding: 0px 19px;
+    color: var(--Plain-White);
+    font-size: 18px;
+    font-family: var(--Magistral-Medium);
+    border-radius: 0px;
+    // max-width: 150px;
+    text-transform: uppercase;
+    width: fit-content;
+    &:hover {
+        color: var(--Plain-White);
+    }
+    &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.btn-market {
+    font-size: 15px;
+    font-family: var(--Magistral-Medium);
+}

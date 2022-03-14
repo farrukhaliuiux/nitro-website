@@ -1,0 +1,18 @@
+@import './mixins';
+@import './fonts';
+
+input[type="email"] {
+    &.form-control {
+        background-color: var(--Input-Text-Field);
+        border: none;
+        color: var(--Plain-White);
+        padding: 20px 120px 20px 24px;
+        outline: none;
+        &::placeholder {
+            color: var(--Plain-White);
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+}

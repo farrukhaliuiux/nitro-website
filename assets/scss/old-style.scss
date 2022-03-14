@@ -1,0 +1,1485 @@
+@import "./importables/fonts";
+@import "./importables/mixins";
+@import "./importables/variables";
+@import "./importables/headings";
+@import "./importables/spacing";
+@import "./importables/buttons";
+
+.reset-style {
+  all: unset;
+  &:hover,
+  &:focus {
+    all: unset;
+  }
+}
+img,
+svg {
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include fontStyle;
+  position: relative;
+  transition: 0.3s all;
+  overflow-x: hidden;
+
+  &.dark-body {
+    background-color: var(--bg-dark);
+
+    .sec-nav-listing {
+      background: transparent !important;
+    }
+
+    #game-story {
+      color: var(--Plain-White);
+      opacity: 0.8;
+    }
+
+    .inr-gameOverview {
+      .game-content {
+        .story-video {
+          p.arena-content {
+            color: var(--Plain-White);
+          }
+        }
+        .gameOverview-title.story-title {
+          h2 {
+            color: var(--Plain-White);
+          }
+        }
+        p.arena-content {
+          color: var(--Plain-White);
+        }
+        .btn.btn-watch-nitro {
+          span {
+            color: var(--Plain-White);
+          }
+        }
+      }
+    }
+  }
+
+  &.scrolling {
+    .navbar-listing {
+      @include xLarge(min-width) {
+        display: none !important;
+      }
+    }
+  }
+}
+
+.nitro-container {
+  padding-inline: 16px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include ipad(min-width) {
+    padding-inline: 24px;
+  }
+  @include xxLarge(min-width) {
+    padding-inline: 0;
+  }
+}
+
+.gameOverview-title {
+  position: relative;
+  margin-bottom: 40px;
+  span.title-borderLine {
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-bottom: calc(clamp(18px, 1.7vw + 4px, 40px));
+    &::before {
+      content: "";
+      bottom: 0px;
+      max-width: 146px;
+      height: 7px;
+      width: 100%;
+      position: absolute;
+      background: var(--Torch-Red);
+      clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 0% 100%);
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      border-bottom: 1px solid var(--Torch-Red);
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      background: var(--Torch-Red);
+      max-width: 350px;
+      top: 7px;
+      left: 0;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 9999;
+  background-color: var(--Plain-White);
+  @include xLarge(min-width) {
+    background: var(--Transparent-Color);
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+  }
+  .navbar {
+    padding: 0;
+    @include xLarge(min-width) {
+      padding: 20px 0 0 20px;
+    }
+    @include xxLarge(min-width) {
+      transition: all 0.3s ease;
+      background-color: transparent;
+      padding: 20px 0px 0;
+    }
+    .nitro-container {
+      padding: 0 0;
+      .inr-nitro-wrap {
+        border-top: 1px solid #dee3eb;
+        border-bottom: 1px solid #dee3eb;
+        align-items: center;
+        @include xLarge(min-width) {
+          border: none;
+          justify-content: space-between;
+          padding: 0 0;
+          display: flex;
+          width: 100%;
+          padding: 0 20px 0 0;
+          &:hover {
+            transition: all 0.3s ease;
+            background: var(--Plain-White);
+            .navbar-collapse {
+              &.navbar-listing {
+                transition: all 0.3s ease;
+                display: flex !important;
+              }
+            }
+          }
+          &:hover.dark-blue-navbar {
+            background-color: var(--Dark-Opacity30);
+            .navbar-collapse {
+              &.navbar-listing {
+                display: flex !important;
+                .navbar-nav {
+                  a.nav-link {
+                    color: var(--Plain-White);
+                  }
+                }
+                .side-navbar {
+                  li.side-navbar-item {
+                    & .dark-hd-icon {
+                      background-color: var(--Plain-White);
+                      svg path {
+                        fill: var(--Dark-Opacity30);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        @include xxLarge(min-width) {
+          padding: 0 36px 0 0;
+        }
+        .mobile-navbar {
+          display: flex;
+          justify-content: space-between;
+          .logo-branding {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .navbar-brand {
+              order: 2;
+              margin: 0;
+              max-width: 32px;
+              display: inline-block;
+              padding: 0;
+              @include xLarge(min-width) {
+                max-width: 100%;
+                padding: 0%;
+                margin: 0%;
+                margin-right: 60px;
+                // max-width: 80px;
+                img {
+                  max-width: 80px;
+                }
+              }
+              @include xxLarge(min-width) {
+                margin-right: 80px;
+              }
+            }
+            .navbar-toggler {
+              order: 1;
+              border: none;
+              padding: 0;
+              border-right: 1px solid #dee3eb;
+              border-radius: 0;
+              margin-right: 14px;
+              padding: 0 16px;
+              height: 100%;
+              display: block;
+              @include ipad(min-width) {
+                display: block;
+              }
+              @include xLarge(min-width) {
+                display: none;
+              }
+              .navbar-toggler-icon {
+                background-image: url(../images/hamburger.svg);
+                max-width: 20px;
+              }
+            }
+          }
+
+          .nav-buttons {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 18px 0;
+            padding-right: 10px;
+            @include xLarge(min-width) {
+              display: none;
+            }
+            .btn {
+              font-size: 10px;
+              // line-height: 1.2;
+              line-height: 2.6;
+              min-width: 60px;
+              width: 100%;
+              max-height: 24px;
+              padding: 0 0;
+              &.btn-ntr {
+                background-color: var(--Transparent-Color);
+                border: 1px solid var(--Theme-Black);
+                max-width: 60px;
+                color: var(--Theme-Black);
+                margin-right: 6px;
+              }
+              &.btn-race {
+                border-color: var(--Torch-Red);
+              }
+            }
+          }
+        }
+
+        .navbar-collapse {
+          background: rgba(15, 27, 46, 1);
+          padding-bottom: 30px;
+          @include xLarge(min-width) {
+            background: var(--Transparent-Color);
+            padding-bottom: 0;
+            display: flex;
+          }
+          &.navbar-listing {
+            transition: all 0.3s ease;
+            .navbar-nav {
+              padding: 30px 30px;
+              margin-bottom: 0;
+              @include xLarge(min-width) {
+                padding: 0 0;
+                width: 100%;
+                flex-direction: row;
+              }
+              li {
+                @include xLarge(min-width) {
+                  font-size: 16px;
+                  line-height: 24px;
+                  color: var(--Regular-text-color);
+                  padding: 0;
+                }
+                & + li {
+                  @include xLarge(min-width) {
+                    margin-left: 40px;
+                  }
+                  @include xxLarge(min-width) {
+                    margin-left: 48px;
+                  }
+                }
+                a.nav-link {
+                  color: var(--Plain-White);
+                  padding: 15px 0;
+                  display: inline-block;
+                  @include xLarge(min-width) {
+                    color: var(--Regular-text-color);
+                    padding: 0%;
+                  }
+                }
+              }
+            }
+            .side-navbar {
+              width: 100%;
+              padding: 0 30px;
+              list-style: none;
+              display: flex;
+              align-items: center;
+              @include xLarge(min-width) {
+                padding: 0%;
+                margin: 0%;
+              }
+              li.side-navbar-item {
+                &:last-child {
+                  margin-left: auto;
+                  @include xLarge(min-width) {
+                    margin-left: unset;
+                  }
+                }
+                &:first-child {
+                  margin-right: 25px;
+                  @include xLarge(min-width) {
+                    margin-right: 0;
+                  }
+                }
+                & .dark-hd-icon {
+                  background-color: var(--Regular-text-color);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  @include xLarge(min-width) {
+                    width: 36px;
+                    height: 36px;
+                  }
+                }
+                & + li.side-navbar-item {
+                  @include xLarge(min-width) {
+                    margin-left: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-section {
+  padding: calc(clamp(110px, 10vw + 10px, 240px)) 0 68px;
+  background: url(../images/banner-bg.png) no-repeat bottom center;
+  background-size: contain;
+
+  .inr-bnr-section {
+    max-width: 1084px;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    .banner-heading {
+      max-width: 988px;
+      margin: 0 auto;
+      width: 100%;
+      .bnr-small-text {
+        @include fontStyle($size: 32px, $lineHeight: 1);
+        font-size: calc(clamp(16px, 1.5vw + 4px, 32px));
+        margin-bottom: calc(clamp(16px, 1.5vw + 4px, 32px));
+      }
+
+      .banner-title {
+        max-width: 988px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .bnr-buttons {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 76px 0 calc(clamp(76px, 7vw + 6px, 140px));
+        width: 100%;
+        .bnr-btn {
+          position: relative;
+          height: 60px;
+          line-height: 60px;
+          max-width: 240px;
+          width: 100%;
+          &.btn-bnr-game {
+            position: relative;
+            max-width: 240px;
+            overflow: hidden;
+            width: 100%;
+          }
+          &.btn-whitePapaer {
+            background-color: var(--Transparent-Color);
+            border: 2px solid var(--Border-Black);
+            color: var(--Border-Black);
+          }
+        }
+      }
+
+      .car-container {
+        position: fixed;
+        transition: 0.5s all;
+        span {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translate(-50%, -50%) scale(1.3);
+          }
+        }
+      }
+    }
+  }
+}
+
+.nitro-outlined-text-img {
+  img {
+    position: absolute;
+    left: 60%;
+    transform: translate(-100%, 0);
+    bottom: 0;
+  }
+}
+.nitro-section {
+  min-height: 100vh;
+  // border: 1px solid #000;
+  @include xLarge(min-width) {
+    padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+    height: 100vh;
+  }
+
+  &#nitro-over-section,
+  &#nitro-races-section {
+    min-height: 70vh;
+  }
+}
+.game-over-section {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  &#nitro-over-section {
+    align-items: flex-start;
+    @include xLarge(min-width) {
+      // align-items: center;
+    }
+    .inr-gameOverview {
+      padding: 50px 0;
+    }
+  }
+  .inr-gameOverview {
+    position: relative;
+    padding: 0px 0px;
+
+    .secondary-navbar {
+      display: flex;
+      width: 100%;
+      .sec-nav-listing {
+        display: flex;
+        list-style: none;
+        padding: 0px 60px 0;
+        margin: 0;
+        border-bottom: 1px solid #dee3eb;
+        transform: rotate(-90deg);
+        position: absolute;
+        left: -300px;
+        top: 50%;
+        -webkit-transform-origin: center;
+        transform-origin: center;
+        z-index: 1000;
+        // background: var(--Plain-White);
+        background: var(--Transparent-Color);
+        .sec-list-items {
+          & + .sec-list-items {
+            margin-left: 40px;
+          }
+          .sec-list-link {
+            transition: 0.3s all;
+            text-decoration: none;
+            padding: 0 0 30px;
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--Gray-color);
+            font-size: 16px;
+            line-height: 18px;
+            &.list-link-active,
+            &:hover {
+              border-bottom: 1px solid var(--Torch-Red);
+              position: relative;
+              color: var(--Torch-Red);
+              &:before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-bottom: 12px solid var(--Torch-Red);
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .game-content {
+      padding-left: calc(clamp(80px, 12vw + 5px, 172px));
+      max-width: 900px;
+      width: 100%;
+      .gameOverview-title {
+        position: relative;
+        margin-bottom: 40px;
+        span.title-borderLine {
+          position: relative;
+          width: 100%;
+          display: flex;
+          margin-bottom: calc(clamp(18px, 1.7vw + 4px, 40px));
+          &::before {
+            content: "";
+            bottom: 0px;
+            max-width: 146px;
+            height: 7px;
+            width: 100%;
+            position: absolute;
+            background: var(--Torch-Red);
+            clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 0% 100%);
+            top: 0;
+            left: 0;
+          }
+          &::after {
+            content: "";
+            border-bottom: 1px solid var(--Torch-Red);
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            bottom: -2px;
+            background: var(--Torch-Red);
+            max-width: 350px;
+            top: 7px;
+            left: 0;
+          }
+        }
+      }
+      p {
+        font-size: calc(clamp(16px, 1.1vw + 4px, 24px));
+        line-height: 1.3;
+        font-family: var(--Magistral-Book);
+      }
+
+      h5 {
+        font-family: var(--Magistral-Bold);
+        font-size: calc(clamp(16px, 1.1vw + 4px, 24px));
+        line-height: 1.3;
+      }
+
+      .game-listing {
+        list-style: none;
+        padding: 0%;
+        margin: 0;
+        li {
+          display: flex;
+          margin-bottom: 60px;
+          font-size: 20px;
+          line-height: 28px;
+          span {
+            margin-right: 20px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.feature-section {
+    &::after {
+      background: url(../images/nitro-n.png) no-repeat top center;
+      left: unset;
+      right: 0;
+      bottom: 0;
+      width: 14%;
+    }
+    &::before {
+      content: none;
+    }
+
+    @include xLarge(min-width) {
+      padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+    }
+
+    .inr-gameOverview {
+      .game-content {
+        max-width: 1200px;
+        .gameOverview-title {
+          &.feature-title {
+            margin-bottom: 80px;
+            span {
+              &::after {
+                max-width: 211px;
+              }
+              &::before {
+                max-width: 123px;
+              }
+            }
+          }
+        }
+        h4 {
+          margin-bottom: 20px;
+        }
+
+        .features-listing {
+          list-style: none;
+          padding: 0 0;
+          margin-bottom: 0;
+          li {
+            img {
+              margin-bottom: 20px;
+            }
+            p {
+              margin-bottom: 0;
+            }
+          }
+          li:last-child,
+          li:nth-child(4) {
+            @include xLarge(min-width) {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.game-story-section {
+    &::after,
+    &::before {
+      content: none;
+    }
+
+    @include xLarge(min-width) {
+      padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+    }
+
+    .game-content {
+      position: relative;
+      max-width: 100%;
+      .gameOverview-title {
+        margin-bottom: 50px;
+        &.story-title {
+          span.title-borderLine {
+            &::before {
+              max-width: 123px;
+            }
+            &::after {
+              max-width: 211px;
+            }
+          }
+        }
+      }
+
+      p.arena-content {
+        line-height: 1.3;
+        color: var(--Black-Color);
+        margin-bottom: 0;
+      }
+
+      .btn.btn-watch-nitro {
+        display: flex;
+        align-items: center;
+        background-color: var(--Transparent-Color);
+        span {
+          color: var(--Border-Black);
+          text-decoration: underline;
+          font-size: calc(clamp(14px, 0.8vw + 2px, 18px));
+        }
+      }
+
+      .story-video {
+        max-width: 1250px;
+        margin: 0 auto;
+        height: 100%;
+        .video-img-border {
+          border: 1px solid var(--Video-Border);
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to right, var(--Video-Edges) 5px) 0 0,
+            linear-gradient(to right, var(--Video-Edges) 5px, transparent 5px) 0
+              100%,
+            linear-gradient(to left, var(--Video-Edges) 5px, transparent 5px)
+              100% 0,
+            linear-gradient(to left, var(--Video-Edges) 5px, transparent 5px)
+              100% 100%,
+            linear-gradient(to bottom, var(--Video-Edges) 5px, transparent 5px)
+              0 0,
+            linear-gradient(to bottom, var(--Video-Edges) 5px, transparent 5px)
+              100% 0,
+            linear-gradient(to top, var(--Video-Edges) 5px, transparent 5px) 0
+              100%,
+            linear-gradient(to top, var(--Video-Edges) 5px, transparent 5px)
+              100% 100%;
+          background-repeat: no-repeat;
+          background-size: 20px 20px;
+          .video-thumbnail {
+            position: relative;
+            padding: calc(clamp(16px, 1.5vw + 4px, 32px));
+            img {
+              width: 100%;
+              object-fit: cover;
+            }
+            span {
+              display: inline-block;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transition: all 0.3s ease;
+              transform: translate(-50%, -50%) scale(1.3);
+              &:hover {
+                transform: translate(-50%, -50%) scale(1.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.game-presection {
+    background: url(../images/game-preview.png) no-repeat top center;
+    height: 40vh;
+    background-size: contain;
+    width: 100%;
+    min-height: unset;
+
+    @include medium(min-width) {
+      height: 100vh;
+      background-size: cover;
+    }
+    .game-content {
+      .game-preTitle {
+        h2 {
+          color: var(--Plain-White);
+        }
+      }
+    }
+  }
+
+  &.race-section {
+    @include xLarge(min-width) {
+      padding: 60px 0;
+    }
+    .inr-gameOverview {
+      padding: 0 0;
+      .game-content {
+        .gameOverview-title {
+          &.story-title {
+            margin-bottom: 0px;
+            @include xxxLarge(min-width) {
+              position: absolute;
+              top: 50%;
+              right: -5px;
+              transform: translate(0, -40%) rotate(90deg);
+              transform-origin: 100% 100%;
+            }
+            span.title-borderWidth {
+              position: relative;
+              display: inline-block;
+              margin-bottom: 30px;
+              &::before {
+                max-width: 123px;
+                content: "";
+                position: absolute;
+                border: 5px solid var(--Torch-Red);
+                height: 0;
+                width: 123px;
+                top: 0px;
+                left: 0;
+                clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+              }
+              &::after {
+                max-width: 211px;
+                content: "";
+                position: absolute;
+                border: 1px solid var(--Torch-Red);
+                height: 0;
+                width: 211px;
+                top: 10px;
+                left: 0;
+              }
+            }
+            h2 {
+              margin: 0 0;
+            }
+          }
+        }
+        .story-video {
+          @include xLarge(min-width) {
+            max-width: 1140px;
+            margin: 0;
+            margin-left: auto;
+          }
+          .video-img-border {
+            margin-bottom: 27px;
+            @include xLarge(min-width) {
+              max-width: 800px;
+            }
+            @include xxLarge(min-width) {
+              max-width: 100%;
+            }
+          }
+          p {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &.pEarn-section {
+    @include xLarge(min-width) {
+      padding: 60px 0;
+    }
+    &::after,
+    &::before {
+      content: none;
+    }
+
+    .inr-gameOverview {
+      .game-content {
+        .story-title {
+          span.title-borderLine {
+            &::before {
+              max-width: 123px;
+            }
+            &::after {
+              max-width: 211px;
+            }
+          }
+        }
+
+        h4 {
+          margin-bottom: 12px;
+        }
+        ul.market-listing {
+          list-style: square;
+          padding-left: 1.5rem;
+          @include xLarge(min-width) {
+            margin-bottom: 50px;
+          }
+          @include xxxLarge(min-width) {
+            margin-bottom: 70px;
+          }
+          li {
+            margin-bottom: calc(clamp(20px, 1.8vw + 6px, 40px));
+            line-height: 1.3;
+            &::marker {
+              font-size: 35px;
+            }
+
+            .roadmap-navbar {
+              display: flex;
+              justify-content: space-around;
+              list-style: none;
+              border-bottom: 1px solid var(--Border-Color);
+              width: 100%;
+              .rm-nav-items {
+                color: var(--Theme-Black);
+                display: block;
+                padding-bottom: 27px;
+                text-decoration: none;
+                cursor: pointer;
+                &.rm-nav-active,
+                &:hover {
+                  border-bottom: 2px solid var(--Torch-Red);
+                  color: var(--Torch-Red);
+                  position: relative;
+                  &::after {
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid var(--Torch-Red);
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  }
+                }
+              }
+            }
+          }
+          &.racing-listing {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .roadmap-content {
+        &:not(:first-child) {
+          display: none;
+        }
+        padding: 120px 80px 0;
+        img {
+          margin-bottom: 24px;
+        }
+        h4 {
+          font-size: 24px;
+          line-height: 26px;
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+
+  &.roadmap-section {
+    padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+    display: none;
+    @include ipad(min-width) {
+      display: block;
+    }
+    &::after,
+    &::before {
+      content: none;
+    }
+    .game-content {
+      position: relative;
+      padding-left: 0;
+      max-width: 100%;
+      .story-title {
+        margin-bottom: 68px;
+      }
+
+      .roadmap-navbar {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        border-bottom: 1px solid var(--Border-Color);
+        width: 100%;
+        .rm-nav-items {
+          color: var(--Theme-Black);
+          display: block;
+          padding-bottom: 27px;
+          text-decoration: none;
+          cursor: pointer;
+          &.rm-nav-active,
+          &:hover {
+            border-bottom: 2px solid var(--Torch-Red);
+            color: var(--Torch-Red);
+            position: relative;
+            &::after {
+              content: "";
+              width: 0;
+              height: 0;
+              border-left: 8px solid transparent;
+              border-right: 8px solid transparent;
+              border-bottom: 8px solid var(--Torch-Red);
+              position: absolute;
+              bottom: 0;
+              z-index: -1;
+              left: 50%;
+              transform: translate(-50%, 0);
+            }
+          }
+        }
+      }
+
+      .roadmap-content {
+        &:not(:first-child) {
+          display: none;
+        }
+        padding: 120px 0px 0;
+        img {
+          margin-bottom: 24px;
+        }
+        h4 {
+          font-size: 24px;
+          line-height: 26px;
+          margin-bottom: 32px;
+        }
+      }
+    }
+
+    .roadmap-car {
+      display: block;
+      position: absolute;
+      right: 0px;
+      bottom: 0;
+      z-index: -1;
+      .scroll-car {
+        max-width: 100%;
+        width: 100%;
+        @include xLarge(min-width) {
+          max-width: 350px;
+        }
+        @include xxLarge(min-width) {
+          max-width: 450px;
+        }
+      }
+      .qa-scroll {
+        text-align: center;
+        position: relative;
+        z-index: -1;
+        @include xLarge(min-width) {
+          top: -14px;
+        }
+        h2.qa-bg-text {
+          font-size: 160px;
+          line-height: 72px;
+          -webkit-text-stroke: 2px var(--Gray-color);
+          color: transparent;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &.race-never-sec {
+    padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+    &::after,
+    &::before {
+      content: none;
+    }
+    @include xLarge(min-width) {
+      display: flex;
+      align-items: center;
+    }
+    .game-content {
+      padding-left: 0;
+      max-width: 100%;
+      .rnsld-content {
+        .story-title {
+          margin-bottom: 48px;
+        }
+        p {
+          margin-bottom: 60px;
+        }
+        .btn {
+          &.btn-explore {
+            // max-width: 220px;
+            max-width: 350px;
+            height: 100%;
+            padding: 24px 0;
+            width: 100%;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .rnsld-listing {
+        list-style: none;
+        padding: none;
+        .rnsld-card {
+          img {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+          h4 {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+
+    &.community-seaction {
+      padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+      &::after,
+      &::before {
+        content: none;
+      }
+      .community-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        .inr-community {
+          p {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 16px;
+          }
+          h2 {
+            margin-bottom: 86px;
+          }
+
+          .comm-content {
+            .comm-img-link {
+              text-decoration: none;
+              display: inline-block;
+              img {
+                max-width: 100%;
+                margin-bottom: 40px;
+              }
+            }
+            .comm-links {
+              font-size: 20px;
+              line-height: 28px;
+              text-decoration: underline;
+              &.join-dis {
+                color: #5865f2;
+              }
+              &.join-tele {
+                color: #2ca5e0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.community-seaction {
+    background: url(../images/cummunity-bg.png) no-repeat top center;
+    padding: calc(clamp(48px, 6vw + 6px, 122px)) 0;
+    text-align: center;
+    background-size: cover;
+    .inr-community {
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+      @include xLarge(min-width) {
+        max-width: 530px;
+      }
+      @include xxLarge(min-width) {
+        max-width: 650px;
+      }
+
+      // @include xxxLarge(min-width) {
+      //   max-width: 800px;
+      // }
+
+      h2 {
+        margin-bottom: 84px;
+        @include xxLarge(min-width) {
+          margin-bottom: 60px;
+        }
+
+        @include xxxLarge(min-width) {
+          margin-bottom: 84px;
+        }
+      }
+
+      .comm-content {
+        a {
+          display: block;
+          &.comm-img-link {
+            margin-bottom: 40px;
+          }
+
+          &.comm-links {
+            font-size: 20px;
+            line-height: 28px;
+            text-decoration: underline;
+
+            &.join-dis {
+              color: var(--Discord-Color);
+            }
+
+            &.join-tele {
+              color: var(--Blue-Color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.coming-soon-section {
+  background: url(../images/coming-soon.png) no-repeat center center;
+  height: 40vh;
+  background-size: contain;
+  width: 100%;
+  min-height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include medium(min-width) {
+    height: 100vh;
+    background-size: cover;
+  }
+  // @include xLarge(min-width) {
+  //   background-size: contain;
+  // }
+  .inr-coming-soon {
+    .cs-heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        color: var(--Plain-White);
+        text-align: center;
+        font-size: calc(clamp(48px, 5vw + 4px, 100px));
+        line-height: 1.3;
+        max-width: 415px;
+      }
+    }
+
+    .cm-token-wrapper {
+      position: absolute;
+      right: 4%;
+      bottom: 4%;
+      text-align: right;
+      @include xLarge(min-width) {
+        right: 4%;
+        bottom: 4%;
+      }
+      img {
+        margin-bottom: 40px;
+      }
+      p {
+        color: var(--Plain-White);
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 6px;
+      }
+      h2 {
+        color: var(--Plain-White);
+        margin: 0 0;
+      }
+    }
+  }
+}
+
+.footer {
+  display: none;
+  @include xLarge(min-width) {
+    display: block;
+    background-color: #191a1c;
+    padding: 60px 0 0;
+    height: 100vh;
+    // height: 100%;
+    .inr-footer {
+      position: relative;
+      width: 100%;
+      .footer-above-sec {
+        margin-bottom: 40px;
+        width: 100%;
+
+        .footer-watermarker {
+          background: url(../images/footer-right-align.png) no-repeat top center;
+          position: absolute;
+          width: 40px;
+          height: 100%;
+          top: -50px;
+          right: 0;
+        }
+        .footer-about-content {
+          position: relative;
+          .footer-logo {
+            display: block;
+            margin-bottom: 60px;
+            max-width: 400px;
+          }
+          p {
+            color: var(--Gray-color);
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 80px;
+          }
+          .footer-car-bg {
+            img {
+              max-width: 100%;
+              mix-blend-mode: screen;
+            }
+          }
+        }
+
+        .footer-logos-sec {
+          max-width: 140px;
+          margin: 0 auto;
+          text-align: center;
+          .nitro-vertical {
+            margin-bottom: 110px;
+          }
+        }
+
+        .footer-newsletter {
+          .nitro-sign {
+            padding-bottom: 60px;
+          }
+
+          .gameOverview-title {
+            span.title-borderLine {
+              margin-bottom: 80px;
+            }
+
+            h2 {
+              color: transparent;
+              margin-bottom: 46px;
+              font-size: 40px;
+              text-shadow: -25px -30px 0 #fff, -10px 10px 0 transparent;
+              -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2%);
+              padding-left: 22px;
+            }
+          }
+          .newsletter {
+            label {
+              color: var(--Plain-White);
+              display: block;
+              line-height: 28px;
+              margin-bottom: 5px;
+              width: 100%;
+            }
+            .subscribe-nitro {
+              position: relative;
+              input {
+                background-color: var(--Input-Text-Field);
+                border: none;
+                color: var(--Plain-White);
+                padding: 22px 120px 22px 24px;
+                outline: none;
+                &::placeholder {
+                  color: var(--Plain-White);
+                }
+                &:focus {
+                  outline: none;
+                }
+              }
+              .btn-subscribe {
+                font-size: 14px;
+                height: 38px;
+                line-height: 38px;
+                padding: 0;
+                position: absolute;
+                top: 50%;
+                right: 14px;
+                transform: translateY(-50%);
+                max-width: 90px;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+
+      .footer-menu {
+        border-top: 1px solid var(--Gray-color);
+        padding: 40px 0;
+        width: 100%;
+        .inr-menu {
+          .row {
+            align-items: center;
+            .footer-nav {
+              .footer-nav-list {
+                display: flex;
+                li {
+                  color: var(--Gray-color);
+                  & + li {
+                    margin-left: 40px;
+                  }
+                  a {
+                    display: block;
+                    color: var(--Gray-color);
+                  }
+                }
+              }
+            }
+
+            .social-links {
+              .social-listing {
+                display: flex;
+                justify-content: flex-end;
+                li {
+                  & + li {
+                    margin-left: 20px;
+                  }
+                  a {
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include xxLarge(min-width) {
+    display: flex;
+    align-items: center;
+    padding: 160px 0 0;
+    .inr-footer {
+      .footer-above-sec {
+        margin-bottom: 60px;
+        .footer-about-content {
+          a.footer-logo {
+            max-width: 100%;
+          }
+          p {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 152px;
+          }
+        }
+
+        .footer-logos-sec {
+          max-width: 100%;
+          margin: 0 auto;
+        }
+
+        .footer-newsletter {
+          .nitro-sign {
+            padding-bottom: 160px;
+          }
+          .gameOverview-title {
+            h2 {
+              font-size: 52px;
+              margin-bottom: 66px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.js-video-button {
+  background-color: transparent;
+}
+.nitro-races-wrapper {
+  @include xxxLarge(max-width) {
+    display: flex;
+    flex-direction: column-reverse;
+    .gameOverview-title {
+      margin-bottom: 32px !important;
+    }
+  }
+}
+
+#nitro-game-preview-section {
+  .inr-gameOverview {
+    padding: 20px 0px;
+    @include ipad(min-width) {
+      padding: 50px 0px;
+    }
+  }
+}
+
+html,
+body {
+  -webkit-overflow-scrolling: auto;
+  overscroll-behavior: contain;
+}
+body {
+  overflow: auto;
+  position: relative;
+  height: 100%;
+}
+
+html {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.nitro-car {
+  transition: 0.3s all;
+}

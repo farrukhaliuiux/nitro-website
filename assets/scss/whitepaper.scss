@@ -1,0 +1,330 @@
+@import "./importables/mixins";
+@import "./importables/variables";
+img,
+svg {
+  max-width: 100%;
+}
+:root {
+  scroll-behavior: unset;
+
+  @include large(min-width) {
+    scroll-behavior: smooth;
+  }
+}
+body {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #14212d;
+  overflow-x: hidden;
+}
+section {
+  .wp-main {
+    padding-bottom: 40px;
+    .gp-main {
+      padding-bottom: 80px;
+      &.gp-classes {
+        padding-top: 40px;
+        .class-rating {
+          padding: 0 0 40px 50px;
+          .rp-stars {
+            display: flex;
+            span {
+              max-width: 120px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  h2 {
+    font-size: calc(clamp(28px, 2.4vw + 5px, 48px));
+    margin-bottom: calc(clamp(16px, 2vw + 5px, 48px));
+    font-weight: bold;
+    text-transform: capitalize;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    padding-block: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+    padding-bottom: 20px;
+
+    // &.overview {
+      
+    // }
+
+    // /* From https://css.glass */
+    // background: rgba(255, 255, 255, 0.48);
+    // border-radius: 16px;
+    // box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    // backdrop-filter: blur(5px);
+    // -webkit-backdrop-filter: blur(5px);
+    // border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  iframe {
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 34px;
+  }
+
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: 22px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 18px;
+    color: #14212d;
+    font-weight: 400;
+    margin-bottom: 40px;
+    opacity: 86%;
+    // letter-spacing: 1px;
+  }
+
+  ul {
+    margin-bottom: 20px;
+    li {
+      line-height: 1.8;
+      font-size: 18px;
+      // letter-spacing: 1px;
+      color: #14212d;
+    }
+  }
+
+  img {
+    margin-bottom: 40px;
+  }
+}
+.whitepaper-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.wp-left-nav {
+  width: 360px;
+  z-index: 2001;
+  height: 100vh;
+  position: fixed;
+  background-color: #f8f7f9;
+  border-right: 1px solid #e1e5e8;
+  display: none;
+
+  @include large(min-width) {
+    display: block;
+  }
+
+  .wp-sidebar-head {
+    padding: 40px 28px 32px 28px;
+  }
+
+  .wp-logo {
+    padding-bottom: 20px;
+    a {
+      display: inline-block;
+    }
+  }
+  .wp-search {
+    .sf-w {
+      position: relative;
+      &::after {
+        content: "";
+        background: url(../images/search-icon.svg);
+        display: block;
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: translateY(-50%);
+      }
+      .search-field {
+        border: 1px solid #e1e5e8;
+        padding: 10px 20px;
+        width: 100%;
+        border-radius: 6px;
+        color: #404853;
+        height: 48px;
+
+        &:hover,
+        &:focus {
+          border-color: #fa0339;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #404853;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer */
+  color: #404853;
+}
+
+::placeholder {
+  color: #404853;
+}
+
+.wp-content-wrapper {
+  padding-inline: calc(clamp(32px, 5vw + 5px, 100px));
+  position: relative !important;
+  padding-top: 20px;
+
+  @include large(min-width) {
+    flex-shrink: 1;
+    width: calc(100vw - 360px);
+    margin-left: 360px;
+    max-width: 1180px;
+    padding-top: 115px;
+    padding-bottom: 115px;
+  }
+
+  section {
+    padding-bottom: 80px;
+    max-width: 1215px;
+    &#wp-introduction {
+      padding-top: calc(clamp(40px, 5vw + 10px, 115px));
+    }
+  }
+}
+
+.nitro-sidebar-items {
+  // @include large(min-width) {
+  //   overflow-y: scroll;
+  //   overflow-x: hidden;
+  //   height: 75vh;
+  // }
+  &::-webkit-scrollbar-track {
+    background: rgba(103, 112, 126, 0.2);
+  }
+  .nav-link {
+    text-decoration: none;
+    padding: 16px 28px;
+    color: rgba(19, 34, 57, 0.5);
+    text-transform: capitalize;
+    &.nav-nav-link {
+      padding: 8px 28px;
+    }
+    &.nav-gray-link {
+      color: #505864;
+
+      &.nav-link {
+        padding: 8px 28px;
+      }
+    }
+
+    
+
+    &.active {
+      background-color: #ffffff;
+      color: #14212d;
+      position: relative;
+      font-weight: bold;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -2px;
+        height: 100%;
+        width: 4px;
+        background: #fa0339;
+        top: 0;
+      }
+    }
+  }
+}
+.nitro-logo {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+
+  a {
+    display: inline-block;
+  }
+  svg {
+    transition: 0.3s all;
+    path {
+      transition: 0.3s all;
+      transform-origin: center;
+    }
+
+    &:hover {
+      path {
+        &:first-of-type {
+          transform: rotate(45deg) scale(1.4);
+        }
+        &:last-child {
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}
+.sections-select-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 42px;
+  width: 42px;
+  background: #ddd;
+  border: 1 px solid #eee;
+  border-radius: 50%;
+  box-shadow: 10px 10px 28px -1px rgba(0, 0, 0, 0.14);
+  top: calc(clamp(14px, 1.5vw + 3px, 28px));
+  right: 28px;
+
+  @include large(min-width) {
+    display: none;
+  }
+  span.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  select {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    text-transform: capitalize;
+    &:focus {
+      box-shadow: none;
+      border-color: #fa0339;
+      outline: none;
+    }
+  }
+}
