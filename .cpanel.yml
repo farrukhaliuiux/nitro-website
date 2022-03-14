@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/nitroleague/public_html/repositories/nitro-website
+    - /bin/cp * $DEPLOYPATH
