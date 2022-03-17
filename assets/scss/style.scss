@@ -505,7 +505,9 @@ header {
   /****** New Hero Section *******/
 
   &.hero-section {
-    padding: calc(clamp(40px, 5vw + 4px, 100px)) 0;
+    padding: 110px 0;
+    background-color: #0f1320;
+    background-image: url(../images/slide-1-el-layer1.png);
     .hero-slider {
       @include medium(max-width) {
         padding: 0;
@@ -529,13 +531,15 @@ header {
               .slider-txt-section {
                 max-width: 590px;
                 h1 {
-                  font-size: 60px;
-                  line-height: 1.6;
+                  font-size: calc(clamp(1.75rem, 1.4769rem + 1.165vw, 2.875rem));
+                  margin-bottom: 16px;
+                  color: var(--Plain-White);
                 }
                 p {
                   font-size: 18px;
-                  line-height: 1.5;
-                  margin-bottom: 0;
+                  line-height: 26px;
+                  margin-bottom: 32px;
+                  color: var(--Primary400);
                 }
                 .xplor-btn {
                   font-size: 16px;
@@ -577,12 +581,11 @@ header {
                           @include medium(min-width) {
                             font-size: 24px;
                           }
-
                         }
-                        .n-current-value{
+                        .n-current-value {
                           padding-left: 12px;
                           margin-bottom: 0;
-                          color: #00BD1E;
+                          color: #00bd1e;
                           display: flex;
                           padding-left: 12px;
                           align-items: center;
@@ -596,7 +599,6 @@ header {
                         }
                       }
                     }
-
                   }
                   .nitro--caps {
                     display: flex;
@@ -653,7 +655,6 @@ header {
           .heroAvatarSwiper {
             height: 20%;
             box-sizing: border-box;
-            padding: 100px 0 10px;
             .swiper-wrapper {
               .swiper-slide {
                 width: 25%;
@@ -709,25 +710,25 @@ header {
               right: 5%;
               left: auto;
               color: #fa0339;
-              @include medium(min-width){
+              @include medium(min-width) {
                 display: block;
                 bottom: 26%;
               }
-              @include ipad(min-width){
+              @include ipad(min-width) {
                 bottom: 22%;
               }
             }
-  
+
             &.swiper-button-prev {
               bottom: 18%;
               right: 23%;
               left: unset;
-              @include medium(min-width){
+              @include medium(min-width) {
                 display: block;
                 right: 15%;
                 bottom: 26%;
               }
-              @include ipad(min-width){
+              @include ipad(min-width) {
                 right: 12%;
                 bottom: 22%;
               }
@@ -744,13 +745,9 @@ header {
               }
             }
           }
-
         }
       }
-      
-
     }
-    
   }
 }
 
@@ -891,54 +888,14 @@ header {
         }
         &:before {
           content: "";
-          background: linear-gradient(
-                to right,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 0,
-            linear-gradient(
-                to right,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 100%,
-            linear-gradient(
-                to left,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 0,
-            linear-gradient(
-                to left,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 100%,
-            linear-gradient(
-                to bottom,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 0,
-            linear-gradient(
-                to bottom,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 0,
-            linear-gradient(
-                to top,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 100%,
-            linear-gradient(
-                to top,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 100%;
+          background: linear-gradient(to right, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 0,
+            linear-gradient(to right, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 100%,
+            linear-gradient(to left, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 0,
+            linear-gradient(to left, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 100%,
+            linear-gradient(to bottom, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 0,
+            linear-gradient(to bottom, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 0,
+            linear-gradient(to top, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 100%,
+            linear-gradient(to top, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 100%;
           background-repeat: no-repeat;
           background-size: 8px 8px;
           position: absolute;
@@ -1004,8 +961,7 @@ header {
             .bnr-buttons {
               justify-content: center;
               flex-direction: row;
-              padding: calc(clamp(32px, 3vw + 6px, 110px)) 0
-                calc(clamp(32px, 3vw + 6px, 110px));
+              padding: calc(clamp(32px, 3vw + 6px, 110px)) 0 calc(clamp(32px, 3vw + 6px, 110px));
               @include ipad(min-width) {
                 justify-content: flex-start;
                 padding: calc(clamp(32px, 3vw + 6px, 110px)) 0 0;
@@ -1396,8 +1352,7 @@ header {
     background: #fafafa;
     @include medium(min-width) {
       background: url(../images/grid-bg.svg) no-repeat top center,
-        url(../images/arena-bottom.svg) no-repeat bottom right,
-        url(../images/arena-left.svg) no-repeat top left;
+        url(../images/arena-bottom.svg) no-repeat bottom right, url(../images/arena-left.svg) no-repeat top left;
       background-size: inherit;
       background-position: 100% 100%, 98% 98%, 3% 0%;
     }
@@ -1467,54 +1422,14 @@ header {
           border: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(
-                to right,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 0,
-            linear-gradient(
-                to right,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 100%,
-            linear-gradient(
-                to left,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 0,
-            linear-gradient(
-                to left,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 100%,
-            linear-gradient(
-                to bottom,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 0,
-            linear-gradient(
-                to bottom,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 0,
-            linear-gradient(
-                to top,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 100%,
-            linear-gradient(
-                to top,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 100%;
+          background: linear-gradient(to right, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 0,
+            linear-gradient(to right, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 100%,
+            linear-gradient(to left, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 0,
+            linear-gradient(to left, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 100%,
+            linear-gradient(to bottom, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 0,
+            linear-gradient(to bottom, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 0,
+            linear-gradient(to top, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 100%,
+            linear-gradient(to top, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 100%;
           background-repeat: no-repeat;
           background-size: 20px 20px;
           padding: 2px;
@@ -1608,8 +1523,7 @@ header {
   }
 
   &.the-races-section {
-    background: url(../images/bg-element-1.svg) no-repeat left
-        calc((100vw - 1440px + 303px) / 2) top 17.5vh,
+    background: url(../images/bg-element-1.svg) no-repeat left calc((100vw - 1440px + 303px) / 2) top 17.5vh,
       url(../images/bg-element-2.svg) no-repeat right 1vw bottom 1vh;
 
     .game-content {
@@ -2078,8 +1992,7 @@ header {
     background: transparent;
     @include medium(min-width) {
       background: url(../images/jangla.svg) no-repeat center,
-        url(../images/bg-element-3.svg) no-repeat left
-          calc((100vw - 1440px + 683px) / 2) top 5px;
+        url(../images/bg-element-3.svg) no-repeat left calc((100vw - 1440px + 683px) / 2) top 5px;
     }
   }
 
@@ -2089,31 +2002,31 @@ header {
       padding-left: 0;
       max-width: 100%;
       .gameOverview-title {
-          margin-bottom: 120px;
+        margin-bottom: 120px;
       }
 
       .investors-grid {
-          .inv-listing {
-              display: grid;
-              grid-template-columns: repeat(2, 1fr);
-              grid-gap: 80px;
-              align-items: center;
-              text-align: center;
-              @include medium(min-width) {
-                  grid-template-columns: repeat(3, 1fr);
-              }
-              @include large(min-width) {
-                  grid-template-columns: repeat(4, 1fr);
-              }
-              @include xLarge(min-width) {
-                  grid-template-columns: repeat(6, 1fr);
-              }
-              li {
-                  img {
-                      filter: grayscale(100%);
-                  }
-              }
+        .inv-listing {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 80px;
+          align-items: center;
+          text-align: center;
+          @include medium(min-width) {
+            grid-template-columns: repeat(3, 1fr);
           }
+          @include large(min-width) {
+            grid-template-columns: repeat(4, 1fr);
+          }
+          @include xLarge(min-width) {
+            grid-template-columns: repeat(6, 1fr);
+          }
+          li {
+            img {
+              filter: grayscale(100%);
+            }
+          }
+        }
       }
     }
   }
@@ -2268,18 +2181,15 @@ header {
   @include xLarge(min-width) {
     height: 100vh;
     min-height: 100vh;
-    background: url(../images/footer-logo-vertical.png) no-repeat top 20% center,
-      var(--Footer-Bg-Color);
+    background: url(../images/footer-logo-vertical.png) no-repeat top 20% center, var(--Footer-Bg-Color);
   }
   @include xxLarge(min-width) {
-    background: url(../images/footer-logo-vertical.png) no-repeat top 10% center,
-      var(--Footer-Bg-Color);
+    background: url(../images/footer-logo-vertical.png) no-repeat top 10% center, var(--Footer-Bg-Color);
     padding: 90px 0 0;
     background-size: 12%;
   }
   @include xxxLarge(min-width) {
-    background: url(../images/footer-logo-vertical.png) no-repeat top 20% center,
-      var(--Footer-Bg-Color);
+    background: url(../images/footer-logo-vertical.png) no-repeat top 20% center, var(--Footer-Bg-Color);
   }
   &.nitro-section {
     @include xLarge(min-width) {
@@ -2677,17 +2587,11 @@ header {
   padding: 0 !important;
 }
 
-.ml-form-formContent.horozintalForm
-  .ml-form-horizontalRow
-  .ml-input-horizontal {
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
   width: 100% !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-  .ml-form-embedWrapper
-  .ml-form-embedBody
-  .ml-form-horizontalRow
-  input {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
   padding: 22px 120px 20px 24px !important;
   background-color: #2a2f38 !important;
   border-color: #2a2f38 !important;
@@ -2701,11 +2605,7 @@ header {
   }
 }
 
-#mlb2-5160863.ml-form-embedContainer
-  .ml-form-embedWrapper
-  .ml-form-embedBody
-  .ml-form-horizontalRow
-  button.primary {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button.primary {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -2716,10 +2616,7 @@ header {
   border-radius: 2px !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-  .ml-form-embedWrapper
-  .ml-form-embedBody
-  .ml-form-formContent.horozintalForm {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
   padding: 0 0 !important;
 }
 

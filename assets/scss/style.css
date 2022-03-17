@@ -118,7 +118,8 @@ html {
   --Icon-Bg-Color: #fbfbfd;
   --Dark-Black: #040404;
   --Tag-Color: #ffc700;
-  --Slider-Bullets-Bg: #E2E8F0;
+  --Slider-Bullets-Bg: #e2e8f0;
+  --Primary400: #b8bdc4;
 }
 
 h1 {
@@ -3519,7 +3520,9 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
 }
 
 .nitro-section.hero-section {
-  padding: calc(clamp(40px, 5vw + 4px, 100px)) 0;
+  padding: 110px 0;
+  background-color: #0f1320;
+  background-image: url(../images/slide-1-el-layer1.png);
 }
 
 @media (max-width: 768px) {
@@ -3560,14 +3563,16 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
 }
 
 .nitro-section.hero-section .hero-slider .swiper.heroAvatarThumbnaiSwiper .swiper-wrapper .swiper-slide .slider-txt-section h1 {
-  font-size: 60px;
-  line-height: 1.6;
+  font-size: calc(clamp(1.75rem, 1.4769rem + 1.165vw, 2.875rem));
+  margin-bottom: 16px;
+  color: var(--Plain-White);
 }
 
 .nitro-section.hero-section .hero-slider .swiper.heroAvatarThumbnaiSwiper .swiper-wrapper .swiper-slide .slider-txt-section p {
   font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 0;
+  line-height: 26px;
+  margin-bottom: 32px;
+  color: var(--Primary400);
 }
 
 .nitro-section.hero-section .hero-slider .swiper.heroAvatarThumbnaiSwiper .swiper-wrapper .swiper-slide .slider-txt-section .xplor-btn {
@@ -3630,7 +3635,7 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
 .nitro-section.hero-section .hero-slider .swiper.heroAvatarThumbnaiSwiper .swiper-wrapper .swiper-slide .slider-txt-section .nitro-link-stats .nitro-stats .nitro-current-value .nitro-current-stats .n-current-value {
   padding-left: 12px;
   margin-bottom: 0;
-  color: #00BD1E;
+  color: #00bd1e;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3723,7 +3728,6 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   height: 20%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 100px 0 10px;
 }
 
 .nitro-section.hero-section .hero-slider .swiper.heroAvatarThumbnaiSwiper .heroAvatarSwiper .swiper-wrapper .swiper-slide {
@@ -6234,17 +6238,11 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   padding: 0 !important;
 }
 
-.ml-form-formContent.horozintalForm
-.ml-form-horizontalRow
-.ml-input-horizontal {
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
   width: 100% !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-input {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
   padding: 22px 120px 20px 24px !important;
   background-color: #2a2f38 !important;
   border-color: #2a2f38 !important;
@@ -6252,53 +6250,29 @@ input {
   font-size: 20px !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-input::-webkit-input-placeholder {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder {
   color: var(--Plain-White) !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-input:-ms-input-placeholder {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder {
   color: var(--Plain-White) !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-input::-ms-input-placeholder {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-ms-input-placeholder {
   color: var(--Plain-White) !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-input::placeholder {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::placeholder {
   color: var(--Plain-White) !important;
 }
 
 @media (max-width: 400px) {
-  #mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-input {
+  #mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
     padding: 22px 24px 20px 24px !important;
   }
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-horizontalRow
-button.primary {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button.primary {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -6310,10 +6284,7 @@ button.primary {
   border-radius: 2px !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-.ml-form-embedWrapper
-.ml-form-embedBody
-.ml-form-formContent.horozintalForm {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
   padding: 0 0 !important;
 }
 
