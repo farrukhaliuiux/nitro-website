@@ -3619,10 +3619,9 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   margin-bottom: 48px;
 }
 
-.nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide.exploreSlide {
+.nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide.avatarSlide {
   padding: 0;
-  background-color: #0f1320;
-  background-image: url(../images/slide-1-el-layer1.png);
+  background: url(../images/hero-section/avatar/slide-avatar.png) top 70px right 19% no-repeat, url(../images/hero-section/jangla-10.svg), url(../images/hero-section/avatar/avatar-pattern-bg.jpg) center/cover no-repeat;
 }
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .heroCarouselThumbsTrack {
