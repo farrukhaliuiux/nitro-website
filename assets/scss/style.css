@@ -3595,8 +3595,9 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   max-width: 590px;
 }
 
-.nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide .slider-txt-section h3, .nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide .slider-txt-section h1 {
-  font-size: calc(clamp(1.75rem, 1.4769rem + 1.165vw, 2.875rem));
+.nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide .slider-txt-section h3,
+.nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide .slider-txt-section h1 {
+  font-size: calc( clamp(1.75rem, 1.4769rem + 1.165vw, 2.875rem));
   margin-bottom: 16px;
   color: var(--Plain-White);
 }
@@ -3662,6 +3663,8 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   -webkit-backdrop-filter: blur(13.5px);
   border-radius: 0;
   border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-transition: 0.3s background;
+  transition: 0.3s background;
 }
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .heroCarouselThumbsTrack .swiper-wrapper .swiper-slide h3 {
@@ -3677,6 +3680,10 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .heroCarouselThumbsTrack .swiper-wrapper .swiper-slide.swiper-slide-thumb-active {
   opacity: 1;
+}
+
+.nitro-section.hero-section .swiper.heroHorizontalCarousel .heroCarouselThumbsTrack.light-active .swiper-slide {
+  background: #212529;
 }
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-navigation-btn {
@@ -6149,11 +6156,17 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   padding: 0 !important;
 }
 
-.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
+.ml-form-formContent.horozintalForm
+.ml-form-horizontalRow
+.ml-input-horizontal {
   width: 100% !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+input {
   padding: 22px 120px 20px 24px !important;
   background-color: #2a2f38 !important;
   border-color: #2a2f38 !important;
@@ -6161,29 +6174,53 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   font-size: 20px !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+input::-webkit-input-placeholder {
   color: var(--Plain-White) !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+input:-ms-input-placeholder {
   color: var(--Plain-White) !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-ms-input-placeholder {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+input::-ms-input-placeholder {
   color: var(--Plain-White) !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::placeholder {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+input::placeholder {
   color: var(--Plain-White) !important;
 }
 
 @media (max-width: 400px) {
-  #mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+  #mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+input {
     padding: 22px 24px 20px 24px !important;
   }
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button.primary {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-horizontalRow
+button.primary {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -6195,7 +6232,10 @@ header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing 
   border-radius: 2px !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+#mlb2-5160863.ml-form-embedContainer
+.ml-form-embedWrapper
+.ml-form-embedBody
+.ml-form-formContent.horozintalForm {
   padding: 0 0 !important;
 }
 
