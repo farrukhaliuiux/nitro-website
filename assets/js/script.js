@@ -479,22 +479,27 @@ $(document).ready(function () {
 
   // New Hero Slider Section
 
-  var heroAvatarSwiper = new Swiper(".heroAvatarSwiper", {
+  var heroCarouselThumbsTrack = new Swiper(".heroCarouselThumbsTrack", {
     spaceBetween: 10,
-    slidesPerView: 2,
+    slidesPerView: 2.2,
     freeMode: true,
+    // centeredSlides: true,
     breakpoints: {
       768: {
-        slidesPerView: 3,
+        slidesPerView: 3.5,
         spaceBetween: 10,
       },
       992: {
-        slidesPerView: 4,
+        slidesPerView: 6.5,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 7,
         spaceBetween: 10,
       },
     },
   });
-  var heroAvatarThumbnaiSwiper = new Swiper(".heroAvatarThumbnaiSwiper", {
+  var heroHorizontalCarousel = new Swiper(".heroHorizontalCarousel", {
     spaceBetween: 10,
     slidesPerView: 1,
     navigation: {
@@ -502,7 +507,7 @@ $(document).ready(function () {
       prevEl: ".swiper-button-prev",
     },
     thumbs: {
-      swiper: heroAvatarSwiper,
+      swiper: heroCarouselThumbsTrack,
     },
     pagination: {
       el: '.nitroPrime-pagination',
@@ -518,7 +523,7 @@ $(document).ready(function () {
           prevEl: ".swiper-button-prev",
         },
         thumbs: {
-          swiper: heroAvatarSwiper,
+          swiper: heroCarouselThumbsTrack,
         },
       }
     },
