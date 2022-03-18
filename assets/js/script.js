@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   // $("body").on("scroll", function () {
   //   var scroll = $(this).scrollTop();
   //   console.log(scroll);
@@ -510,8 +509,8 @@ $(document).ready(function () {
       swiper: heroCarouselThumbsTrack,
     },
     pagination: {
-      el: '.nitroPrime-pagination',
-      clickable: true
+      el: ".nitroPrime-pagination",
+      clickable: true,
     },
     breakpoints: {
       768: {
@@ -525,11 +524,13 @@ $(document).ready(function () {
         thumbs: {
           swiper: heroCarouselThumbsTrack,
         },
-      }
+      },
     },
   });
 
-
+  heroHorizontalCarousel.on("slideChange", function () {
+    console.log("slide changed");
+  });
 });
 
 $(".js-video-button").modalVideo({
