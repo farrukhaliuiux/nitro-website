@@ -528,8 +528,16 @@ $(document).ready(function () {
     },
   });
 
-  heroHorizontalCarousel.on("slideChange", function () {
-    console.log("slide changed");
+  heroHorizontalCarousel.on("slideChangeTransitionEnd", function () {
+    const isLightSlideActive = $(".light-slide").hasClass(
+      "swiper-slide-active"
+    );
+
+    if (isLightSlideActive) {
+      $(".heroCarouselThumbsTrack").addClass("light-active");
+    } else {
+      $(".heroCarouselThumbsTrack").removeClass("light-active");
+    }
   });
 });
 
