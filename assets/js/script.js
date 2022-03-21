@@ -435,12 +435,13 @@ $(document).ready(function () {
         $(".inr-nitro-wrap").removeClass("dark-blue-navbar");
         sectionTitleTween(activeSectionID);
         break;
-      case "nitro-roadmap-section":
-        paginationHideTween();
-        nitroCarMoveAwayTween();
-        sectionTitleTween(activeSectionID);
-        break;
+      // case "nitro-roadmap-section":
+      //   paginationHideTween();
+      //   nitroCarMoveAwayTween();
+      //   sectionTitleTween(activeSectionID);
+      //   break;
       case "nitro-investor-section":
+        paginationHideTween();
         $(".inr-nitro-wrap").addClass("dark-blue-navbar");
         break;
       case "nitro-play-earn-section":
