@@ -8,6 +8,31 @@ $(document).ready(function () {
   //     $("body").removeClass("scrolling");
   //   }
   // });
+  const statsRotatorTimeline = gsap.timeline({
+    repeat: -1,
+    yoyo: true,
+    epeatDelay: 2,
+  });
+
+  statsRotatorTimeline
+    .to(".stats-rotator-inner-wrapper", {
+      duration: 2,
+      y: -20,
+      delay: 1,
+      ease: "none",
+    })
+    .to(".stats-rotator-inner-wrapper", {
+      duration: 2,
+      y: -40,
+      delay: 1,
+      ease: "none",
+    })
+    .to(".stats-rotator-inner-wrapper", {
+      duration: 1,
+      y: -40,
+      delay: 1,
+      ease: "none",
+    });
 
   $(".rm-nav-items").on("click", function (e) {
     e.preventDefault();
@@ -208,33 +233,33 @@ $(document).ready(function () {
     });
   };
 
-  const carVerticalTween = () => {
-    gsap.to(".car-container", {
-      y: "10vh",
-      duration: 0.7,
-      ease: "power3.out",
-    });
-  };
+  // const carVerticalTween = () => {
+  //   gsap.to(".car-container", {
+  //     y: "10vh",
+  //     duration: 0.7,
+  //     ease: "power3.out",
+  //   });
+  // };
 
-  const playBtnHideTween = () => {
-    gsap.to(".cover-play-btn", {
-      ease: "power3.out",
-      duration: 0.2,
-      opacity: 0,
-    });
-  };
+  // const playBtnHideTween = () => {
+  //   gsap.to(".cover-play-btn", {
+  //     ease: "power3.out",
+  //     duration: 0.2,
+  //     opacity: 0,
+  //   });
+  // };
 
-  const playBtnShowTween = () => {
-    gsap.to(".cover-play-btn", {
-      ease: "power3.out",
-      duration: 0.2,
-      opacity: 1,
-    });
-  };
+  // const playBtnShowTween = () => {
+  //   gsap.to(".cover-play-btn", {
+  //     ease: "power3.out",
+  //     duration: 0.2,
+  //     opacity: 1,
+  //   });
+  // };
 
   const paginationHideTween = () => {
     gsap.to(".swiper-pagination-wrapper", {
-      ease: "power3.out",
+      ease: "none",
       duration: 0.2,
       opacity: 0,
       visibility: "hidden",
@@ -243,9 +268,10 @@ $(document).ready(function () {
 
   const paginationShowTween = () => {
     gsap.to(".swiper-pagination-wrapper", {
-      ease: "power3.out",
+      ease: "none",
       duration: 0.2,
       opacity: 1,
+      delay: 0.5,
       visibility: "visible",
     });
   };
@@ -375,20 +401,24 @@ $(document).ready(function () {
   const tweensHandler = (activeSectionID) => {
     switch (activeSectionID) {
       case "nitro-cover-section":
-        carTimeLineHandler();
-        playBtnShowTween();
+        // carTimeLineHandler();
+        // playBtnShowTween();
         paginationHideTween();
         $("body").removeClass("scrolling");
+        $(".inr-nitro-wrap").removeClass("dark-blue-navbar");
+        $(".inr-nitro-wrap").addClass("cover-area-visible");
         break;
       case "nitro-over-section":
-        carRotateTween();
-        playBtnHideTween();
+        // carRotateTween();
+        // playBtnHideTween();
         paginationShowTween();
         sectionTitleTween(activeSectionID);
         $("body").addClass("scrolling");
+        $(".inr-nitro-wrap").addClass("dark-blue-navbar");
+        $(".inr-nitro-wrap").removeClass("cover-area-visible");
         break;
       case "nitro-feature-section":
-        carVerticalTween();
+        // carVerticalTween();
         sectionTitleTween(activeSectionID);
         break;
       case "nitro-game-story-section":
@@ -479,9 +509,9 @@ $(document).ready(function () {
   // New Hero Slider Section
 
   var heroCarouselThumbsTrack = new Swiper(".heroCarouselThumbsTrack", {
-    spaceBetween: 10,
-    slidesPerView: 2.2,
-    freeMode: true,
+    spaceBetween: 16,
+    slidesPerView: "auto",
+    // freeMode: true,
     // centeredSlides: true,
     breakpoints: {
       768: {
@@ -493,7 +523,7 @@ $(document).ready(function () {
         spaceBetween: 10,
       },
       1200: {
-        slidesPerView: 7,
+        slidesPerView: 5,
         spaceBetween: 10,
       },
     },
@@ -535,7 +565,9 @@ $(document).ready(function () {
 
     if (isLightSlideActive) {
       $(".heroCarouselThumbsTrack").addClass("light-active");
+      $(".inr-nitro-wrap").addClass("light-slide-visible");
     } else {
+      $(".inr-nitro-wrap").removeClass("light-slide-visible");
       $(".heroCarouselThumbsTrack").removeClass("light-active");
     }
   });

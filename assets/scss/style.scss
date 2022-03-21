@@ -416,10 +416,10 @@ header {
                     font-family: var(--Magistral-Medium);
                   }
                   &:hover {
-                    color: var(--Torch-Red);
+                    color: var(--Torch-Red) !important;
                   }
                   &.active {
-                    color: var(--Torch-Red);
+                    color: var(--Torch-Red) !important;
                   }
                 }
               }
@@ -470,6 +470,95 @@ header {
                   }
                 }
               }
+            }
+          }
+        }
+
+        &.cover-area-visible {
+          &.light-slide-visible {
+            a.nav-link {
+              color: var(--Regular-text-color) !important;
+            }
+            .nitro-stats-wrapper {
+              .nitro-stats-upper-text,
+              .stats-rotator span,
+              .stats-rotator strong {
+                color: var(--Regular-text-color);
+              }
+            }
+          }
+          &:hover {
+            background: transparent;
+          }
+          a.nav-link {
+            color: var(--Plain-White) !important;
+          }
+        }
+        .nitro-stats-wrapper {
+          display: flex;
+          gap: 8px;
+          grid-gap: 8px;
+          margin-right: 24px;
+          align-items: baseline;
+
+          .stats-rotator-wrapper {
+            overflow: hidden;
+            height: 20px;
+          }
+
+          .nitro-stats-logo {
+            min-width: 17px;
+          }
+          .stats-rotator {
+            white-space: nowrap;
+            text-align: end;
+            strong {
+              font-family: var(--Magistral-Book);
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 1.3;
+              color: var(--Primary400);
+            }
+            span {
+              font-family: var(--Magistral-Book);
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 1.3;
+              color: var(--Plain-White);
+            }
+            &.stats-rotator-1 {
+              strong {
+                font-family: var(--Magistral-Medium);
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.3;
+                color: var(--Plain-White);
+              }
+              span {
+                font-family: var(--Magistral-Book);
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 1.3;
+                color: var(--Green) !important;
+              }
+            }
+          }
+          .nitro-stats-upper-text {
+            white-space: nowrap;
+
+            font-family: var(--Magistral-Book);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.3;
+            color: var(--Plain-White);
+
+            span {
+              color: var(--Primary400);
             }
           }
         }
@@ -536,6 +625,14 @@ header {
               padding-bottom: 230px;
               padding-top: 120px;
               justify-content: center;
+
+              &.light-slide {
+                .slider-txt-section {
+                  h3 {
+                    color: var(--Regular-text-color);
+                  }
+                }
+              }
               .slider-txt-section {
                 max-width: 590px;
                 h3,
@@ -561,6 +658,20 @@ header {
                   margin-bottom: 48px;
                 }
               }
+              &.carsParts {
+                padding: 0;
+                background: url(../images/car-parts.png) 85% center no-repeat,
+                  url(../images/car-parts-bg-layer.png) right bottom no-repeat,
+                  url(../images/car-parts-bg-diagonal.png) 90% center no-repeat,
+                  url(../images/hero-section/jangla-10.svg) center right
+                    no-repeat;
+              }
+              &.carsSlide {
+                padding: 0;
+                background: url(../images/car-slide.png) center right no-repeat,
+                  url(../images/hero-section/jangla-10.svg),
+                  url(../images/cars-red-lines.png) center right no-repeat;
+              }
               &.avatarSlide {
                 padding: 0;
                 background: url(../images/hero-section/avatar/slide-avatar.png) top 70px right 19% no-repeat,
@@ -571,6 +682,12 @@ header {
                 padding: 0;
                 background: url(../images/hero-section/land/land-block.png) right center no-repeat,
                   url(../images/hero-section/land/land-bg-abstract.svg) bottom -180px right -460px no-repeat
+                    var(--Plain-White);
+              }
+              &.guildSlide {
+                padding: 0;
+                background: url(../images/guilds.png) right center no-repeat,
+                  url(../images/Abstract.png) top left no-repeat
                     var(--Plain-White);
               }
               &.landCarParts {
@@ -588,6 +705,8 @@ header {
           position: absolute;
           left: 0;
           bottom: 40px;
+          padding-left: calc((100vw - 1440px) / 2 + 32px);
+          padding-right: 32px;
           .swiper-wrapper {
             .swiper-slide {
               opacity: 1;
@@ -614,13 +733,22 @@ header {
               }
               &.swiper-slide-thumb-active {
                 opacity: 1;
+                background: var(--Torch-Red);
+
+                h3 {
+                  color: var(--Plain-White);
+                }
               }
             }
           }
 
           &.light-active {
             .swiper-slide {
-              background: #212529;
+              background: rgba(28, 28, 28, 0.08);
+
+              h3 {
+                color: var(--Regular-text-color);
+              }
             }
           }
         }
