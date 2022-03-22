@@ -3494,6 +3494,16 @@ header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible.light-slide-v
   color: var(--Regular-text-color);
 }
 
+header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible .nitro-stats-wrapper {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible .header-cta {
+  display: none;
+}
+
 header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible:hover {
   background: transparent;
 }
@@ -3503,9 +3513,7 @@ header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible a.nav-link {
 }
 
 header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   gap: 8px;
   grid-gap: 8px;
   margin-right: 24px;

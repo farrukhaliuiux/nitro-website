@@ -487,6 +487,12 @@ header {
               }
             }
           }
+          .nitro-stats-wrapper {
+            display: flex !important;
+          }
+          .header-cta {
+            display: none;
+          }
           &:hover {
             background: transparent;
           }
@@ -495,7 +501,7 @@ header {
           }
         }
         .nitro-stats-wrapper {
-          display: flex;
+          display: none;
           gap: 8px;
           grid-gap: 8px;
           margin-right: 24px;
