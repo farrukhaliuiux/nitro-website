@@ -15,19 +15,19 @@ $(document).ready(function () {
   });
 
   statsRotatorTimeline
-    .to(".stats-rotator-inner-wrapper", {
+    .to(".stats-desktop-rotator .stats-rotator-inner-wrapper", {
       duration: 2,
       y: -20,
       delay: 1,
       ease: "none",
     })
-    .to(".stats-rotator-inner-wrapper", {
+    .to(".stats-desktop-rotator .stats-rotator-inner-wrapper", {
       duration: 2,
       y: -40,
       delay: 1,
       ease: "none",
     })
-    .to(".stats-rotator-inner-wrapper", {
+    .to(".stats-desktop-rotator .stats-rotator-inner-wrapper", {
       duration: 1,
       y: -40,
       delay: 1,

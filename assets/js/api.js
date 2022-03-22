@@ -9,72 +9,103 @@ fetch(url)
     data.map(function (item) {
       let nitroPrice = item.current_price;
       let nitroVolumn = item.total_volume;
-      let mkcapPrice = (nitroPrice * 43333333);
+      let mkcapPrice = nitroPrice * 43333333;
       let rMkt = mkcapPrice.toFixed(0);
       let nitroPercent = item.price_change_percentage_24h;
       let nitroFinalPres = nitroPercent.toFixed(1);
 
-      let nitroPriceElements = document.getElementsByClassName("nitroleague-price");
-      for(var i = 0, length = nitroPriceElements.length; i < length; i++) {
+      const statsRotator1Strong = document.querySelectorAll(
+        ".stats-rotator-1 strong"
+      );
+      statsRotator1Strong.forEach((stat1Strong) => {
+        stat1Strong.textContent = `$${nitroPrice}`;
+      });
+
+      const statsRotator1Span = document.querySelectorAll(
+        ".stats-rotator-1 span"
+      );
+      statsRotator1Span.forEach((stat1Span) => {
+        stat1Span.textContent = `+${nitroFinalPres}%`;
+      });
+
+      const statsRotator2Span = document.querySelectorAll(
+        ".stats-rotator-2 span"
+      );
+      statsRotator2Span.forEach((stat2Span) => {
+        stat2Span.textContent = `$${rMkt}`;
+      });
+
+      const statsRotator3Span = document.querySelectorAll(
+        ".stats-rotator-3 span"
+      );
+      statsRotator3Span.forEach((stat3Span) => {
+        stat3Span.textContent = `$${nitroVolumn}`;
+      });
+
+      let nitroPriceElements =
+        document.getElementsByClassName("nitroleague-price");
+      for (var i = 0, length = nitroPriceElements.length; i < length; i++) {
         nitroPriceElements[i].textContent = "$" + nitroPrice;
       }
 
       let nitroVolumeElements = document.getElementsByClassName("nitro-volumn");
-      for(var i = 0, length = nitroVolumeElements.length; i < length; i++) {
+      for (var i = 0, length = nitroVolumeElements.length; i < length; i++) {
         nitroVolumeElements[i].textContent = "$" + nitroVolumn;
       }
 
       let nitroMKTPrice = document.getElementsByClassName("nitroMKT-price");
-      for(var i = 0, length = nitroMKTPrice.length; i < length; i++) {
+      for (var i = 0, length = nitroMKTPrice.length; i < length; i++) {
         nitroMKTPrice[i].textContent = "$" + rMkt;
       }
 
-      if(Math.sign(nitroFinalPres) === -1) {
-        let nitroPreWithoutMinus = nitroFinalPres.toString().replace('-','');
+      if (Math.sign(nitroFinalPres) === -1) {
+        let nitroPreWithoutMinus = nitroFinalPres.toString().replace("-", "");
         let svgElement = document.getElementsByClassName("percent-svg");
-        for(var i = 0, length = svgElement.length; i < length; i++) {
-          svgElement[i].style.transform = 'rotate(180deg)';
+        for (var i = 0, length = svgElement.length; i < length; i++) {
+          svgElement[i].style.transform = "rotate(180deg)";
         }
 
         let percent = document.getElementsByClassName("n-current-value");
-        for(var i = 0, length = percent.length; i < length; i++) {
+        for (var i = 0, length = percent.length; i < length; i++) {
           percent[i].style.color = "#fa0339";
         }
 
-        let svgElementPath = document.getElementsByClassName("percent-svg-path");
-        for(var i = 0, length = svgElementPath.length; i < length; i++) {
+        let svgElementPath =
+          document.getElementsByClassName("percent-svg-path");
+        for (var i = 0, length = svgElementPath.length; i < length; i++) {
           svgElementPath[i].setAttribute("fill", "#fa0339");
         }
 
-        let nitroCoinPercent = document.getElementsByClassName("nitroCoin-percent");
-        for(var i = 0, length = nitroCoinPercent.length; i < length; i++) {
+        let nitroCoinPercent =
+          document.getElementsByClassName("nitroCoin-percent");
+        for (var i = 0, length = nitroCoinPercent.length; i < length; i++) {
           nitroCoinPercent[i].textContent = nitroPreWithoutMinus + "%";
         }
-
       } else {
-        let nitroPreWithoutMinus = nitroFinalPres.toString().replace('-','');
+        let nitroPreWithoutMinus = nitroFinalPres.toString().replace("-", "");
 
         let svgElement = document.getElementsByClassName("percent-svg");
-        for(var i = 0, length = svgElement.length; i < length; i++) {
-          svgElement[i].style.transform = 'rotate(0deg)';
+        for (var i = 0, length = svgElement.length; i < length; i++) {
+          svgElement[i].style.transform = "rotate(0deg)";
         }
 
         let percent = document.getElementsByClassName("n-current-value");
-        for(var i = 0, length = percent.length; i < length; i++) {
+        for (var i = 0, length = percent.length; i < length; i++) {
           percent[i].style.color = "#00BD1E";
         }
 
-        let svgElementPath = document.getElementsByClassName("percent-svg-path");
-        for(var i = 0, length = svgElementPath.length; i < length; i++) {
+        let svgElementPath =
+          document.getElementsByClassName("percent-svg-path");
+        for (var i = 0, length = svgElementPath.length; i < length; i++) {
           svgElementPath[i].setAttribute("fill", "#00BD1E");
         }
 
-        let nitroCoinPercent = document.getElementsByClassName("nitroCoin-percent");
-        for(var i = 0, length = nitroCoinPercent.length; i < length; i++) {
+        let nitroCoinPercent =
+          document.getElementsByClassName("nitroCoin-percent");
+        for (var i = 0, length = nitroCoinPercent.length; i < length; i++) {
           nitroCoinPercent[i].textContent = nitroPreWithoutMinus + "%";
         }
       }
-
     });
   });
 
@@ -91,67 +122,73 @@ function refresh() {
       data.map(function (item) {
         let nitroPrice = item.current_price;
         let nitroVolumn = item.total_volume;
-        let mkcapPrice = (nitroPrice * 43333333);
+        let mkcapPrice = nitroPrice * 43333333;
         let rMkt = mkcapPrice.toFixed(0);
         let nitroPercent = item.price_change_percentage_24h;
         let nitroFinalPres = nitroPercent.toFixed(1);
 
-        let nitroPriceElements = document.getElementsByClassName("nitroleague-price");
-        for(var i = 0, length = nitroPriceElements.length; i < length; i++) {
+        let nitroPriceElements =
+          document.getElementsByClassName("nitroleague-price");
+        for (var i = 0, length = nitroPriceElements.length; i < length; i++) {
           nitroPriceElements[i].textContent = "$" + nitroPrice;
         }
 
-        let nitroVolumeElements = document.getElementsByClassName("nitro-volumn");
-        for(var i = 0, length = nitroVolumeElements.length; i < length; i++) {
+        let nitroVolumeElements =
+          document.getElementsByClassName("nitro-volumn");
+        for (var i = 0, length = nitroVolumeElements.length; i < length; i++) {
           nitroVolumeElements[i].textContent = "$" + nitroVolumn;
         }
 
         let nitroMKTPrice = document.getElementsByClassName("nitroMKT-price");
-        for(var i = 0, length = nitroMKTPrice.length; i < length; i++) {
+        for (var i = 0, length = nitroMKTPrice.length; i < length; i++) {
           nitroMKTPrice[i].textContent = "$" + rMkt;
         }
 
-        if(Math.sign(nitroFinalPres) === -1) {
-          let nitroPreWithoutMinus = nitroFinalPres.toString().replace('-','');
+        if (Math.sign(nitroFinalPres) === -1) {
+          let nitroPreWithoutMinus = nitroFinalPres.toString().replace("-", "");
           let svgElement = document.getElementsByClassName("percent-svg");
-          for(var i = 0, length = svgElement.length; i < length; i++) {
-            svgElement[i].style.transform = 'rotate(180deg)';
+          for (var i = 0, length = svgElement.length; i < length; i++) {
+            svgElement[i].style.transform = "rotate(180deg)";
           }
 
           let percent = document.getElementsByClassName("n-current-value");
-          for(var i = 0, length = percent.length; i < length; i++) {
+          for (var i = 0, length = percent.length; i < length; i++) {
             percent[i].style.color = "#fa0339";
           }
 
-          let svgElementPath = document.getElementsByClassName("percent-svg-path");
-          for(var i = 0, length = svgElementPath.length; i < length; i++) {
+          let svgElementPath =
+            document.getElementsByClassName("percent-svg-path");
+          for (var i = 0, length = svgElementPath.length; i < length; i++) {
             svgElementPath[i].setAttribute("fill", "#fa0339");
           }
 
-          let nitroCoinPercent = document.getElementsByClassName("nitroCoin-percent");
-          for(var i = 0, length = nitroCoinPercent.length; i < length; i++) {
+          let nitroCoinPercent =
+            document.getElementsByClassName("nitroCoin-percent");
+          for (var i = 0, length = nitroCoinPercent.length; i < length; i++) {
             nitroCoinPercent[i].textContent = nitroPreWithoutMinus + "%";
           }
         } else {
-          let nitroPreWithoutMinus = nitroFinalPres.toString().replace('-','');
+          let nitroPreWithoutMinus = nitroFinalPres.toString().replace("-", "");
 
           let svgElement = document.getElementsByClassName("percent-svg");
-          for(var i = 0, length = svgElement.length; i < length; i++) {
-            svgElement[i].style.transform = 'rotate(0deg)';
+          for (var i = 0, length = svgElement.length; i < length; i++) {
+            svgElement[i].style.transform = "rotate(0deg)";
           }
 
           let percent = document.getElementsByClassName("n-current-value");
-          for(var i = 0, length = percent.length; i < length; i++) {
+          for (var i = 0, length = percent.length; i < length; i++) {
             percent[i].style.color = "#00BD1E";
           }
 
-          let svgElementPath = document.getElementsByClassName("percent-svg-path");
-          for(var i = 0, length = svgElementPath.length; i < length; i++) {
+          let svgElementPath =
+            document.getElementsByClassName("percent-svg-path");
+          for (var i = 0, length = svgElementPath.length; i < length; i++) {
             svgElementPath[i].setAttribute("fill", "#00BD1E");
           }
 
-          let nitroCoinPercent = document.getElementsByClassName("nitroCoin-percent");
-          for(var i = 0, length = nitroCoinPercent.length; i < length; i++) {
+          let nitroCoinPercent =
+            document.getElementsByClassName("nitroCoin-percent");
+          for (var i = 0, length = nitroCoinPercent.length; i < length; i++) {
             nitroCoinPercent[i].textContent = nitroPreWithoutMinus + "%";
           }
         }

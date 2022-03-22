@@ -119,8 +119,9 @@ html {
   --Dark-Black: #040404;
   --Tag-Color: #ffc700;
   --Slider-Bullets-Bg: #e2e8f0;
-  --Primary300: #B8BDC4;
+  --Primary300: #b8bdc4;
   --Primary400: #b8bdc4;
+  --Primary5: #f3f4f5;
   --Green: #00bd1e;
 }
 
@@ -3266,13 +3267,18 @@ header .navbar .nitro-container .inr-nitro-wrap .mobile-navbar .nav-buttons {
           align-items: center;
   margin: 18px 0;
   padding-right: 10px;
-  display: none;
 }
 
 @media (min-width: 1200px) {
   header .navbar .nitro-container .inr-nitro-wrap .mobile-navbar .nav-buttons {
     display: none;
   }
+}
+
+header .navbar .nitro-container .inr-nitro-wrap .mobile-navbar .nav-buttons a {
+  padding: 0 16px !important;
+  height: auto;
+  max-height: unset !important;
 }
 
 header .navbar .nitro-container .inr-nitro-wrap .mobile-navbar .nav-buttons .btn {
@@ -3503,16 +3509,31 @@ header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible a.nav-link {
   color: var(--Plain-White) !important;
 }
 
+@media (min-width: 1200px) {
+  header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible .nitro-stats-wrapper {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  header .navbar .nitro-container .inr-nitro-wrap.cover-area-visible .header-cta {
+    display: none;
+  }
+}
+
 header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   gap: 8px;
   grid-gap: 8px;
   margin-right: 24px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+}
+
+@media (max-width: 1200px) {
+  header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper {
+    display: none !important;
+  }
 }
 
 header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .stats-rotator-wrapper {
@@ -3577,6 +3598,100 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 
 header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stats-upper-text span {
   color: var(--Primary400);
+}
+
+.nitro-stats-topbar {
+  position: absolute;
+  z-index: 1000;
+  background: var(--Primary5);
+  width: 100%;
+  top: 62px;
+  padding: 8px 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+}
+
+@media (max-width: 1199px) {
+  .nitro-stats-topbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.nitro-stats-topbar .nitro-stats-logo {
+  margin-right: 8px;
+  min-width: 16px;
+}
+
+.nitro-stats-topbar .nitro-stats-left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nitro-stats-topbar .nitro-stats-upper-text {
+  font-family: var(--Magistral-Book);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--Regular-text-color);
+}
+
+.nitro-stats-topbar .nitro-stats-upper-text span {
+  color: var(--Primary400);
+}
+
+.nitro-stats-topbar .stats-desktop-rotator {
+  overflow: hidden;
+  height: 20px;
+}
+
+.nitro-stats-topbar .stats-rotator {
+  white-space: nowrap;
+  text-align: end;
+}
+
+.nitro-stats-topbar .stats-rotator strong {
+  font-family: var(--Magistral-Book);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--Primary400);
+}
+
+.nitro-stats-topbar .stats-rotator span {
+  font-family: var(--Magistral-Book);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--Regular-text-color);
+}
+
+.nitro-stats-topbar .stats-rotator.stats-rotator-1 strong {
+  font-family: var(--Magistral-Medium);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--Regular-text-color);
+}
+
+.nitro-stats-topbar .stats-rotator.stats-rotator-1 span {
+  font-family: var(--Magistral-Book);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.3;
+  color: var(--Green) !important;
 }
 
 .nitro-section {
@@ -3757,8 +3872,14 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
   position: absolute;
   left: 0;
   bottom: 40px;
-  padding-left: calc((100vw - 1440px) / 2 + 32px);
   padding-right: 32px;
+  padding-left: 32px;
+}
+
+@media (min-width: 1440px) {
+  .nitro-section.hero-section .swiper.heroHorizontalCarousel .heroCarouselThumbsTrack {
+    padding-left: calc((100vw - 1440px) / 2 + 32px);
+  }
 }
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .heroCarouselThumbsTrack .swiper-wrapper .swiper-slide {
@@ -5481,7 +5602,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 }
 
 .game-over-section.investor-section .game-content .investors-grid .inv-listing li {
-  border: 1px solid #E7E9EB;
+  border: 1px solid #e7e9eb;
   width: 100%;
   height: 100%;
   -webkit-box-align: center;
@@ -6260,7 +6381,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 
 .investor-section {
   padding-top: 140px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .ml-form-embedWrapper.embedForm {
