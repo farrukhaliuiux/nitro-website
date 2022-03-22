@@ -14,16 +14,33 @@ fetch(url)
       let nitroPercent = item.price_change_percentage_24h;
       let nitroFinalPres = nitroPercent.toFixed(1);
 
-      document.querySelector(
+      const statsRotator1Strong = document.querySelectorAll(
         ".stats-rotator-1 strong"
-      ).textContent = `$${nitroPrice}`;
-      document.querySelector(
+      );
+      statsRotator1Strong.forEach((stat1Strong) => {
+        stat1Strong.textContent = `$${nitroPrice}`;
+      });
+
+      const statsRotator1Span = document.querySelectorAll(
         ".stats-rotator-1 span"
-      ).textContent = `+${nitroFinalPres}%`;
-      document.querySelector(".stats-rotator-2 span").textContent = `$${rMkt}`;
-      document.querySelector(
+      );
+      statsRotator1Span.forEach((stat1Span) => {
+        stat1Span.textContent = `+${nitroFinalPres}%`;
+      });
+
+      const statsRotator2Span = document.querySelectorAll(
+        ".stats-rotator-2 span"
+      );
+      statsRotator2Span.forEach((stat2Span) => {
+        stat2Span.textContent = `$${rMkt}`;
+      });
+
+      const statsRotator3Span = document.querySelectorAll(
         ".stats-rotator-3 span"
-      ).textContent = `$${nitroVolumn}`;
+      );
+      statsRotator3Span.forEach((stat3Span) => {
+        stat3Span.textContent = `$${nitroVolumn}`;
+      });
 
       let nitroPriceElements =
         document.getElementsByClassName("nitroleague-price");
