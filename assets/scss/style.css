@@ -119,6 +119,7 @@ html {
   --Dark-Black: #040404;
   --Tag-Color: #ffc700;
   --Slider-Bullets-Bg: #e2e8f0;
+  --Primary300: #B8BDC4;
   --Primary400: #b8bdc4;
   --Green: #00bd1e;
 }
@@ -3734,7 +3735,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide.carsSlide {
   padding: 0;
-  background: url(../images/car-slide.png) center right no-repeat, url(../images/hero-section/jangla-10.svg), url(../images/cars-red-lines.png) center right no-repeat;
+  background: url(../images/car-slide.png) center right no-repeat, url(../images/hero-section/jangla-10.svg), url(../images/cars-red-lines.png) center right no-repeat, url(../images/hero-section/cars/cars-bg-1.png) center/cover no-repeat;
 }
 
 .nitro-section.hero-section .swiper.heroHorizontalCarousel .swiper-wrapper.heroCarouselSlidesTrack .swiper-slide.avatarSlide {
@@ -5451,7 +5452,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 }
 
 .game-over-section.investor-section .game-content .gameOverview-title {
-  margin-bottom: 120px;
+  margin-bottom: 40px;
 }
 
 .game-over-section.investor-section .game-content .investors-grid .inv-listing {
@@ -5459,7 +5460,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
-  grid-gap: 80px;
+  grid-gap: 24px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -5485,6 +5486,24 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
   }
+}
+
+.game-over-section.investor-section .game-content .investors-grid .inv-listing li {
+  border: 1px solid #E7E9EB;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 22px;
+  background: #fff;
+  border-radius: 2px;
 }
 
 .game-over-section.investor-section .game-content .investors-grid .inv-listing li img {
@@ -5701,20 +5720,20 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
   .footer {
     height: 100vh;
     min-height: 100vh;
-    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center center, var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
   }
 }
 
 @media (min-width: 1440px) {
   .footer {
-    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center center, var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
     padding: 90px 0 0;
   }
 }
 
 @media (min-width: 1680px) {
   .footer {
-    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center center, var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
   }
 }
 
@@ -6248,7 +6267,8 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 }
 
 .investor-section {
-  padding: 0;
+  padding-top: 140px;
+  background-color: #FAFAFA;
 }
 
 .ml-form-embedWrapper.embedForm {

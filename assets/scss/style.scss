@@ -678,7 +678,8 @@ header {
                 padding: 0;
                 background: url(../images/car-slide.png) center right no-repeat,
                   url(../images/hero-section/jangla-10.svg),
-                  url(../images/cars-red-lines.png) center right no-repeat;
+                  url(../images/cars-red-lines.png) center right no-repeat,
+                  url(../images/hero-section/cars/cars-bg-1.png) center/cover no-repeat;
               }
               &.avatarSlide {
                 padding: 0;
@@ -2161,14 +2162,14 @@ header {
       padding-left: 0;
       max-width: 100%;
       .gameOverview-title {
-        margin-bottom: 120px;
+        margin-bottom: 40px;
       }
 
       .investors-grid {
         .inv-listing {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          grid-gap: 80px;
+          grid-gap: 24px;
           align-items: center;
           text-align: center;
           @include medium(min-width) {
@@ -2181,6 +2182,15 @@ header {
             grid-template-columns: repeat(6, 1fr);
           }
           li {
+            border: 1px solid #E7E9EB;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: 22px;
+            background: #fff;
+            border-radius: 2px;
             img {
               filter: grayscale(100%);
             }
@@ -2340,26 +2350,14 @@ header {
   @include xLarge(min-width) {
     height: 100vh;
     min-height: 100vh;
-    background: url(../images/footer-right-align.svg) no-repeat center right
-        20px,
-      url(../images/footer-top-align.png) no-repeat top right 270px,
-      url(../images/footer-logo-vertical.png) no-repeat center center,
-      var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
   }
   @include xxLarge(min-width) {
-    background: url(../images/footer-right-align.svg) no-repeat center right
-        20px,
-      url(../images/footer-top-align.png) no-repeat top right 270px,
-      url(../images/footer-logo-vertical.png) no-repeat center center,
-      var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
     padding: 90px 0 0;
   }
   @include xxxLarge(min-width) {
-    background: url(../images/footer-right-align.svg) no-repeat center right
-        20px,
-      url(../images/footer-top-align.png) no-repeat top right 270px,
-      url(../images/footer-logo-vertical.png) no-repeat center center,
-      var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
   }
   &.nitro-section {
     @include xLarge(min-width) {
@@ -2745,7 +2743,8 @@ header {
 }
 
 .investor-section {
-  padding: 0;
+  padding-top: 140px;
+  background-color: #FAFAFA;
 }
 
 .ml-form-embedWrapper.embedForm {
