@@ -5489,7 +5489,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 }
 
 .game-over-section.investor-section .game-content .investors-grid .inv-listing li {
-  border: 1px solid #E7E9EB;
+  border: 1px solid #e7e9eb;
   width: 100%;
   height: 100%;
   -webkit-box-align: center;
@@ -6268,7 +6268,7 @@ header .navbar .nitro-container .inr-nitro-wrap .nitro-stats-wrapper .nitro-stat
 
 .investor-section {
   padding-top: 140px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .ml-form-embedWrapper.embedForm {

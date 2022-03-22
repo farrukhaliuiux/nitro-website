@@ -679,7 +679,8 @@ header {
                 background: url(../images/car-slide.png) center right no-repeat,
                   url(../images/hero-section/jangla-10.svg),
                   url(../images/cars-red-lines.png) center right no-repeat,
-                  url(../images/hero-section/cars/cars-bg-1.png) center/cover no-repeat;
+                  url(../images/hero-section/cars/cars-bg-1.png) center/cover
+                    no-repeat;
               }
               &.avatarSlide {
                 padding: 0;
@@ -2182,7 +2183,7 @@ header {
             grid-template-columns: repeat(6, 1fr);
           }
           li {
-            border: 1px solid #E7E9EB;
+            border: 1px solid #e7e9eb;
             width: 100%;
             height: 100%;
             align-items: center;
@@ -2350,14 +2351,26 @@ header {
   @include xLarge(min-width) {
     height: 100vh;
     min-height: 100vh;
-    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right
+        20px,
+      url(../images/footer-top-align.png) no-repeat top right 270px,
+      url(../images/footer-logo-vertical.png) no-repeat center left 45%,
+      var(--Footer-Bg-Color);
   }
   @include xxLarge(min-width) {
-    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right
+        20px,
+      url(../images/footer-top-align.png) no-repeat top right 270px,
+      url(../images/footer-logo-vertical.png) no-repeat center left 45%,
+      var(--Footer-Bg-Color);
     padding: 90px 0 0;
   }
   @include xxxLarge(min-width) {
-    background: url(../images/footer-right-align.svg) no-repeat center right 20px, url(../images/footer-top-align.png) no-repeat top right 270px, url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
+    background: url(../images/footer-right-align.svg) no-repeat center right
+        20px,
+      url(../images/footer-top-align.png) no-repeat top right 270px,
+      url(../images/footer-logo-vertical.png) no-repeat center left 45%,
+      var(--Footer-Bg-Color);
   }
   &.nitro-section {
     @include xLarge(min-width) {
@@ -2744,7 +2757,7 @@ header {
 
 .investor-section {
   padding-top: 140px;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
 }
 
 .ml-form-embedWrapper.embedForm {
