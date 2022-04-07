@@ -520,11 +520,11 @@ $(document).ready(function () {
         spaceBetween: 10,
       },
       992: {
-        slidesPerView: 6.5,
+        slidesPerView: 7,
         spaceBetween: 10,
       },
       1200: {
-        slidesPerView: 5,
+        slidesPerView: 7,
         spaceBetween: 10,
       },
     },

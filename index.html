@@ -1,561 +1,477 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-    <title>Nitro League</title>
 
-    <meta
-      name="description"
-      content="The world has evolved. Technology is the best we could have ever envisioned; we are prosperous and peaceful. This prosperity has come through great change."
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <title>Nitro League</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://nitroleague.com/" />
-    <meta
-      property="og:title"
-      content="Get your NITRO and enter the world of blockchain in the Nitro League Arena."
-    />
-    <meta
-      property="og:description"
-      content="The world has evolved. Technology is the best we could have ever envisioned; we are prosperous and peaceful. This prosperity has come through great change."
-    />
-    <meta property="og:image" content="https://nitroleague.com/og.png" />
+  <meta name="description"
+    content="The world has evolved. Technology is the best we could have ever envisioned; we are prosperous and peaceful. This prosperity has come through great change." />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://nitroleague.com/" />
-    <meta property="twitter:title" content="Nitro League" />
-    <meta
-      property="twitter:description"
-      content="The world has evolved. Technology is the best we could have ever envisioned; we are prosperous and peaceful. This prosperity has come through great change."
-    />
-    <meta property="twitter:image" content="https://nitroleague.com/og.png" />
-    <!-- Google Tag Manager -->
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MCCRWS5");
-    </script>
-    <!-- End Google Tag Manager -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
-    <link rel="stylesheet" href="./assets/scss/modal-video.css" />
-    <link rel="stylesheet" href="./assets/scss/style.css" />
-  </head>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://nitroleague.com/" />
+  <meta property="og:title" content="Get your NITRO and enter the world of blockchain in the Nitro League Arena." />
+  <meta property="og:description"
+    content="The world has evolved. Technology is the best we could have ever envisioned; we are prosperous and peaceful. This prosperity has come through great change." />
+  <meta property="og:image" content="https://nitroleague.com/og.png" />
 
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        title="Google tag manager"
-        src="https://www.googletagmanager.com/ns.html?id=GTM-MCCRWS5"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <header>
-      <nav class="navbar navbar-light">
-        <div class="nitro-container header-container">
-          <div class="inr-nitro-wrap cover-area-visible">
-            <div class="mobile-navbar">
-              <div class="logo-branding">
-                <a class="navbar-brand" href="/index.html">
-                  <img src="assets/images/logo.svg" alt="Nitro Logo" />
-                </a>
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              </div>
-              <div class="nav-buttons">
-                <a href="/marketplace.html" class="btn btn-market"
-                  >Marketplace</a
-                >
-              </div>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://nitroleague.com/" />
+  <meta property="twitter:title" content="Nitro League" />
+  <meta property="twitter:description"
+    content="The world has evolved. Technology is the best we could have ever envisioned; we are prosperous and peaceful. This prosperity has come through great change." />
+  <meta property="twitter:image" content="https://nitroleague.com/og.png" />
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-MCCRWS5");
+  </script>
+  <!-- End Google Tag Manager -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/scss/modal-video.css" />
+  <link rel="stylesheet" href="./assets/scss/style.css" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe title="Google tag manager" src="https://www.googletagmanager.com/ns.html?id=GTM-MCCRWS5" height="0"
+      width="0" style="display: none; visibility: hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav class="navbar navbar-light">
+      <div class="nitro-container header-container">
+        <div class="inr-nitro-wrap cover-area-visible">
+          <div class="mobile-navbar">
+            <div class="logo-branding">
+              <a class="navbar-brand" href="/index.html">
+                <img src="assets/images/logo.svg" alt="Nitro Logo" />
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
             </div>
-            <div
-              class="collapse navbar-collapse navbar-listing"
-              id="navbarSupportedContent"
-            >
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0 nitro-navbar">
-                <li class="nav-item">
-                  <a
-                    class="
-                      nav-link
-                      reset-style
-                      nitro-section-btn
-                      story-section-btn
-                    "
-                    aria-current="page"
-                    data-section-name="story"
-                    href="index.html#story"
-                    >Game</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link reset-style" href="#">Roadmap</a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link reset-style"
-                    aria-current="page"
-                    href="/whitepaper.html"
-                    >Whitepaper</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link reset-style"
-                    aria-current="page"
-                    href="/tokenomics.html"
-                    >Tokenomics</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link reset-style"
-                    aria-current="page"
-                    href="/team.html"
-                    >Team</a
-                  >
-                </li>
-              </ul>
-              <div class="d-flex">
-                <div class="nitro-stats-wrapper">
-                  <div class="nitro-stats-logo">
-                    <img
-                      src="./assets/images/nitro-rounded.svg"
-                      alt="Nitro rounded logo"
-                    />
+            <div class="nav-buttons">
+              <a href="/marketplace.html" class="btn btn-market">Marketplace</a>
+            </div>
+          </div>
+          <div class="collapse navbar-collapse navbar-listing" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nitro-navbar">
+              <li class="nav-item">
+                <a class=" nav-link reset-style nitro-section-btn story-section-btn" aria-current="page"
+                  data-section-name="story" href="index.html#story">Game</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link reset-style" href="#">Roadmap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link reset-style" aria-current="page" href="/whitepaper.html">Whitepaper</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link reset-style" aria-current="page" href="/tokenomics.html">Tokenomics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link reset-style" aria-current="page" href="/team.html">Team</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link reset-style" aria-current="page" href="/download-app.html">Download</a>
+              </li>
+            </ul>
+            <div class="d-flex position-relative nitro-stats-dd-wrapper">
+              <div class="nitro-stats-wrapper" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="nitro-stats-logo">
+                  <img src="./assets/images/nitro-rounded.svg" alt="Nitro rounded logo" />
+                </div>
+                <div class="stats-desktop-rotator">
+                  <div class="nitro-stats-upper-text">
+                    NITRO
+                    <span>Nitro League</span>
                   </div>
-                  <div class="stats-desktop-rotator">
-                    <div class="nitro-stats-upper-text">
-                      NITRO
-                      <span>Nitro League</span>
-                    </div>
-                    <div class="stats-rotator-wrapper">
-                      <div class="stats-rotator-inner-wrapper">
-                        <div class="stats-rotator stats-rotator-1">
-                          <strong>--</strong>
-                          <span>--</span>
-                        </div>
-                        <div class="stats-rotator stats-rotator-2">
-                          <strong>Mkt. Cap:</strong>
-                          <span>--</span>
-                        </div>
-                        <div class="stats-rotator stats-rotator-3">
-                          <strong>24H Vol:</strong>
-                          <span>--</span>
-                        </div>
+                  <div class="stats-rotator-wrapper">
+                    <div class="stats-rotator-inner-wrapper">
+                      <div class="stats-rotator stats-rotator-1">
+                        <strong>--</strong>
+                        <span>--</span>
+                      </div>
+                      <div class="stats-rotator stats-rotator-2">
+                        <strong>Mkt. Cap:</strong>
+                        <span>--</span>
+                      </div>
+                      <div class="stats-rotator stats-rotator-3">
+                        <strong>24H Vol:</strong>
+                        <span>--</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <ul class="side-navbar">
-                  <li class="side-navbar-item">
-                    <a href="https://t.me/nitroleaguegame" target="_blank">
-                      <span class="dark-hd-icon">
-                        <svg
-                          width="17"
-                          height="16"
-                          viewBox="0 0 17 16"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M12.8938 15.8252L8.98403 12.5618L6.7928 14.905C6.66759 15.0192 3.53925 15.0762 3.40464 15.0762C6.101 15.0762 5.89753 14.93 5.79736 14.634L4.24785 9.29469L0.403812 7.93223C0.169038 7.85734 0.0344336 7.66474 0 7.358C0 7.05127 0.134604 3.84084 0.403812 3.72314C10.9217 2.23986 16.2151 0 16.2839 0C16.406 0 16.5344 0.0641998 16.6627 0.192599C16.7911 0.320999 16.8505 0.488631 16.8411 0.691931L14.1616 15.251C14.0708 15.7503 13.8079 16 13.3696 16C13.1974 16 13.0409 15.9429 12.8938 15.8252ZM6.59246 10.486C11.4006 5.54258 13.811 3.05662 13.8141 3.02452C13.8204 2.99242 13.8235 2.97102 13.8235 2.95676C13.8235 2.84262 13.7515 2.78556 13.6044 2.78556C13.57 2.78556 10.7621 4.82211 5.17756 8.89166L6.35456 13.2929L6.59246 10.486Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </span>
-                    </a>
-                  </li>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" target="_blank"
+                    href="https://quickswap.exchange/#/swap?inputCurrency=0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270&outputCurrency=0x695FC8B80F344411F34bDbCb4E621aA69AdA384b">Buy
+                    Via Quickswap</a></li>
+                <li><a class="dropdown-item" target="_blank"
+                    href="https://app.uniswap.org/#/swap?use=v2&outputCurrency=0x0335a7610d817aeca1bebbefbd392ecc2ed587b8&inputCurrency=ETH&chain=mainnet">Buy
+                    Via Uniswap</a></li>
+              </ul>
+              <ul class="side-navbar">
+                <li class="side-navbar-item">
+                  <a href="https://t.me/nitroleaguegame" target="_blank">
+                    <span class="dark-hd-icon">
+                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.8938 15.8252L8.98403 12.5618L6.7928 14.905C6.66759 15.0192 3.53925 15.0762 3.40464 15.0762C6.101 15.0762 5.89753 14.93 5.79736 14.634L4.24785 9.29469L0.403812 7.93223C0.169038 7.85734 0.0344336 7.66474 0 7.358C0 7.05127 0.134604 3.84084 0.403812 3.72314C10.9217 2.23986 16.2151 0 16.2839 0C16.406 0 16.5344 0.0641998 16.6627 0.192599C16.7911 0.320999 16.8505 0.488631 16.8411 0.691931L14.1616 15.251C14.0708 15.7503 13.8079 16 13.3696 16C13.1974 16 13.0409 15.9429 12.8938 15.8252ZM6.59246 10.486C11.4006 5.54258 13.811 3.05662 13.8141 3.02452C13.8204 2.99242 13.8235 2.97102 13.8235 2.95676C13.8235 2.84262 13.7515 2.78556 13.6044 2.78556C13.57 2.78556 10.7621 4.82211 5.17756 8.89166L6.35456 13.2929L6.59246 10.486Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
 
-                  <li class="side-navbar-item">
-                    <a href="http://discord.gg/nitroleague" target="_blank">
-                      <span class="dark-hd-icon">
-                        <svg
-                          width="17"
-                          height="13"
-                          viewBox="0 0 17 13"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.3912 1.07763C13.3077 0.578841 12.1458 0.211357 10.9309 0.00088291C10.9088 -0.00317917 10.8867 0.00697218 10.8753 0.0272754C10.7259 0.293919 10.5604 0.641778 10.4444 0.915194C9.13779 0.718936 7.83784 0.718936 3.55798 0.915194C6.44204 0.635701 3.27051 0.293919 6.12041 0.0272754C6.10901 0.0076496 6.08691 -0.00250175 6.06479 0.00088291C4.8506 0.210684 3.68869 0.578169 2.6045 1.07763C2.59511 1.08169 2.58706 1.08846 2.58173 1.09725C0.377819 4.40058 -0.225923 7.62272 0.0702526 10.8049C0.0715927 10.8205 0.0803037 10.8354 0.0923653 10.8448C1.54644 11.9161 2.95496 12.5665 4.33732 12.9976C4.35945 13.0044 4.38289 12.9963 4.39697 12.978C4.72397 12.53 5.01546 12.0576 5.26538 11.5608C5.28013 11.5318 5.26605 11.4972 5.2359 11.4857C4.77355 11.3098 4.3333 11.0952 3.90981 10.8516C3.87631 10.832 3.87363 10.7839 3.90445 10.7609C3.99356 10.6939 4.08271 10.6242 4.1678 10.5538C4.1832 10.5409 4.20465 10.5382 4.22275 10.5464C7.00491 11.8207 10.0169 11.8207 12.7663 10.5464C12.7844 10.5376 12.8058 10.5403 12.8219 10.5531C12.907 10.6235 12.9961 10.6939 13.0859 10.7609C13.1167 10.7839 13.1147 10.832 13.0812 10.8516C12.6577 11.1 12.2175 11.3098 11.7544 11.4851C11.7243 11.4966 11.7109 11.5318 11.7256 11.5608C11.9809 12.0569 12.2724 12.5293 12.5934 12.9773C12.6068 12.9963 12.6309 13.0044 12.653 12.9976C14.0421 12.5665 15.4506 11.9161 16.9047 10.8448C16.9174 10.8354 16.9255 10.8211 16.9268 10.8056C17.2813 7.12662 16.3331 3.93091 14.4133 1.09793C14.4086 1.08846 14.4006 1.08169 14.3912 1.07763ZM5.68085 8.86728C4.84323 8.86728 4.15305 8.09578 4.15305 7.14829C4.15305 6.2008 4.82984 5.42929 5.68085 5.42929C6.53854 5.42929 7.22203 6.20757 7.20862 7.14829C7.20862 8.09578 6.53183 8.86728 5.68085 8.86728ZM11.3296 8.86728C10.492 8.86728 9.80184 8.09578 9.80184 7.14829C9.80184 6.2008 10.4786 5.42929 11.3296 5.42929C12.1873 5.42929 12.8708 6.20757 12.8574 7.14829C12.8574 8.09578 12.1873 8.86728 11.3296 8.86728Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </span>
-                    </a>
-                  </li>
+                <li class="side-navbar-item">
+                  <a href="http://discord.gg/nitroleague" target="_blank">
+                    <span class="dark-hd-icon">
+                      <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.3912 1.07763C13.3077 0.578841 12.1458 0.211357 10.9309 0.00088291C10.9088 -0.00317917 10.8867 0.00697218 10.8753 0.0272754C10.7259 0.293919 10.5604 0.641778 10.4444 0.915194C9.13779 0.718936 7.83784 0.718936 3.55798 0.915194C6.44204 0.635701 3.27051 0.293919 6.12041 0.0272754C6.10901 0.0076496 6.08691 -0.00250175 6.06479 0.00088291C4.8506 0.210684 3.68869 0.578169 2.6045 1.07763C2.59511 1.08169 2.58706 1.08846 2.58173 1.09725C0.377819 4.40058 -0.225923 7.62272 0.0702526 10.8049C0.0715927 10.8205 0.0803037 10.8354 0.0923653 10.8448C1.54644 11.9161 2.95496 12.5665 4.33732 12.9976C4.35945 13.0044 4.38289 12.9963 4.39697 12.978C4.72397 12.53 5.01546 12.0576 5.26538 11.5608C5.28013 11.5318 5.26605 11.4972 5.2359 11.4857C4.77355 11.3098 4.3333 11.0952 3.90981 10.8516C3.87631 10.832 3.87363 10.7839 3.90445 10.7609C3.99356 10.6939 4.08271 10.6242 4.1678 10.5538C4.1832 10.5409 4.20465 10.5382 4.22275 10.5464C7.00491 11.8207 10.0169 11.8207 12.7663 10.5464C12.7844 10.5376 12.8058 10.5403 12.8219 10.5531C12.907 10.6235 12.9961 10.6939 13.0859 10.7609C13.1167 10.7839 13.1147 10.832 13.0812 10.8516C12.6577 11.1 12.2175 11.3098 11.7544 11.4851C11.7243 11.4966 11.7109 11.5318 11.7256 11.5608C11.9809 12.0569 12.2724 12.5293 12.5934 12.9773C12.6068 12.9963 12.6309 13.0044 12.653 12.9976C14.0421 12.5665 15.4506 11.9161 16.9047 10.8448C16.9174 10.8354 16.9255 10.8211 16.9268 10.8056C17.2813 7.12662 16.3331 3.93091 14.4133 1.09793C14.4086 1.08846 14.4006 1.08169 14.3912 1.07763ZM5.68085 8.86728C4.84323 8.86728 4.15305 8.09578 4.15305 7.14829C4.15305 6.2008 4.82984 5.42929 5.68085 5.42929C6.53854 5.42929 7.22203 6.20757 7.20862 7.14829C7.20862 8.09578 6.53183 8.86728 5.68085 8.86728ZM11.3296 8.86728C10.492 8.86728 9.80184 8.09578 9.80184 7.14829C9.80184 6.2008 10.4786 5.42929 11.3296 5.42929C12.1873 5.42929 12.8708 6.20757 12.8574 7.14829C12.8574 8.09578 12.1873 8.86728 11.3296 8.86728Z"
+                          fill="white" />
+                      </svg>
+                    </span>
+                  </a>
+                </li>
 
-                  <li class="side-navbar-item header-cta">
-                    <a href="/marketplace.html" class="btn btn-market"
-                      >Marketplace</a
-                    >
+                <li class="side-navbar-item header-cta">
+                  <a href="/marketplace.html" class="btn btn-market">Marketplace</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="nitro-stats-topbar">
+    <div class="nitro-stats-left d-flex">
+      <div class="nitro-stats-logo">
+        <img src="./assets/images/nitro-rounded.svg" alt="Nitro rounded logo" />
+      </div>
+      <div class="nitro-stats-upper-text">
+        NITRO
+        <span>Nitro League</span>
+      </div>
+    </div>
+    <div class="stats-desktop-rotator">
+      <div class="stats-rotator-wrapper">
+        <div class="stats-rotator-inner-wrapper">
+          <div class="stats-rotator stats-rotator-1">
+            <strong>--</strong>
+            <span>--</span>
+          </div>
+          <div class="stats-rotator stats-rotator-2">
+            <strong>Mkt. Cap:</strong>
+            <span>--</span>
+          </div>
+          <div class="stats-rotator stats-rotator-3">
+            <strong>24H Vol:</strong>
+            <span>--</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swiper mySwiper homepage-swiper">
+    <div class="swiper-wrapper homepage-swiper-wrapper">
+      <div class="swiper-slide">
+        <section class="nitro-section hero-section" id="nitro-cover-section" data-tilt>
+          <div class="swiper heroHorizontalCarousel">
+            <div class="swiper-wrapper heroCarouselSlidesTrack">
+
+              <div class="swiper-slide exploreSlide">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h1>Explore</h1>
+                    <p>
+                      Get your NITRO and enter the world of Play to Earn racing in the Nitro League.
+                    </p>
+                    <a href="/marketplace.html" class="btn">Marketplace</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide carsSlide">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h1>Cars</h1>
+                    <p>
+                      Get your NITRO and enter the world of Play to Earn
+                      Racing in the Nitro League.
+                    </p>
+                    <a href="#" class="btn">Explore cars</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide carsParts">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h3>Car Parts</h3>
+                    <p>
+                      Get your NITRO and enter the world of Play to Earn
+                      Racing in the Nitro League.
+                    </p>
+                    <a href="#" class="btn">Explore car parts</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide landSlide light-slide">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h3>Land</h3>
+                    <p>
+                      Get your NITRO and enter the world of Play to Earn
+                      Racing in the Nitro League.
+                    </p>
+                    <a href="#" class="btn">Explore land</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h3>Buildings</h3>
+                    <p>
+                      Get your NITRO and enter the world of Play to EarnRacing
+                      in the Nitro League.
+                    </p>
+                    <a href="#" class="btn">Explore buildings</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide avatarSlide">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h3>Avatars</h3>
+                    <p>
+                      Get your NITRO and enter the world of Play to Earn
+                      Racing in the Nitro League.
+                    </p>
+                    <a href="#" class="btn">Explore avatars</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide guildSlide light-slide">
+                <div class="nitro-container">
+                  <div class="slider-txt-section text-start">
+                    <h3>Guilds</h3>
+                    <p>
+                      Get your NITRO and enter the world of Play to Earn
+                      Racing in the Nitro League.
+                    </p>
+                    <a href="#" class="btn">Explore guilds</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div thumbsSlider="" class="swiper heroCarouselThumbsTrack d-none d-md-block">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <h3>Explore</h3>
+                </div>
+                <div class="swiper-slide">
+                  <h3>Cars</h3>
+                </div>
+                <div class="swiper-slide">
+                  <h3>Car Parts</h3>
+                </div>
+                <div class="swiper-slide">
+                  <h3>Land</h3>
+                </div>
+                <div class="swiper-slide">
+                  <h3>Buildings</h3>
+                </div>
+                <div class="swiper-slide">
+                  <h3>Avatars</h3>
+                </div>
+                <div class="swiper-slide">
+                  <h3>Guilds</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="swiper-slide">
+        <section class="nitro-section game-over-section intro-section" id="nitro-over-section">
+          <div class="nitro-container">
+            <div class="inr-gameOverview">
+              <div class="game-content">
+                <div class="gameOverview-title">
+                  <span class="title-borderLine"></span>
+                  <h2 id="game-over" class="nitro-section-title">
+                    In the year 3050
+                  </h2>
+                </div>
+                <p class="nitro-mb-60 caption-text nitro-section-desc">
+                  The world has evolved. Technology is the best we could have
+                  ever envisioned; This prosperity has come through great
+                  change. Nations no longer exist and the world is now ruled
+                  by clans. Disputes are no longer settled by conflict and
+                  war. Status, honor and wealth are now earned by racing in
+                  the Nitro League Arena.
+                </p>
+                <h5>Are you ready to race?</h5>
+              </div>
+            </div>
+            <!-- <div class="banner-section">
+                <div class="inr-bnr-section">
+                  <div class="banner-heading">
+                    <div class="car-container">
+                      <img src="/assets/images/bnr-car.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>  -->
+          </div>
+          <div class="nitro-outlined-text-img">
+            <img src="./assets/images/nitro-left.png" alt="nitro outlined text img" />
+          </div>
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <section class="
+              nitro-section
+              game-over-section
+              feature-section
+              align-items-center
+            " id="nitro-feature-section">
+          <div class="nitro-container">
+            <div class="inr-gameOverview">
+              <div class="game-content">
+                <div class="gameOverview-title feature-title">
+                  <span class="title-borderLine"></span>
+                  <h2>Features</h2>
+                </div>
+                <ul class="row align-items-start features-listing">
+                  <li class="col-md-6 col-lg-4 nitro-mb-40">
+                    <img src="assets/images/earn-fea.svg" alt="Play To Earn" />
+                    <h4>Play to Earn</h4>
+                    <p>
+                      Winning a match brings REP - reputation points, scales
+                      up the XP - experience level, & unlocks BLUEPRINTS to
+                      build cars.
+                    </p>
+                  </li>
+                  <li class="col-md-6 col-lg-4 nitro-mb-40">
+                    <img src="assets/images/nft-fea.svg" alt="NFT Upgrades" />
+                    <h4>NFT Upgrades</h4>
+                    <p>
+                      Upgrade your vehicles to make them unique or faster in
+                      the race and increase their value in the marketplace.
+                    </p>
+                  </li>
+                  <li class="col-md-6 col-lg-4 nitro-mb-40">
+                    <img src="assets/images/drive-fea.svg" alt="Drive Tribe" />
+                    <h4>Drive Tribe</h4>
+                    <p>
+                      NFT owners can race on their own or sponsor other
+                      players with a DRIVE TRIBE scholarship - earning both
+                      the owner and the driver REP, XP and rewards.
+                    </p>
+                  </li>
+                  <li class="col-md-6 col-lg-4 nitro-mb-40">
+                    <img src="assets/images/meta-fea.svg" alt="Metaverse Linked" />
+                    <h4>Metaverse Linked</h4>
+                    <p>
+                      Manage your profile as a racer, collector, shopkeeper,
+                      or any of the other roles available in the Nitro
+                      metaverse. Bring in your punk, vlfect, or ape andadd
+                      them as the skin on your car, display them in your
+                      garage or make it your identity!
+                    </p>
+                  </li>
+                  <li class="col-md-6 col-lg-4 nitro-mb-40">
+                    <img src="assets/images/rewards-fea.svg" alt="New Rewards Mechanic" />
+                    <h4>New Rewards Mechanics</h4>
+                    <p>
+                      Rewards can be gained in all game modes. All game
+                      rewards are ERC20 variable supply tokens, i.e. XP, REP &
+                      TICKETS.
+                    </p>
+                  </li>
+                  <li class="col-md-6 col-lg-4 nitro-mb-0">
+                    <img src="assets/images/daos-fea.svg" alt="DAOS, Tracks, Leagues" />
+                    <h4>DAOS, Tracks, Leagues</h4>
+                    <p>
+                      NITRO ownership allows holders to create and join DAOs-
+                      create your own clan, design tracks, organise events,
+                      tournaments and more!
+                    </p>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <div class="nitro-stats-topbar">
-      <div class="nitro-stats-left d-flex">
-        <div class="nitro-stats-logo">
-          <img
-            src="./assets/images/nitro-rounded.svg"
-            alt="Nitro rounded logo"
-          />
-        </div>
-        <div class="nitro-stats-upper-text">
-          NITRO
-          <span>Nitro League</span>
-        </div>
+        </section>
       </div>
-      <div class="stats-desktop-rotator">
-        <div class="stats-rotator-wrapper">
-          <div class="stats-rotator-inner-wrapper">
-            <div class="stats-rotator stats-rotator-1">
-              <strong>--</strong>
-              <span>--</span>
-            </div>
-            <div class="stats-rotator stats-rotator-2">
-              <strong>Mkt. Cap:</strong>
-              <span>--</span>
-            </div>
-            <div class="stats-rotator stats-rotator-3">
-              <strong>24H Vol:</strong>
-              <span>--</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="swiper mySwiper homepage-swiper">
-      <div class="swiper-wrapper homepage-swiper-wrapper">
-        <div class="swiper-slide">
-          <section
-            class="nitro-section hero-section"
-            id="nitro-cover-section"
-            data-tilt
-          >
-            <div class="swiper heroHorizontalCarousel">
-              <div class="swiper-wrapper heroCarouselSlidesTrack">
-                <div class="swiper-slide carsSlide">
-                  <div class="nitro-container">
-                    <div class="slider-txt-section text-start">
-                      <h1>Cars</h1>
-                      <p>
-                        Get your NITRO and enter the world of Play to Earn
-                        Racing in the Nitro League.
-                      </p>
-                      <a href="/marketplace.html" class="btn">Marketplace</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide carsParts">
-                  <div class="nitro-container">
-                    <div class="slider-txt-section text-start">
-                      <h3>Car Parts</h3>
-                      <p>
-                        Get your NITRO and enter the world of Play to Earn
-                        Racing in the Nitro League.
-                      </p>
-                      <a href="/marketplace.html" class="btn">Marketplace</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide landSlide light-slide">
-                  <div class="nitro-container">
-                    <div class="slider-txt-section text-start">
-                      <h3>Land</h3>
-                      <p>
-                        Get your NITRO and enter the world of Play to Earn
-                        Racing in the Nitro League.
-                      </p>
-                      <a href="/marketplace.html" class="btn">Marketplace</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="nitro-container">
-                    <div class="slider-txt-section text-start">
-                      <h3>Buildings</h3>
-                      <p>
-                        Get your NITRO and enter the world of Play to EarnRacing
-                        in the Nitro League.
-                      </p>
-                      <a href="/marketplace.html" class="btn">Marketplace</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide avatarSlide">
-                  <div class="nitro-container">
-                    <div class="slider-txt-section text-start">
-                      <h3>Avatars</h3>
-                      <p>
-                        Get your NITRO and enter the world of Play to Earn
-                        Racing in the Nitro League.
-                      </p>
-                      <a href="/marketplace.html" class="btn">Marketplace</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="swiper-slide guildSlide light-slide">
-                  <div class="nitro-container">
-                    <div class="slider-txt-section text-start">
-                      <h3>Guilds</h3>
-                      <p>
-                        Get your NITRO and enter the world of Play to Earn
-                        Racing in the Nitro League.
-                      </p>
-                      <a href="/marketplace.html" class="btn">Marketplace</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                thumbsSlider=""
-                class="swiper heroCarouselThumbsTrack d-none d-md-block"
-              >
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <h3>Cars</h3>
-                  </div>
-                  <div class="swiper-slide">
-                    <h3>Car Parts</h3>
-                  </div>
-                  <div class="swiper-slide">
-                    <h3>Land</h3>
-                  </div>
-                  <div class="swiper-slide">
-                    <h3>Buildings</h3>
-                  </div>
-                  <div class="swiper-slide">
-                    <h3>Avatars</h3>
-                  </div>
-                  <div class="swiper-slide">
-                    <h3>Guilds</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-
-        <div class="swiper-slide">
-          <section
-            class="nitro-section game-over-section intro-section"
-            id="nitro-over-section"
-          >
-            <div class="nitro-container">
-              <div class="inr-gameOverview">
-                <div class="game-content">
-                  <div class="gameOverview-title">
-                    <span class="title-borderLine"></span>
-                    <h2 id="game-over" class="nitro-section-title">
-                      In the year 3050
-                    </h2>
-                  </div>
-                  <p class="nitro-mb-60 caption-text nitro-section-desc">
-                    The world has evolved. Technology is the best we could have
-                    ever envisioned; This prosperity has come through great
-                    change. Nations no longer exist and the world is now ruled
-                    by clans. Disputes are no longer settled by conflict and
-                    war. Status, honor and wealth are now earned by racing in
-                    the Nitro League Arena.
-                  </p>
-                  <h5>Are you ready to race?</h5>
-                </div>
-              </div>
-            </div>
-            <div class="nitro-outlined-text-img">
-              <img
-                src="./assets/images/nitro-left.png"
-                alt="nitro outlined text img"
-              />
-            </div>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section
-            class="
-              nitro-section
-              game-over-section
-              feature-section
-              align-items-center
-            "
-            id="nitro-feature-section"
-          >
-            <div class="nitro-container">
-              <div class="inr-gameOverview">
-                <div class="game-content">
-                  <div class="gameOverview-title feature-title">
-                    <span class="title-borderLine"></span>
-                    <h2>Features</h2>
-                  </div>
-                  <ul class="row align-items-start features-listing">
-                    <li class="col-md-6 col-lg-4 nitro-mb-40">
-                      <img
-                        src="assets/images/earn-fea.svg"
-                        alt="Play To Earn"
-                      />
-                      <h4>Play to Earn</h4>
-                      <p>
-                        Winning a match brings REP - reputation points, scales
-                        up the XP - experience level, & unlocks BLUEPRINTS to
-                        build cars.
-                      </p>
-                    </li>
-                    <li class="col-md-6 col-lg-4 nitro-mb-40">
-                      <img src="assets/images/nft-fea.svg" alt="NFT Upgrades" />
-                      <h4>NFT Upgrades</h4>
-                      <p>
-                        Upgrade your vehicles to make them unique or faster in
-                        the race and increase their value in the marketplace.
-                      </p>
-                    </li>
-                    <li class="col-md-6 col-lg-4 nitro-mb-40">
-                      <img
-                        src="assets/images/drive-fea.svg"
-                        alt="Drive Tribe"
-                      />
-                      <h4>Drive Tribe</h4>
-                      <p>
-                        NFT owners can race on their own or sponsor other
-                        players with a DRIVE TRIBE scholarship - earning both
-                        the owner and the driver REP, XP and rewards.
-                      </p>
-                    </li>
-                    <li class="col-md-6 col-lg-4 nitro-mb-40">
-                      <img
-                        src="assets/images/meta-fea.svg"
-                        alt="Metaverse Linked"
-                      />
-                      <h4>Metaverse Linked</h4>
-                      <p>
-                        Manage your profile as a racer, collector, shopkeeper,
-                        or any of the other roles available in the Nitro
-                        metaverse. Bring in your punk, vlfect, or ape andadd
-                        them as the skin on your car, display them in your
-                        garage or make it your identity!
-                      </p>
-                    </li>
-                    <li class="col-md-6 col-lg-4 nitro-mb-40">
-                      <img
-                        src="assets/images/rewards-fea.svg"
-                        alt="New Rewards Mechanic"
-                      />
-                      <h4>New Rewards Mechanics</h4>
-                      <p>
-                        Rewards can be gained in all game modes. All game
-                        rewards are ERC20 variable supply tokens, i.e. XP, REP &
-                        TICKETS.
-                      </p>
-                    </li>
-                    <li class="col-md-6 col-lg-4 nitro-mb-0">
-                      <img
-                        src="assets/images/daos-fea.svg"
-                        alt="DAOS, Tracks, Leagues"
-                      />
-                      <h4>DAOS, Tracks, Leagues</h4>
-                      <p>
-                        NITRO ownership allows holders to create and join DAOs-
-                        create your own clan, design tracks, organise events,
-                        tournaments and more!
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section
-            class="
+      <div class="swiper-slide">
+        <section class="
               nitro-section
               game-over-section game-story-section
               align-items-center
-            "
-            id="nitro-game-story-section"
-          >
-            <!-- <div class="game-story-overlay"> -->
-            <div class="nitro-container">
-              <div class="inr-gameOverview">
-                <div class="game-content">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6 d-flex flex-column nitro-mb-40">
-                      <div class="gameOverview-title story-title">
-                        <span class="title-borderLine"></span>
-                        <h2>The Arena</h2>
-                      </div>
-                      <p
-                        class="
+            " id="nitro-game-story-section">
+          <!-- <div class="game-story-overlay"> -->
+          <div class="nitro-container">
+            <div class="inr-gameOverview">
+              <div class="game-content">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 d-flex flex-column nitro-mb-40">
+                    <div class="gameOverview-title story-title">
+                      <span class="title-borderLine"></span>
+                      <h2>The Arena</h2>
+                    </div>
+                    <p class="
                           arena-content
                           caption-text
                           mb-0 mb-md-5
                           nitro-section-desc
-                        "
-                      >
-                        The Arena is where legends are born. Drivers represent
-                        their clans, racing for victory, wealth and status as
-                        billions watch what unfolds. The fate of every clans’
-                        future depends on what happens in the grand arena of the
-                        Nitro League
-                      </p>
-                      <h5>Experience a new era of racing.</h5>
-                    </div>
-                    <div class="col-sm-8 col-lg-6">
-                      <div class="story-video">
-                        <div class="video-img-border">
-                          <div class="video-thumbnail">
-                            <div class="video-thumbnail-widgets"></div>
-                            <div class="img-reveal-wrapper">
-                              <div class="img-reveal-overlay"></div>
-                              <img src="assets/images/the-arena.png" alt="" />
-                            </div>
+                        ">
+                      The Arena is where legends are born. Drivers represent
+                      their clans, racing for victory, wealth and status as
+                      billions watch what unfolds. The fate of every clans’
+                      future depends on what happens in the grand arena of the
+                      Nitro League
+                    </p>
+                    <h5>Experience a new era of racing.</h5>
+                  </div>
+                  <div class="col-sm-8 col-lg-6">
+                    <div class="story-video">
+                      <div class="video-img-border">
+                        <div class="video-thumbnail">
+                          <div class="video-thumbnail-widgets"></div>
+                          <div class="img-reveal-wrapper">
+                            <div class="img-reveal-overlay"></div>
+                            <img src="assets/images/the-arena.png" alt="" />
                           </div>
                         </div>
                       </div>
@@ -564,84 +480,76 @@
                 </div>
               </div>
             </div>
-            <!-- </div> -->
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section
-            class="
+          </div>
+          <!-- </div> -->
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <section class="
               nitro-section
               game-over-section game-story-section game-presection
-            "
-            id="nitro-game-preview-section"
-          >
-            <div class="nitro-container">
-              <div class="inr-gameOverview">
-                <div class="game-content">
-                  <div class="gameOverview-title game-preTitle">
-                    <span class="title-borderLine"></span>
-                    <h2 id="game-story" class="nitro-section-title">
-                      Game Preview
-                    </h2>
-                    <p class="nitro-preview-text mw-680 nitro-section-desc">
-                      Players can collect Nitro League cars, race them online,
-                      trade them on any NFT marketplace or showcase them across
-                      the metaverse. Take them into Terra Virtua, Decentraland
-                      or other metaverse spaces!
-                    </p>
-                    <p class="nitro-preview-text mw-680 nitro-section-desc">
-                      Choose your clan and enter the race to earn REP, XP and
-                      more. Upgrade your vehicle and brand it from avatars
-                      throughout the metaverse. Lock NITRO to turbocharge your
-                      progress and race to glory!
-                    </p>
-                  </div>
+            " id="nitro-game-preview-section">
+          <div class="nitro-container">
+            <div class="inr-gameOverview">
+              <div class="game-content">
+                <div class="gameOverview-title game-preTitle">
+                  <span class="title-borderLine"></span>
+                  <h2 id="game-story" class="nitro-section-title">
+                    Game Preview
+                  </h2>
+                  <p class="nitro-preview-text mw-680 nitro-section-desc">
+                    Players can collect Nitro League cars, race them online,
+                    trade them on any NFT marketplace or showcase them across
+                    the metaverse. Take them into Terra Virtua, Decentraland
+                    or other metaverse spaces!
+                  </p>
+                  <p class="nitro-preview-text mw-680 nitro-section-desc">
+                    Choose your clan and enter the race to earn REP, XP and
+                    more. Upgrade your vehicle and brand it from avatars
+                    throughout the metaverse. Lock NITRO to turbocharge your
+                    progress and race to glory!
+                  </p>
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section
-            class="
+          </div>
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <section class="
               nitro-section
               game-over-section game-story-section
               the-races-section
               align-items-center
-            "
-            id="nitro-races-section"
-          >
-            <div class="nitro-container">
-              <div class="inr-gameOverview">
-                <div class="game-content">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6 d-flex flex-column nitro-mb-40">
-                      <div class="gameOverview-title story-title">
-                        <span class="title-borderLine"></span>
-                        <h2>The Races</h2>
-                      </div>
-                      <p
-                        class="
+            " id="nitro-races-section">
+          <div class="nitro-container">
+            <div class="inr-gameOverview">
+              <div class="game-content">
+                <div class="row align-items-center">
+                  <div class="col-lg-6 d-flex flex-column nitro-mb-40">
+                    <div class="gameOverview-title story-title">
+                      <span class="title-borderLine"></span>
+                      <h2>The Races</h2>
+                    </div>
+                    <p class="
                           arena-content
                           caption-text
                           mb-5
                           nitro-section-desc
-                        "
-                      >
-                        Nitro League hosts racing events both in game and within
-                        the community. Owners pay entry fees in NITRO to race
-                        their NFT cars against other players for prizes.
-                      </p>
-                      <h5>Let the race begin!</h5>
-                    </div>
-                    <div class="col-sm-8 col-lg-6">
-                      <div class="story-video">
-                        <div class="video-img-border">
-                          <div class="video-thumbnail">
-                            <div class="img-reveal-wrapper">
-                              <div class="img-reveal-overlay"></div>
-                              <img src="assets/images/the-races.png" alt="" />
-                            </div>
+                        ">
+                      Nitro League hosts racing events both in game and within
+                      the community. Owners pay entry fees in NITRO to race
+                      their NFT cars against other players for prizes.
+                    </p>
+                    <h5>Let the race begin!</h5>
+                  </div>
+                  <div class="col-sm-8 col-lg-6">
+                    <div class="story-video">
+                      <div class="video-img-border">
+                        <div class="video-thumbnail">
+                          <div class="img-reveal-wrapper">
+                            <div class="img-reveal-overlay"></div>
+                            <img src="assets/images/the-races.png" alt="" />
                           </div>
                         </div>
                       </div>
@@ -650,539 +558,331 @@
                 </div>
               </div>
             </div>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section
-            class="
+          </div>
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <section class="
               nitro-section
               game-over-section
               pEarn-section
               align-items-center
-            "
-            id="nitro-play-earn-section"
-          >
-            <div class="nitro-container">
-              <div class="inr-gameOverview row">
-                <div class="col-lg-7 align-self-center">
-                  <div class="game-content">
-                    <div class="gameOverview-title story-title">
-                      <span class="title-borderLine"></span>
-                      <h2>Play to Earn</h2>
-                    </div>
-                    <p class="nitro-section-desc">
-                      NITRO unlocks a whole host of access and benefits. Buy
-                      NITRO or win NITRO as a prize.
-                    </p>
-                    <div class="nitro-earn-box">
-                      <div class="">
-                        <h4>Marketplace</h4>
-                        <ul class="market-listing">
-                          <li class="mlist-item">
-                            Sell or auction any items rewarded or earned
-                          </li>
-                          <li class="mlist-item">
-                            Swap NFTs with other players
-                          </li>
-                          <li class="mlist-item">
-                            Sell any NFT vehicle or parts you own
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="">
-                        <h4 class="nitro-mt-40">Racing</h4>
-                        <ul class="market-listing racing-listing">
-                          <li class="mlist-item">
-                            Participate in single play, mutli-player as well as
-                            clan races
-                          </li>
-                          <li class="mlist-item">
-                            Join in exclusive races and earn rewards at
-                            event-based races
-                          </li>
-                          <li class="mlist-item">
-                            Win new items that you can trade or sell
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-5">
-                  <div class="roadmap-wrapper">
-                    <img
-                      class="roadmap-wrapper-map-img"
-                      src="assets/images/road-map.png"
-                      alt="Road Map"
-                    />
-                    <img
-                      class="nitro-car"
-                      src="assets/images/earn-car.png"
-                      alt="Earn Car"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <section
-            class="
-              nitro-section
-              game-over-section
-              investor-section
-              align-items-center
-            "
-            id="nitro-investor-section"
-          >
-            <div class="nitro-container">
-              <div class="inr-gameOverview">
+            " id="nitro-play-earn-section">
+          <div class="nitro-container">
+            <div class="inr-gameOverview row">
+              <div class="col-lg-7 align-self-center">
                 <div class="game-content">
                   <div class="gameOverview-title story-title">
                     <span class="title-borderLine"></span>
-                    <h2>Investors</h2>
+                    <h2>Play to Earn</h2>
                   </div>
-                  <div class="investors-grid">
-                    <ul class="inv-listing">
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-01.png"
-                          alt="Axia8"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-02.png"
-                          alt="Skyman"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-03.png"
-                          alt="Mashable"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-04.png"
-                          alt="Extra Watts"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-05.png"
-                          alt="Yolo"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-06.png"
-                          alt="Play It Forward"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-07.png"
-                          alt="Infinity Ventures Crypto"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-08.png"
-                          alt="Huobi"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-09.png"
-                          alt="Yuild Guild"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-10.png"
-                          alt="Unix"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-11.png"
-                          alt="Double Peak"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-12.png"
-                          alt="LD Capital"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-13.png"
-                          alt="YGG SEA"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-14.png"
-                          alt="Insignius Capital"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-15.png"
-                          alt="NGC Ventures"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-16.png"
-                          alt="Follow The Seed"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-17.png"
-                          alt="Skyman"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-18.png"
-                          alt="Skyman"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-19.png"
-                          alt="Skyman"
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src="assets/images/investors/investor-20.png"
-                          alt="Skyman"
-                        />
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+                  <p class="nitro-section-desc">
+                    NITRO unlocks a whole host of access and benefits. Buy
+                    NITRO or win NITRO as a prize.
+                  </p>
+                  <div class="nitro-earn-box">
+                    <div class="">
+                      <h4>Marketplace</h4>
+                      <ul class="market-listing">
+                        <li class="mlist-item">
+                          Sell or auction any items rewarded or earned
+                        </li>
+                        <li class="mlist-item">
+                          Swap NFTs with other players
+                        </li>
+                        <li class="mlist-item">
+                          Sell any NFT vehicle or parts you own
+                        </li>
+                      </ul>
+                    </div>
 
-        <div class="swiper-slide">
-          <section
-            class="
-              game-over-section
-              community-seaction
-              nitro-section
-              align-items-center
-            "
-            id="nitro-community-section"
-          >
-            <div class="nitro-container community-wrapper">
-              <div class="inr-community">
-                <p class="nitro-section-desc">See what the hype is all about</p>
-                <h2 class="nitro-section-title">Join the Community</h2>
-                <div class="row">
-                  <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="comm-content">
-                      <a
-                        href="http://discord.gg/nitroleague"
-                        class="comm-img-link"
-                      >
-                        <img
-                          src="assets/images/discord-server.png"
-                          alt="Discord Server"
-                        />
-                      </a>
-                      <a
-                        href="http://discord.gg/nitroleague"
-                        class="comm-links join-dis"
-                        >Join Discord Server</a
-                      >
-                    </div>
-                  </div>
-                  <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="comm-content">
-                      <a
-                        href="https://t.me/nitroleaguegame"
-                        class="comm-img-link"
-                      >
-                        <img
-                          src="assets/images/telegram-channel.png"
-                          alt="Discord Server"
-                        />
-                      </a>
-                      <a
-                        href="https://t.me/nitroleaguegame"
-                        class="comm-links join-tele"
-                        >Join Telegram Channel</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-        <div class="swiper-slide">
-          <footer class="footer nitro-section" id="nitro-footer">
-            <div class="nitro-container">
-              <div class="inr-footer">
-                <div class="footer-above-sec">
-                  <div class="row">
-                    <div class="col-lg-4 col-xs-12">
-                      <div class="footer-about-content">
-                        <a href="/index.html" class="footer-logo">
-                          <img
-                            class="d-none d-lg-block"
-                            src="assets/images/footer-logo.svg"
-                            alt="Nitro League"
-                          />
-                          <img
-                            class="d-lg-none"
-                            src="assets/images/footer-mob-logo.svg"
-                            alt="Nitro League"
-                          />
-                        </a>
-                        <p>
-                          © 2021 Nitro League and all linked logos, cars,
-                          digital assets, naming conventions are exclusive
-                          property of Nitro League, Inc. All Rights Reserved.
-                        </p>
-                        <ul class="footer-quick-links">
-                          <li><a href="#">Roadmap</a></li>
-                          <li><a href="#">Whitepaper</a></li>
-                          <li><a href="#">Tokenomics</a></li>
-                          <li><a href="#">Team</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-lg-5 offset-lg-3 col-xs-12">
-                      <div class="footer-newsletter-side">
-                        <div class="footer-social-icons">
-                          <h6>Stay Tuned</h6>
-                          <ul class="social-listing">
-                            <li class="social-item">
-                              <a
-                                href="https://discord.com/invite/nitroleague"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/fgame-icon.svg"
-                                  alt="Discord Icon"
-                                />
-                              </a>
-                            </li>
-                            <li class="social-item">
-                              <a
-                                href="https://t.me/nitroleaguegame"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/fshare-icon.svg"
-                                  alt="Telegram Icon"
-                                />
-                              </a>
-                            </li>
-                            <li class="social-item">
-                              <a
-                                href="https://www.linkedin.com/company/nitro-league"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/flinkedin-icon.svg"
-                                  alt="Linkedin Icon"
-                                />
-                              </a>
-                            </li>
-                            <li class="social-item">
-                              <a
-                                href="https://medium.com/nitro-league"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/medium-icon.svg"
-                                  alt="Medium Icon"
-                                />
-                              </a>
-                            </li>
-                            <li class="social-item">
-                              <a
-                                href="https://www.facebook.com/nitroleagueracing"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/ffacebook-icon.svg"
-                                  alt="Facebook Icon"
-                                />
-                              </a>
-                            </li>
-                            <li class="social-item">
-                              <a
-                                href="https://twitter.com/NitroLeagueGame"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/twitter-icon.svg"
-                                  alt="Twitter Icon"
-                                />
-                              </a>
-                            </li>
-                            <li class="social-item">
-                              <a
-                                href="https://www.youtube.com/channel/UCU26AuRMNTkMZfELd3bBnXQ"
-                                class="social-links"
-                                target="_blank"
-                              >
-                                <img
-                                  src="assets/images/fyoutube-icon.svg"
-                                  alt="Youtube Icon"
-                                />
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="footer-newsletter">
-                          <div
-                            class="gameOverview-title story-title feature-title"
-                          >
-                            <span
-                              class="title-borderLine d-none d-lg-block"
-                            ></span>
-                            <h2>Ready To Start Your Adventure?</h2>
-                          </div>
-                          <div class="newsletter">
-                            <label for="">Get launch updates</label>
-                            <div class="subcribe-area">
-                              <div class="subscribe-nitro" id="mc_embed_signup">
-                                <div
-                                  class="ml-form-embed"
-                                  data-account="3639311:y2o2a0g3i8"
-                                  data-form="5160863:p5n3q4"
-                                ></div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="footer-menu">
-                  <div class="inr-menu">
-                    <div class="footer-nav">
-                      <ul class="footer-nav-list">
-                        <li class="footer-nav-item">
-                          <a
-                            href="/terms-conditions.html"
-                            class="footer-nav-link"
-                            >Terms & Conditions</a
-                          >
+                    <div class="">
+                      <h4 class="nitro-mt-40">Racing</h4>
+                      <ul class="market-listing racing-listing">
+                        <li class="mlist-item">
+                          Participate in single play, mutli-player as well as
+                          clan races
                         </li>
-                        <li class="footer-nav-item">
-                          <a href="#" class="footer-nav-link">Privacy Notice</a>
+                        <li class="mlist-item">
+                          Join in exclusive races and earn rewards at
+                          event-based races
                         </li>
-                        <li class="footer-nav-item">
-                          <a href="/faq.html" class="footer-nav-link">FAQ</a>
+                        <li class="mlist-item">
+                          Win new items that you can trade or sell
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
               </div>
+              <div class="col-lg-5">
+                <div class="roadmap-wrapper">
+                  <img class="roadmap-wrapper-map-img" src="assets/images/road-map.png" alt="Road Map" />
+                  <img class="nitro-car" src="assets/images/earn-car.png" alt="Earn Car" />
+                </div>
+              </div>
             </div>
-          </footer>
-        </div>
+          </div>
+        </section>
       </div>
-      <div class="swiper-pagination-wrapper">
-        <div class="swiper-pagination"></div>
+      <div class="swiper-slide">
+        <section class="
+              nitro-section
+              game-over-section
+              investor-section
+              align-items-center
+            " id="nitro-investor-section">
+          <div class="nitro-container">
+            <div class="inr-gameOverview">
+              <div class="game-content">
+                <div class="gameOverview-title story-title">
+                  <span class="title-borderLine"></span>
+                  <h2>Investors</h2>
+                </div>
+                <div class="investors-grid">
+                  <ul class="inv-listing">
+                    <li>
+                      <img src="assets/images/investors/investor-01.png" alt="Axia8" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-02.png" alt="Skyman" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-03.png" alt="Mashable" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-04.png" alt="Extra Watts" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-05.png" alt="Yolo" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-06.png" alt="Play It Forward" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-07.png" alt="Infinity Ventures Crypto" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-08.png" alt="Huobi" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-09.png" alt="Yuild Guild" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-10.png" alt="Unix" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-11.png" alt="Double Peak" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-12.png" alt="LD Capital" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-13.png" alt="YGG SEA" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-14.png" alt="Insignius Capital" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-15.png" alt="NGC Ventures" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-16.png" alt="Follow The Seed" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-17.png" alt="Skyman" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-18.png" alt="Skyman" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-19.png" alt="Skyman" />
+                    </li>
+                    <li>
+                      <img src="assets/images/investors/investor-20.png" alt="Skyman" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <nav class="secondary-navbar" aria-label="secondary navbar">
-        <ul class="sec-nav-listing">
-          <li class="sec-list-items">
-            <a href="#nitro-play-earn-section" class="sec-list-link">Earn</a>
-          </li>
-          <li class="sec-list-items">
-            <a href="#nitro-races-section" class="sec-list-link">Races</a>
-          </li>
-          <li class="sec-list-items">
-            <a href="#nitro-game-preview-section" class="sec-list-link">Game</a>
-          </li>
-          <li class="sec-list-items">
-            <a href="#nitro-game-story-section" class="sec-list-link">Arena</a>
-          </li>
-          <li class="sec-list-items">
-            <a href="#nitro-feature-section" class="sec-list-link">Features</a>
-          </li>
-          <li class="sec-list-items">
-            <a href="#nitro-over-section" class="sec-list-link list-link-active"
-              >Story</a
-            >
-          </li>
-        </ul>
-      </nav>
+
+      <div class="swiper-slide">
+        <section class="
+              game-over-section
+              community-seaction
+              nitro-section
+              align-items-center
+            " id="nitro-community-section">
+          <div class="nitro-container community-wrapper">
+            <div class="inr-community">
+              <p class="nitro-section-desc">See what the hype is all about</p>
+              <h2 class="nitro-section-title">Join the Community</h2>
+              <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="comm-content">
+                    <a href="http://discord.gg/nitroleague" class="comm-img-link">
+                      <img src="assets/images/discord-server.png" alt="Discord Server" />
+                    </a>
+                    <a href="http://discord.gg/nitroleague" class="comm-links join-dis">Join Discord Server</a>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4 mb-md-0">
+                  <div class="comm-content">
+                    <a href="https://t.me/nitroleaguegame" class="comm-img-link">
+                      <img src="assets/images/telegram-channel.png" alt="Discord Server" />
+                    </a>
+                    <a href="https://t.me/nitroleaguegame" class="comm-links join-tele">Join Telegram Channel</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="swiper-slide">
+        <footer class="footer nitro-section footerv2" id="nitro-footer">
+          <div class="footer-upper-mob">
+            <a href="/" class="footer-logo-mob"><img src="/assets/images/footer-logo-red.svg"
+                alt="Nitro League Logo"></a>
+          </div>
+          <div class="nitro-container">
+            <div class="footer-upper">
+              <a href="/" class="footer-logo"><img src="/assets/images/footer-logo-red.svg" alt="Nitro League Logo"></a>
+              <ul class="footer-social-lst">
+                <li class="social-item">
+                  <a href="https://discord.com/invite/nitroleague" class="social-links" target="_blank">
+                    <img src="assets/images/fl-discord.svg" alt="Discord Icon" />
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="https://t.me/nitroleaguegame" class="social-links" target="_blank">
+                    <img src="assets/images/fl-telegram.svg" alt="Telegram Icon" />
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="https://www.linkedin.com/company/nitro-league" class="social-links" target="_blank">
+                    <img src="assets/images/fl-linkedin.svg" alt="Linkedin Icon" />
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="https://medium.com/nitro-league" class="social-links" target="_blank">
+                    <img src="assets/images/fl-medium.svg" alt="Medium Icon" />
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="https://www.facebook.com/nitroleagueracing" class="social-links" target="_blank">
+                    <img src="assets/images/fl-facebook.svg" alt="Facebook Icon" />
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="https://twitter.com/NitroLeagueGame" class="social-links" target="_blank">
+                    <img src="assets/images/fl-twitter.svg" alt="Twitter Icon" />
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a href="https://www.youtube.com/channel/UCU26AuRMNTkMZfELd3bBnXQ" class="social-links"
+                    target="_blank">
+                    <img src="assets/images/fl-youtube.svg" alt="Youtube Icon" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-lower">
+              <div class="lower-content-wrapper">
+                <ul class="footer-nav-menu">
+                  <li><a href="/index.html">Roadmap</a></li>
+                  <li><a href="/whitepaper.html">Whitepaper</a></li>
+                  <li><a href="/tokenomics.html">Tokenomics</a></li>
+                  <li><a href="/team.html">Team</a></li>
+                  <li><a href="/assets/nitro-press-kit.zip">Download Press kit</a></li>
+                </ul>
+                <p>© 2022 Nitro League and all linked logos, cars, digital assets, naming conventions are exclusive
+                  property of Nitro League, Inc. All Rights Reserved.</p>
+              </div>
+              <ul class="bottom-bar-nav">
+                <!-- <li><a href="#">Copyrights</a></li> -->
+                <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                <li><a href="/faq.html">FAQs</a></li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
+    <div class="swiper-pagination-wrapper">
+      <div class="swiper-pagination"></div>
+    </div>
+    <nav class="secondary-navbar" aria-label="secondary navbar">
+      <ul class="sec-nav-listing">
+        <li class="sec-list-items">
+          <a href="#nitro-play-earn-section" class="sec-list-link">Earn</a>
+        </li>
+        <li class="sec-list-items">
+          <a href="#nitro-races-section" class="sec-list-link">Races</a>
+        </li>
+        <li class="sec-list-items">
+          <a href="#nitro-game-preview-section" class="sec-list-link">Game</a>
+        </li>
+        <li class="sec-list-items">
+          <a href="#nitro-game-story-section" class="sec-list-link">Arena</a>
+        </li>
+        <li class="sec-list-items">
+          <a href="#nitro-feature-section" class="sec-list-link">Features</a>
+        </li>
+        <li class="sec-list-items">
+          <a href="#nitro-over-section" class="sec-list-link list-link-active">Story</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 
-    <!-- Minified Jquery Script CDN -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Minified Jquery Script CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <!-- BootStrap5 Script CDN -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./assets/js/jquery-modal-video.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <!-- BootStrap5 Script CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/jquery-modal-video.min.js"></script>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/api.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/api.js"></script>
 
-    <!-- MailerLite Universal -->
-    <script>
-      (function (m, a, i, l, e, r) {
-        m["MailerLiteObject"] = e;
-        function f() {
-          var c = { a: arguments, q: [] };
-          var r = this.push(c);
-          return "number" != typeof r ? r : f.bind(c.q);
-        }
-        f.q = f.q || [];
-        m[e] = m[e] || f.bind(f.q);
-        m[e].q = m[e].q || f.q;
-        r = a.createElement(i);
-        var _ = a.getElementsByTagName(i)[0];
-        r.async = 1;
-        r.src = l + "?v" + ~~(new Date().getTime() / 1000000);
-        _.parentNode.insertBefore(r, _);
-      })(
-        window,
-        document,
-        "script",
-        "https://static.mailerlite.com/js/universal.js",
-        "ml"
-      );
-      var ml_account = ml("accounts", "3639311", "y2o2a0g3i8", "load");
-    </script>
-    <!-- End MailerLite Universal -->
-  </body>
+  <!-- MailerLite Universal -->
+  <script>
+    (function (m, a, i, l, e, r) {
+      m["MailerLiteObject"] = e;
+      function f() {
+        var c = { a: arguments, q: [] };
+        var r = this.push(c);
+        return "number" != typeof r ? r : f.bind(c.q);
+      }
+      f.q = f.q || [];
+      m[e] = m[e] || f.bind(f.q);
+      m[e].q = m[e].q || f.q;
+      r = a.createElement(i);
+      var _ = a.getElementsByTagName(i)[0];
+      r.async = 1;
+      r.src = l + "?v" + ~~(new Date().getTime() / 1000000);
+      _.parentNode.insertBefore(r, _);
+    })(
+      window,
+      document,
+      "script",
+      "https://static.mailerlite.com/js/universal.js",
+      "ml"
+    );
+    var ml_account = ml("accounts", "3639311", "y2o2a0g3i8", "load");
+  </script>
+  <!-- End MailerLite Universal -->
+</body>
+
 </html>

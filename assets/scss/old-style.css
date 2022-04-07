@@ -123,6 +123,16 @@ html {
   --Primary400: #b8bdc4;
   --Primary5: #f3f4f5;
   --Green: #00bd1e;
+  --Primary-05: #F3F4F5;
+  --Primary-10: #E7E9EB;
+  --Primary-20: #D0D3D7;
+  --Primary-30: #B8BDC4;
+  --Primary-40: #A1A7B0;
+  --Primary-50: #89909C;
+  --Primary-60: #717A88;
+  --Primary-70: #5A6474;
+  --Primary-80: #424E61;
+  --Primary-90: #2B384D;
 }
 
 h1 {

@@ -1,125 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Team Nitro</title>
 
-        <!-- BootStrap5 CSS CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-        <link rel="stylesheet" href="./assets/scss/style.css" />
-        <link rel="stylesheet" href="./assets/scss/ido.css" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
-    </head>
-    <body class="screen-load">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Nitro</title>
+
+    <!-- BootStrap5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/scss/style.css" />
+    <link rel="stylesheet" href="./assets/scss/ido.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+</head>
+
+<body class="screen-load">
 
     <header>
         <nav class="navbar navbar-light nav-darker">
-        <div class="nitro-container header-container">
-            <div class="inr-nitro-wrap dark-blue-navbar">
-            <div class="mobile-navbar">
-                <div class="logo-branding">
-                <a class="navbar-brand" href="/index.html">
-                    <img src="assets/images/logo.svg" alt="Nitro Logo" />
-                </a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                </div>
-                <div class="nav-buttons">
-                <button class="btn btn-ntr">NTR 20.0</button>
-                <button class="btn btn-race">Race</button>
-                </div>
-            </div>
-            <div class="collapse navbar-collapse navbar-listing" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 nitro-navbar">
-                    <li class="nav-item">
-                        <a class="nav-link reset-style nitro-section-btn story-section-btn" aria-current="page" data-section-name="story" href="index.html">Nitroprime</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link reset-style nitro-section-btn story-section-btn" aria-current="page" data-section-name="story" href="index.html#story">Game</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link reset-style nitro-section-btn roadmap-section-btn" aria-current="page" data-section-name="roadmap" href="index.html#roadmap">Roadmap</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link reset-style" aria-current="page" href="/whitepaper.html">Whitepaper</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link reset-style" aria-current="page" href="/tokenomics.html">Tokenomics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active reset-style" aria-current="page" href="/team.html">Team</a>
-                    </li>
-                    <!-- <li class="nav-item">
-                    <a class="nav-link reset-style" aria-current="page" href="/marketplace.html">Marketplace</a>
-                    </li> -->
-                    <!-- <li class="nav-item ido-nav-item">
-                    <a class="nav-link reset-style" aria-current="page" href="/ido.html">IDO</a>
-                    <div class="link-tag"><span>hot</span></div>
-                    </li> -->
-                </ul>
-                <div class="d-flex">
-                <ul class="side-navbar">
-                    <li class="side-navbar-item">
-                        <a href="https://t.me/nitroleaguegame" target="_blank">
-                            <span class="dark-hd-icon">
-                            <svg
-                                width="17"
-                                height="16"
-                                viewBox="0 0 17 16"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                d="M12.8938 15.8252L8.98403 12.5618L6.7928 14.905C6.66759 15.0192 3.53925 15.0762 3.40464 15.0762C6.101 15.0762 5.89753 14.93 5.79736 14.634L4.24785 9.29469L0.403812 7.93223C0.169038 7.85734 0.0344336 7.66474 0 7.358C0 7.05127 0.134604 3.84084 0.403812 3.72314C10.9217 2.23986 16.2151 0 16.2839 0C16.406 0 16.5344 0.0641998 16.6627 0.192599C16.7911 0.320999 16.8505 0.488631 16.8411 0.691931L14.1616 15.251C14.0708 15.7503 13.8079 16 13.3696 16C13.1974 16 13.0409 15.9429 12.8938 15.8252ZM6.59246 10.486C11.4006 5.54258 13.811 3.05662 13.8141 3.02452C13.8204 2.99242 13.8235 2.97102 13.8235 2.95676C13.8235 2.84262 13.7515 2.78556 13.6044 2.78556C13.57 2.78556 10.7621 4.82211 5.17756 8.89166L6.35456 13.2929L6.59246 10.486Z"
-                                fill="white"
-                                />
-                            </svg>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="side-navbar-item">
-                        <a href="http://discord.gg/nitroleague" target="_blank">
-                            <span class="dark-hd-icon">
-                            <svg
-                                width="17"
-                                height="13"
-                                viewBox="0 0 17 13"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path
-                                d="M14.3912 1.07763C13.3077 0.578841 12.1458 0.211357 10.9309 0.00088291C10.9088 -0.00317917 10.8867 0.00697218 10.8753 0.0272754C10.7259 0.293919 10.5604 0.641778 10.4444 0.915194C9.13779 0.718936 7.83784 0.718936 3.55798 0.915194C6.44204 0.635701 3.27051 0.293919 6.12041 0.0272754C6.10901 0.0076496 6.08691 -0.00250175 6.06479 0.00088291C4.8506 0.210684 3.68869 0.578169 2.6045 1.07763C2.59511 1.08169 2.58706 1.08846 2.58173 1.09725C0.377819 4.40058 -0.225923 7.62272 0.0702526 10.8049C0.0715927 10.8205 0.0803037 10.8354 0.0923653 10.8448C1.54644 11.9161 2.95496 12.5665 4.33732 12.9976C4.35945 13.0044 4.38289 12.9963 4.39697 12.978C4.72397 12.53 5.01546 12.0576 5.26538 11.5608C5.28013 11.5318 5.26605 11.4972 5.2359 11.4857C4.77355 11.3098 4.3333 11.0952 3.90981 10.8516C3.87631 10.832 3.87363 10.7839 3.90445 10.7609C3.99356 10.6939 4.08271 10.6242 4.1678 10.5538C4.1832 10.5409 4.20465 10.5382 4.22275 10.5464C7.00491 11.8207 10.0169 11.8207 12.7663 10.5464C12.7844 10.5376 12.8058 10.5403 12.8219 10.5531C12.907 10.6235 12.9961 10.6939 13.0859 10.7609C13.1167 10.7839 13.1147 10.832 13.0812 10.8516C12.6577 11.1 12.2175 11.3098 11.7544 11.4851C11.7243 11.4966 11.7109 11.5318 11.7256 11.5608C11.9809 12.0569 12.2724 12.5293 12.5934 12.9773C12.6068 12.9963 12.6309 13.0044 12.653 12.9976C14.0421 12.5665 15.4506 11.9161 16.9047 10.8448C16.9174 10.8354 16.9255 10.8211 16.9268 10.8056C17.2813 7.12662 16.3331 3.93091 14.4133 1.09793C14.4086 1.08846 14.4006 1.08169 14.3912 1.07763ZM5.68085 8.86728C4.84323 8.86728 4.15305 8.09578 4.15305 7.14829C4.15305 6.2008 4.82984 5.42929 5.68085 5.42929C6.53854 5.42929 7.22203 6.20757 7.20862 7.14829C7.20862 8.09578 6.53183 8.86728 5.68085 8.86728ZM11.3296 8.86728C10.492 8.86728 9.80184 8.09578 9.80184 7.14829C9.80184 6.2008 10.4786 5.42929 11.3296 5.42929C12.1873 5.42929 12.8708 6.20757 12.8574 7.14829C12.8574 8.09578 12.1873 8.86728 11.3296 8.86728Z"
-                                fill="white"
-                                />
-                            </svg>
-                            </span>
-                        </a>
-                    </li>
-                    <li class="side-navbar-item">
-                        <a href="/marketplace.html" class="btn btn-market">Marketplace</a>
-                    </li>
-                </ul>
+            <div class="nitro-container header-container">
+                <div class="inr-nitro-wrap dark-blue-navbar">
+                    <div class="mobile-navbar">
+                        <div class="logo-branding">
+                            <a class="navbar-brand" href="/index.html">
+                                <img src="assets/images/logo.svg" alt="Nitro Logo" />
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                        </div>
+                        <div class="nav-buttons">
+                            <button class="btn btn-ntr">NTR 20.0</button>
+                            <button class="btn btn-race">Race</button>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-listing" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nitro-navbar">
+                            <li class="nav-item">
+                                <a class=" nav-link reset-style nitro-section-btn story-section-btn" aria-current="page"
+                                    data-section-name="story" href="index.html#story">Game</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link reset-style" href="#">Roadmap</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link reset-style" aria-current="page"
+                                    href="/whitepaper.html">Whitepaper</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link reset-style" aria-current="page"
+                                    href="/tokenomics.html">Tokenomics</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link reset-style" aria-current="page" href="/team.html">Team</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link reset-style" aria-current="page"
+                                    href="/download-app.html">Download</a>
+                            </li>
+                        </ul>
+                        <div class="d-flex">
+                            <ul class="side-navbar">
+                                <li class="side-navbar-item">
+                                    <a href="https://t.me/nitroleaguegame" target="_blank">
+                                        <span class="dark-hd-icon">
+                                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M12.8938 15.8252L8.98403 12.5618L6.7928 14.905C6.66759 15.0192 3.53925 15.0762 3.40464 15.0762C6.101 15.0762 5.89753 14.93 5.79736 14.634L4.24785 9.29469L0.403812 7.93223C0.169038 7.85734 0.0344336 7.66474 0 7.358C0 7.05127 0.134604 3.84084 0.403812 3.72314C10.9217 2.23986 16.2151 0 16.2839 0C16.406 0 16.5344 0.0641998 16.6627 0.192599C16.7911 0.320999 16.8505 0.488631 16.8411 0.691931L14.1616 15.251C14.0708 15.7503 13.8079 16 13.3696 16C13.1974 16 13.0409 15.9429 12.8938 15.8252ZM6.59246 10.486C11.4006 5.54258 13.811 3.05662 13.8141 3.02452C13.8204 2.99242 13.8235 2.97102 13.8235 2.95676C13.8235 2.84262 13.7515 2.78556 13.6044 2.78556C13.57 2.78556 10.7621 4.82211 5.17756 8.89166L6.35456 13.2929L6.59246 10.486Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="side-navbar-item">
+                                    <a href="http://discord.gg/nitroleague" target="_blank">
+                                        <span class="dark-hd-icon">
+                                            <svg width="17" height="13" viewBox="0 0 17 13" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14.3912 1.07763C13.3077 0.578841 12.1458 0.211357 10.9309 0.00088291C10.9088 -0.00317917 10.8867 0.00697218 10.8753 0.0272754C10.7259 0.293919 10.5604 0.641778 10.4444 0.915194C9.13779 0.718936 7.83784 0.718936 3.55798 0.915194C6.44204 0.635701 3.27051 0.293919 6.12041 0.0272754C6.10901 0.0076496 6.08691 -0.00250175 6.06479 0.00088291C4.8506 0.210684 3.68869 0.578169 2.6045 1.07763C2.59511 1.08169 2.58706 1.08846 2.58173 1.09725C0.377819 4.40058 -0.225923 7.62272 0.0702526 10.8049C0.0715927 10.8205 0.0803037 10.8354 0.0923653 10.8448C1.54644 11.9161 2.95496 12.5665 4.33732 12.9976C4.35945 13.0044 4.38289 12.9963 4.39697 12.978C4.72397 12.53 5.01546 12.0576 5.26538 11.5608C5.28013 11.5318 5.26605 11.4972 5.2359 11.4857C4.77355 11.3098 4.3333 11.0952 3.90981 10.8516C3.87631 10.832 3.87363 10.7839 3.90445 10.7609C3.99356 10.6939 4.08271 10.6242 4.1678 10.5538C4.1832 10.5409 4.20465 10.5382 4.22275 10.5464C7.00491 11.8207 10.0169 11.8207 12.7663 10.5464C12.7844 10.5376 12.8058 10.5403 12.8219 10.5531C12.907 10.6235 12.9961 10.6939 13.0859 10.7609C13.1167 10.7839 13.1147 10.832 13.0812 10.8516C12.6577 11.1 12.2175 11.3098 11.7544 11.4851C11.7243 11.4966 11.7109 11.5318 11.7256 11.5608C11.9809 12.0569 12.2724 12.5293 12.5934 12.9773C12.6068 12.9963 12.6309 13.0044 12.653 12.9976C14.0421 12.5665 15.4506 11.9161 16.9047 10.8448C16.9174 10.8354 16.9255 10.8211 16.9268 10.8056C17.2813 7.12662 16.3331 3.93091 14.4133 1.09793C14.4086 1.08846 14.4006 1.08169 14.3912 1.07763ZM5.68085 8.86728C4.84323 8.86728 4.15305 8.09578 4.15305 7.14829C4.15305 6.2008 4.82984 5.42929 5.68085 5.42929C6.53854 5.42929 7.22203 6.20757 7.20862 7.14829C7.20862 8.09578 6.53183 8.86728 5.68085 8.86728ZM11.3296 8.86728C10.492 8.86728 9.80184 8.09578 9.80184 7.14829C9.80184 6.2008 10.4786 5.42929 11.3296 5.42929C12.1873 5.42929 12.8708 6.20757 12.8574 7.14829C12.8574 8.09578 12.1873 8.86728 11.3296 8.86728Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="side-navbar-item">
+                                    <a href="/marketplace.html" class="btn btn-market">Marketplace</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            </div>
-        </div>
         </nav>
     </header>
 
@@ -143,7 +125,9 @@
                                 <div class="tm-content">
                                     <h3>Zaynab Tucker</h3>
                                     <p class="tm-designasion">Chief Executive Officer</p>
-                                    <p>A successful leader with 20+ years experience working across the technology, media and financial sectors. A history of driving digital transformation at Fortune 500 companies like HSBC, Mastercard, VISA and Emirates Group. </p>
+                                    <p>A successful leader with 20+ years experience working across the technology,
+                                        media and financial sectors. A history of driving digital transformation at
+                                        Fortune 500 companies like HSBC, Mastercard, VISA and Emirates Group. </p>
                                 </div>
                             </div>
                         </li>
@@ -155,7 +139,11 @@
                                 <div class="tm-content">
                                     <h3>Glen Bullen</h3>
                                     <p class="tm-designasion">Chief Operating Officer</p>
-                                    <p>A highly-effective senior leader with over 20 years experience in start-up and growth phase companies, Glen delivers a wealth of expertise across all facets of the global iGaming and Digital Asset sectors and drives significant revenue and organizational growth via a strong operational, strategic, process-improvement and commercial focus.</p>
+                                    <p>A highly-effective senior leader with over 20 years experience in start-up and
+                                        growth phase companies, Glen delivers a wealth of expertise across all facets of
+                                        the global iGaming and Digital Asset sectors and drives significant revenue and
+                                        organizational growth via a strong operational, strategic, process-improvement
+                                        and commercial focus.</p>
                                 </div>
                             </div>
                         </li>
@@ -167,7 +155,10 @@
                                 <div class="tm-content">
                                     <h3>David Atkinson</h3>
                                     <p class="tm-designasion">Chief Strategy Officer</p>
-                                    <p>David is renowned in the Blockchain space for his contributions to notable projects, particularly regarding the definition of their token economy and strategy. Some of those projects include Holochain and Terra Virtua, both now on Binance.</p>
+                                    <p>David is renowned in the Blockchain space for his contributions to notable
+                                        projects, particularly regarding the definition of their token economy and
+                                        strategy. Some of those projects include Holochain and Terra Virtua, both now on
+                                        Binance.</p>
                                 </div>
                             </div>
                         </li>
@@ -179,7 +170,11 @@
                                 <div class="tm-content">
                                     <h3>Haseeb Khan</h3>
                                     <p class="tm-designasion">Chief Technology Officer</p>
-                                    <p>Haseeb has been rated as one of the top technologists and chief software architects in the region. Having worked with the several start-ups as CTO, as well as delivered large scale enterprise and consumer platforms, Haseeb has delivered projects for companies including Yahoo!, AOL, Intuit, Groupon, ABB and WSJ.</p>
+                                    <p>Haseeb has been rated as one of the top technologists and chief software
+                                        architects in the region. Having worked with the several start-ups as CTO, as
+                                        well as delivered large scale enterprise and consumer platforms, Haseeb has
+                                        delivered projects for companies including Yahoo!, AOL, Intuit, Groupon, ABB and
+                                        WSJ.</p>
                                 </div>
                             </div>
                         </li>
@@ -191,11 +186,14 @@
                                 <div class="tm-content">
                                     <h3>Rizwan Siddiqui</h3>
                                     <p class="tm-designasion">Chief Creative Officer</p>
-                                    <p>Founding member of an award-winning gaming studio that has crossed 1M+ downloads/day. As a product designer and marketer, he has built digital products and campaigns for companies including NBC Universal, P&G, Barclays, Toyota and  Manchester United.</p>
+                                    <p>Founding member of an award-winning gaming studio that has crossed 1M+
+                                        downloads/day. As a product designer and marketer, he has built digital products
+                                        and campaigns for companies including NBC Universal, P&G, Barclays, Toyota and
+                                        Manchester United.</p>
                                 </div>
                             </div>
                         </li>
-                        
+
                         <li>
                             <div class="team-member">
                                 <div class="tm-image">
@@ -204,12 +202,15 @@
                                 <div class="tm-content">
                                     <h3>Gasper Stih</h3>
                                     <p class="tm-designasion">Chief Marketing Officer</p>
-                                    <p>Gasper is on a mission to build brands that make an impact. He brought two ICO startups to life and played one of the key roles in one of the biggest fund investing campaigns that Europe saw in recent years. He’s a gamer, sportsman, crypto investor and loves cars (no surprise here). </p>
+                                    <p>Gasper is on a mission to build brands that make an impact. He brought two ICO
+                                        startups to life and played one of the key roles in one of the biggest fund
+                                        investing campaigns that Europe saw in recent years. He’s a gamer, sportsman,
+                                        crypto investor and loves cars (no surprise here). </p>
                                 </div>
                             </div>
                         </li>
-                        
-                        
+
+
                         <li>
                             <div class="team-member">
                                 <div class="tm-image">
@@ -218,7 +219,12 @@
                                 <div class="tm-content">
                                     <h3>Manuel Machado</h3>
                                     <p class="tm-designasion">Chief Commercial Officer</p>
-                                    <p>Manuel has +20 years international experience in Digital Transformation of large corporations and start-ups. For the last 5 years, his focus has been on Blockchain: as Global Head of Blockchain Solutions at Worldline, 4th largest payment service provider in the world; as an Expert Member of different think tanks (i.e. Alastria, EUBOF, INATBA or DEA); and as a Startup Advisor and Investor, with focus on NFT, Play-to-Earn, DAO and Tokenomics.</p>
+                                    <p>Manuel has +20 years international experience in Digital Transformation of large
+                                        corporations and start-ups. For the last 5 years, his focus has been on
+                                        Blockchain: as Global Head of Blockchain Solutions at Worldline, 4th largest
+                                        payment service provider in the world; as an Expert Member of different think
+                                        tanks (i.e. Alastria, EUBOF, INATBA or DEA); and as a Startup Advisor and
+                                        Investor, with focus on NFT, Play-to-Earn, DAO and Tokenomics.</p>
                                 </div>
                             </div>
                         </li>
@@ -230,7 +236,11 @@
                                 <div class="tm-content">
                                     <h3>Sarah Da'na</h3>
                                     <p class="tm-designasion">Marketing & Communications Specialist</p>
-                                    <p>Sarah has international experience both in the large news and entertainment Media, such Al Jazeera and the Jordan Radio and Television Corporation, and in social media and influencer management. Sarah is a multifaceted professional taking critical responsibilities over Nitro League’s communications and community management.</p>
+                                    <p>Sarah has international experience both in the large news and entertainment
+                                        Media, such Al Jazeera and the Jordan Radio and Television Corporation, and in
+                                        social media and influencer management. Sarah is a multifaceted professional
+                                        taking critical responsibilities over Nitro League’s communications and
+                                        community management.</p>
                                 </div>
                             </div>
                         </li>
@@ -255,17 +265,20 @@
                                 <div class="hot-wire">
                                     <div class="diby-logos hot-wire-logo">
                                         <img src="assets/images/team-members/hot-wire.png" alt="Hot Wire">
-                                        <p>A new AAA development studio by blending the best of Tkxel and SL2 Capital</p>
+                                        <p>A new AAA development studio by blending the best of Tkxel and SL2 Capital
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="hot-wire tk-capital">
                                     <div class="diby-logos tkxel-logo">
                                         <img src="assets/images/team-members/tkxel.png" alt="Tkxel">
-                                        <p>Been building great technology for 15 years. 500M downloads of their games, 700 employees.</p>
+                                        <p>Been building great technology for 15 years. 500M downloads of their games,
+                                            700 employees.</p>
                                     </div>
                                     <div class="diby-logos sl2-capital-logo">
                                         <img src="assets/images/team-members/sl2-capital.png" alt="SL2 Capital">
-                                        <p>Experience building projects, putting in place leadership teams, office, support team, incentives, relationships.</p>
+                                        <p>Experience building projects, putting in place leadership teams, office,
+                                            support team, incentives, relationships.</p>
                                     </div>
                                 </div>
                             </div>
@@ -282,7 +295,8 @@
                                 </div>
                                 <div class="hot-wire tv-content">
                                     <div class="tv-text">
-                                        <p>Top NFT project, 400 on CMC, 2 years ahead in metverse and 3D collectibles, marketplace and relationships.</p>
+                                        <p>Top NFT project, 400 on CMC, 2 years ahead in metverse and 3D collectibles,
+                                            marketplace and relationships.</p>
                                     </div>
                                 </div>
                             </div>
@@ -293,135 +307,99 @@
         </div>
     </section>
 
-    <footer class="footer nitro-section" id="nitro-footer">
+    <footer class="footer nitro-section footerv2" id="nitro-footer">
+        <div class="footer-upper-mob">
+            <a href="/" class="footer-logo-mob"><img src="/assets/images/footer-logo-red.svg"
+                    alt="Nitro League Logo"></a>
+        </div>
         <div class="nitro-container">
-            <div class="inr-footer">
-                <div class="footer-above-sec">
-                    <span class="footer-watermarker"></span>
-                    <div class="row">
-                        <div class="col-lg-5 col-xs-12">
-                            <div class="footer-about-content">
-                                <a href="/index.html" class="footer-logo">
-                                    <img class="d-none d-lg-block" src="assets/images/footer-logo.svg" alt="Nitro League" />
-                                    <img class="d-lg-none" src="assets/images/footer-mob-logo.svg" alt="Nitro League" />
-                                </a>
-                                <p>
-                                © 2021 Nitro League and all linked logos, cars, digital
-                                assets, naming conventions are exclusive property of Nitro
-                                League, Inc. All Rights Reserved.
-                                </p>
-                                <div class="footer-car-bg d-none d-lg-block">
-                                    <img src="assets/images/footer-image.png" alt="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 offset-lg-2 col-xs-12">
-                            <div class="footer-newsletter">
-                                <div class="gameOverview-title story-title feature-title">
-                                    <span class="title-borderLine d-none d-lg-block"></span>
-                                    <h2>Ready To Start Your Adventure?</h2>
-                                </div>
-                                <div class="newsletter">
-                                    <label for="">Get launch updates</label>
-                                    <div class="subcribe-area">
-                                        <div class="subscribe-nitro" id="mc_embed_signup">
-                                            <div class="ml-form-embed" data-account="3639311:y2o2a0g3i8" data-form="5160863:p5n3q4"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="footer-upper">
+                <a href="/" class="footer-logo"><img src="/assets/images/footer-logo-red.svg"
+                        alt="Nitro League Logo"></a>
+                <ul class="footer-social-lst">
+                    <li class="social-item">
+                        <a href="https://discord.com/invite/nitroleague" class="social-links" target="_blank">
+                            <img src="assets/images/fl-discord.svg" alt="Discord Icon" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://t.me/nitroleaguegame" class="social-links" target="_blank">
+                            <img src="assets/images/fl-telegram.svg" alt="Telegram Icon" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.linkedin.com/company/nitro-league" class="social-links" target="_blank">
+                            <img src="assets/images/fl-linkedin.svg" alt="Linkedin Icon" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://medium.com/nitro-league" class="social-links" target="_blank">
+                            <img src="assets/images/fl-medium.svg" alt="Medium Icon" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.facebook.com/nitroleagueracing" class="social-links" target="_blank">
+                            <img src="assets/images/fl-facebook.svg" alt="Facebook Icon" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://twitter.com/NitroLeagueGame" class="social-links" target="_blank">
+                            <img src="assets/images/fl-twitter.svg" alt="Twitter Icon" />
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.youtube.com/channel/UCU26AuRMNTkMZfELd3bBnXQ" class="social-links"
+                            target="_blank">
+                            <img src="assets/images/fl-youtube.svg" alt="Youtube Icon" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-lower">
+                <div class="lower-content-wrapper">
+                    <ul class="footer-nav-menu">
+                        <li><a href="/index.html">Roadmap</a></li>
+                        <li><a href="/whitepaper.html">Whitepaper</a></li>
+                        <li><a href="/tokenomics.html">Tokenomics</a></li>
+                        <li><a href="/team.html">Team</a></li>
+                        <li><a href="/assets/nitro-press-kit.zip">Download Press kit</a></li>
+                    </ul>
+                    <p>© 2022 Nitro League and all linked logos, cars, digital assets, naming conventions are exclusive
+                        property of Nitro League, Inc. All Rights Reserved.</p>
                 </div>
-                <div class="footer-menu">
-                    <div class="inr-menu">
-                        <div class="row">
-                            <div class="col-lg-6 col-xs-12 order-sm-2 order-lg-1 change-order-two">
-                                <div class="footer-nav">
-                                    <ul class="footer-nav-list">
-                                        <!-- <li class="footer-nav-item">Copyrights</li> -->
-                                        <li class="footer-nav-item">
-                                            <a href="/terms-conditions.html" class="footer-nav-link">Terms & Conditions</a>
-                                        </li>
-                                        <li class="footer-nav-item">
-                                            <a href="/faq.html" class="footer-nav-link">FAQ</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-xs-12 order-sm-1 order-lg-2 change-order-one">
-                                <div class="social-links">
-                                    <ul class="social-listing">
-                                        <li class="social-item">
-                                            <a href="https://discord.com/invite/nitroleague" class="social-links" target="_blank">
-                                                <img src="assets/images/fgame-icon.svg" alt="Discord Icon" />
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="https://t.me/nitroleaguegame" class="social-links" target="_blank">
-                                                <img src="assets/images/fshare-icon.svg" alt="Telegram Icon" />
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="https://www.linkedin.com/company/nitro-league" class="social-links" target="_blank">
-                                                <img src="assets/images/flinkedin-icon.svg" alt="Linkedin Icon" />
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="https://medium.com/nitro-league" class="social-links" target="_blank">
-                                                <img src="assets/images/medium-icon.svg" alt="Medium Icon" />
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="https://www.facebook.com/nitroleagueracing" class="social-links" target="_blank">
-                                                <img src="assets/images/ffacebook-icon.svg" alt="Facebook Icon" />
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="https://twitter.com/NitroLeagueGame" class="social-links" target="_blank">
-                                                <img src="assets/images/twitter-icon.svg" alt="Twitter Icon" />
-                                            </a>
-                                        </li>
-                                        <li class="social-item">
-                                            <a href="https://www.youtube.com/channel/UCU26AuRMNTkMZfELd3bBnXQ" class="social-links" target="_blank">
-                                                <img src="assets/images/fyoutube-icon.svg" alt="Youtube Icon" />
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ul class="bottom-bar-nav">
+                    <!-- <li><a href="#">Copyrights</a></li> -->
+                    <li><a href="/terms-conditions.html">Terms & Conditions</a></li>
+                    <li><a href="/faq.html">FAQs</a></li>
+                </ul>
             </div>
         </div>
     </footer>
 
     <!-- Minified Jquery Script CDN -->
-    <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    crossorigin="anonymous"
-    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
 
     <!-- BootStrap5 Script CDN -->
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <script src="./assets/js/ido.js"></script>
     <!-- MailerLite Universal -->
     <script>
-        (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-        var c={ a:arguments,q:[]};var r=this.push(c);return "number"!=typeof r?r:f.bind(c.q);}
-        f.q=f.q||[];m[e]=m[e]||f.bind(f.q);m[e].q=m[e].q||f.q;r=a.createElement(i);
-        var _=a.getElementsByTagName(i)[0];r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-        _.parentNode.insertBefore(r,_);})(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-        
+        (function (m, a, i, l, e, r) {
+            m['MailerLiteObject'] = e; function f() {
+                var c = { a: arguments, q: [] }; var r = this.push(c); return "number" != typeof r ? r : f.bind(c.q);
+            }
+            f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q; r = a.createElement(i);
+            var _ = a.getElementsByTagName(i)[0]; r.async = 1; r.src = l + '?v' + (~~(new Date().getTime() / 1000000));
+            _.parentNode.insertBefore(r, _);
+        })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
         var ml_account = ml('accounts', '3639311', 'y2o2a0g3i8', 'load');
     </script>
     <!-- End MailerLite Universal -->
-  
-      <script src="assets/js/script.js"></script>
-    </body>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
 </html>
