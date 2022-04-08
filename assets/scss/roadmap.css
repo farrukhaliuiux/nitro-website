@@ -1,0 +1,206 @@
+html {
+  --Torch-Red: #fa0339;
+  --Regular-text-color: #132239;
+  --Egg-White: #f3f2ee;
+  --Dark-Opacity30: #0f1b2e;
+  --Color-Light: rgba(19, 34, 57, 0.5);
+  --Border-Color: #dee3eb;
+  --Black-Color: #0f1b2e;
+  --Discord-Color: #5865f2;
+  --Blue-Color: #2ca5e0;
+  --Plain-White: #ffffff;
+  --Theme-Black: #000c1b;
+  --Transparent-Color: transparent;
+  --Border-Black: #141f32;
+  --Gray-color: #67707e;
+  --Video-Border: #dee3eb;
+  --Video-Edges: #b1bdcf;
+  --bg-dark: #0f172b;
+  --Input-Text-Field: #2a2f38;
+  --Footer-Bg-Color: #191a1c;
+  --Footer-Mobile-Bg-Color: #1d1e20;
+  --Accordion-Title: #14212d;
+  --Black-Color: #000000;
+  --Icon-Border-Color: #e1e5e8;
+  --Icon-Bg-Color: #fbfbfd;
+  --Dark-Black: #040404;
+  --Tag-Color: #ffc700;
+  --Slider-Bullets-Bg: #e2e8f0;
+  --Primary300: #b8bdc4;
+  --Primary400: #b8bdc4;
+  --Primary5: #f3f4f5;
+  --Green: #00bd1e;
+  --Primary-05: #F3F4F5;
+  --Primary-10: #E7E9EB;
+  --Primary-20: #D0D3D7;
+  --Primary-30: #B8BDC4;
+  --Primary-40: #A1A7B0;
+  --Primary-50: #89909C;
+  --Primary-60: #717A88;
+  --Primary-70: #5A6474;
+  --Primary-80: #424E61;
+  --Primary-90: #2B384D;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+:root {
+  scroll-behavior: unset;
+}
+
+@media (min-width: 991px) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  position: relative;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: #14212d;
+  overflow-x: hidden;
+}
+
+section .wp-main {
+  padding-bottom: 40px;
+}
+
+section .wp-main .gp-main {
+  padding-bottom: 80px;
+}
+
+section .wp-main .gp-main.gp-classes {
+  padding-top: 40px;
+}
+
+section .wp-main .gp-main.gp-classes .class-rating {
+  padding: 0 0 40px 50px;
+}
+
+section .wp-main .gp-main.gp-classes .class-rating .rp-stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .wp-main .gp-main.gp-classes .class-rating .rp-stars span {
+  max-width: 120px;
+  width: 100%;
+}
+
+section h2 {
+  font-size: calc(clamp(28px, 2.4vw + 5px, 48px));
+  font-weight: bold;
+  text-transform: capitalize;
+  padding-block: 6px;
+}
+
+section h1 {
+  font-size: 48px;
+  line-height: 76px;
+  color: #000c1b;
+  font-weight: bold;
+}
+
+section .overview-description {
+  font-size: 26px;
+  line-height: 48px;
+  color: #000c1b;
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+.rm-left-nav {
+  width: 180px;
+  z-index: 2001;
+  height: 100vh;
+  position: fixed;
+  border-right: 1px solid #dee3eb;
+  display: none;
+  top: 80px;
+}
+
+@media (min-width: 991px) {
+  .rm-left-nav {
+    display: block;
+  }
+}
+
+.rm-content-wrapper {
+  padding-inline: calc(clamp(32px, 5vw + 5px, 100px));
+  position: relative !important;
+}
+
+@media (min-width: 991px) {
+  .rm-content-wrapper {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    width: calc(100vw - 180px);
+    margin-left: 180px;
+    max-width: 1180px;
+    padding-bottom: 115px;
+  }
+}
+
+.rm-content-wrapper section {
+  margin-bottom: 130px;
+  text-align: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nitro-sidebar-items .nav-pills {
+  margin-top: 56px;
+}
+
+.nitro-sidebar-items .nav-link {
+  text-decoration: none;
+  padding: 16px 28px;
+  color: rgba(19, 34, 57, 0.5);
+  text-transform: capitalize;
+}
+
+.nitro-sidebar-items .nav-link.nav-nav-link {
+  padding: 8px 28px;
+}
+
+.nitro-sidebar-items .nav-link.nav-gray-link {
+  color: #505864;
+}
+
+.nitro-sidebar-items .nav-link.nav-gray-link.nav-link {
+  padding: 8px 0 40px 102px;
+}
+
+.nitro-sidebar-items .nav-link.active {
+  background-color: transparent;
+  color: #fa0339;
+  position: relative;
+}
+
+.nitro-sidebar-items .nav-link.active::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  height: 36%;
+  width: 1px;
+  background: #fa0339;
+  top: 7px;
+}
+/*# sourceMappingURL=roadmap.css.map */
