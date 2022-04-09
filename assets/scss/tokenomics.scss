@@ -21,11 +21,11 @@ header {
                   // color: var(--Plain-White);
                   a {
                     color: var(--Plain-White);
-                    // &.nav-link {
-                    //   &:hover {
-                    //     color: var(--Torch-Red);
-                    //   }
-                    // }
+                    &.nav-link {
+                      &:hover {
+                        color: var(--Torch-Red);
+                      }
+                    }
                   }
                 }
               }

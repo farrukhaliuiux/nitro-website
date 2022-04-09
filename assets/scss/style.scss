@@ -511,7 +511,7 @@ header {
             }
           }
         }
-        .nitro-stats-dd-wrapper{
+        .nitro-stats-dd-wrapper {
           .nitro-stats-wrapper {
             display: none;
             gap: 8px;
@@ -520,16 +520,16 @@ header {
             align-items: baseline;
             position: relative;
             cursor: pointer;
-  
+
             @media (max-width: 1200px) {
               display: none !important;
             }
-  
+
             .stats-rotator-wrapper {
               overflow: hidden;
               height: 20px;
             }
-  
+
             .nitro-stats-logo {
               min-width: 17px;
             }
@@ -573,28 +573,68 @@ header {
             }
             .nitro-stats-upper-text {
               white-space: nowrap;
-  
+
               font-family: var(--Magistral-Book);
               font-style: normal;
               font-weight: 400;
               font-size: 14px;
               line-height: 1.3;
               color: var(--Plain-White);
-  
+
               span {
                 color: var(--Primary400);
               }
             }
           }
-          .dropdown-menu{
+          .dropdown-menu {
             border-radius: 0;
             background-color: var(--Plain-White);
-            .dropdown-item{
+            .dropdown-item {
               padding: 1rem 1.5rem;
             }
           }
         }
-        
+      }
+    }
+  }
+  &.token-header {
+    .navbar {
+      .nitro-container {
+        .inr-nitro-wrap {
+          .navbar-collapse {
+            &.navbar-listing {
+              .navbar-nav {
+                li {
+                  // color: var(--Plain-White);
+                  a {
+                    color: var(--Plain-White);
+                    &.nav-link {
+                      &:hover {
+                        color: var(--Torch-Red);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          @include xLarge(min-width) {
+            &:hover {
+              .navbar-collapse {
+                &.navbar-listing {
+                  .navbar-nav {
+                    li {
+                      a {
+                        color: var(--Regular-text-color);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -720,10 +760,7 @@ header {
         display: flex;
         flex-direction: column;
         .swiper-wrapper {
-          margin-bottom: 50px;
-          @include medium(min-width) {
-            margin-bottom: 0;
-          }
+          margin-bottom: 0;
           &.heroCarouselSlidesTrack {
             flex: 1;
             .swiper-slide {
@@ -733,9 +770,13 @@ header {
               flex-direction: column;
               align-items: center;
               justify-content: flex-end;
-              padding-bottom: 230px;
-              padding-top: 120px;
-              justify-content: center;
+              padding:0px 0 48px;
+
+              @include medium(min-width){
+                justify-content: center;
+                padding-bottom: 230px;
+                padding-top: 120px;
+              }
 
               &.light-slide {
                 .slider-txt-section {
@@ -748,9 +789,7 @@ header {
                 max-width: 590px;
                 h3,
                 h1 {
-                  font-size: calc(
-                    clamp(1.75rem, 1.4769rem + 1.165vw, 2.875rem)
-                  );
+                  font-size: calc(clamp(1.75rem, 1.4769rem + 1.165vw, 2.875rem));
                   margin-bottom: 16px;
                   color: var(--Plain-White);
                 }
@@ -771,72 +810,100 @@ header {
                   margin-bottom: 48px;
                 }
               }
-              &.exploreSlide{
-                padding: 0;
-                background: url(../images/hero-section/explore-bg-car.png) 100% center no-repeat;
-                  background-blend-mode: screen;
+              &.exploreSlide {
+                background: url(../images/explore-bg-car-mob.png) right -10px center no-repeat, url(../images/jangla-dark.svg) center, url(../images/bg-smoke.png) right bottom no-repeat, #13223b;
+
+                @include medium(min-width) {
+                  padding: 0;
+                  background: url(../images/hero-section/explore-bg-car.png) right -70px bottom -30px no-repeat,
+                  url(../images/jangla-dark.svg) center, url(../images/bg-smoke.png) right bottom no-repeat, #13223b;
+                }
               }
               &.carsParts {
-                padding: 0;
                 background: url(../images/car-parts.png) 85% center no-repeat,
                   url(../images/car-parts-bg-layer.png) right bottom no-repeat,
                   url(../images/car-parts-bg-diagonal.png) 90% center no-repeat,
-                  url(../images/hero-section/jangla-10.svg) center right
-                    no-repeat;
+                  url(../images/hero-section/jangla-10.svg) center right no-repeat;
+
+                  @include medium(min-width) {
+                    padding: 0;
+                  }
               }
               &.carsSlide {
-                padding: 0;
-                background: url(../images/car-slide.png) center right no-repeat,
-                  url(../images/hero-section/jangla-10.svg),
-                  url(../images/cars-red-lines.png) center right no-repeat,
-                  url(../images/hero-section/cars/cars-bg-1.png) center/cover
-                    no-repeat;
+                background: url(../images/hero-section/cars/car-slide.png) center right no-repeat,
+                  url(../images/hero-section/jangla-10.svg), url(../images/cars-red-lines.png) center right no-repeat,
+                  url(../images/hero-section/cars/cars-bg-1.png) center/cover no-repeat;
+
+                  @include medium(min-width) {
+                    padding: 0;
+                  }
               }
               &.avatarSlide {
-                padding: 0;
-                background: url(../images/hero-section/avatar/slide-avatar.png)
-                    top 70px right 19% no-repeat,
+                background: url(../images/hero-section/avatar/slide-avatar.png) top 70px right 19% no-repeat,
                   url(../images/hero-section/jangla-10.svg),
-                  url(../images/hero-section/avatar/avatar-pattern-bg.jpg)
-                    center/cover no-repeat;
+                  url(../images/hero-section/avatar/avatar-pattern-bg.jpg) center/cover no-repeat;
+
+                  @include medium(min-width) {
+                    padding: 0;
+                  }
               }
               &.landSlide {
-                padding: 0;
-                background: url(../images/hero-section/land/land-block.png)
-                    right center no-repeat,
-                  url(../images/hero-section/land/land-bg-abstract.svg) bottom -180px
-                    right -460px no-repeat var(--Plain-White);
+                background: url(../images/hero-section/land/land-block.png) right center no-repeat,
+                  url(../images/hero-section/land/land-bg-abstract.svg) bottom -180px right -460px no-repeat
+                    var(--Plain-White);
+
+                    @include medium(min-width) {
+                      padding: 0;
+                    }
               }
               &.guildSlide {
                 padding: 0;
                 background: url(../images/guilds.png) right center no-repeat,
-                  url(../images/Abstract.png) top left no-repeat
-                    var(--Plain-White);
+                  url(../images/Abstract.png) top left no-repeat var(--Plain-White);
+
+                  @include medium(min-width) {
+                    padding: 0;
+                  }
               }
               &.landCarParts {
                 padding: 0;
-                background: url(../images/hero-section/car-parts/carparts-tyre.svg)
-                  bottom -180px right -460px no-repeat #132239;
+                background: url(../images/hero-section/car-parts/carparts-tyre.svg) bottom -180px right -460px no-repeat
+                  #132239;
+
+                  @include medium(min-width) {
+                    padding: 0;
+                  }
               }
             }
           }
         }
 
         .heroCarouselThumbsTrack {
-          height: 100px;
+          height: 48px;
+          -webkit-box-sizing: border-box;
           box-sizing: border-box;
           position: absolute;
-          left: 0;
-          bottom: 40px;
-
-          padding-right: 32px;
-          padding-left: 32px;
+          bottom: 48px;
+          padding-right: 20px;
+          width: auto;
+          right: 0;
 
           @media (min-width: 1440px) {
             padding-left: calc((100vw - 1440px) / 2 + 32px);
           }
 
+          @include medium(min-width) {
+            bottom: 40px;
+            height: 100px;
+            left: 0;
+            right: unset;
+            width: 100%;
+            padding-right: 32px;
+            padding-left: 32px;
+          }
+
           .swiper-wrapper {
+            align-items: center;
             .swiper-slide {
               opacity: 1;
               justify-content: center;
@@ -851,10 +918,25 @@ header {
               border-radius: 0;
               border: 1px solid rgba(255, 255, 255, 0.18);
               transition: 0.3s background;
+
+              @include medium(max-width) {
+                width: 8px !important;
+                height: 8px !important;
+                background-color: var(--Primary-80);
+                border-radius: 4px;
+                border:0;
+              }
+
               h3 {
                 color: var(--Plain-White);
                 font-size: calc(clamp(1.25rem, 1.159rem + 0.3883vw, 1.625rem));
                 font-family: var(--Magistral-Medium);
+                display: block;
+
+                @include medium(max-width) {
+                  font-size: 0;
+                  display: none;
+                }
               }
               &:hover {
                 cursor: pointer;
@@ -863,6 +945,10 @@ header {
               &.swiper-slide-thumb-active {
                 opacity: 1;
                 background: var(--Torch-Red);
+
+                @include medium(max-width){
+                  width: 48px !important;
+                }
 
                 h3 {
                   color: var(--Plain-White);
@@ -1081,54 +1167,14 @@ header {
         }
         &:before {
           content: "";
-          background: linear-gradient(
-                to right,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 0,
-            linear-gradient(
-                to right,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 100%,
-            linear-gradient(
-                to left,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 0,
-            linear-gradient(
-                to left,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 100%,
-            linear-gradient(
-                to bottom,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 0,
-            linear-gradient(
-                to bottom,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 0,
-            linear-gradient(
-                to top,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              0 100%,
-            linear-gradient(
-                to top,
-                var(--Regular-text-color) 3px,
-                var(--Transparent-Color) 3px
-              )
-              100% 100%;
+          background: linear-gradient(to right, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 0,
+            linear-gradient(to right, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 100%,
+            linear-gradient(to left, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 0,
+            linear-gradient(to left, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 100%,
+            linear-gradient(to bottom, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 0,
+            linear-gradient(to bottom, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 0,
+            linear-gradient(to top, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 0 100%,
+            linear-gradient(to top, var(--Regular-text-color) 3px, var(--Transparent-Color) 3px) 100% 100%;
           background-repeat: no-repeat;
           background-size: 8px 8px;
           position: absolute;
@@ -1194,8 +1240,7 @@ header {
             .bnr-buttons {
               justify-content: center;
               flex-direction: row;
-              padding: calc(clamp(32px, 3vw + 6px, 110px)) 0
-                calc(clamp(32px, 3vw + 6px, 110px));
+              padding: calc(clamp(32px, 3vw + 6px, 110px)) 0 calc(clamp(32px, 3vw + 6px, 110px));
               @include ipad(min-width) {
                 justify-content: flex-start;
                 padding: calc(clamp(32px, 3vw + 6px, 110px)) 0 0;
@@ -1319,6 +1364,79 @@ header {
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+  &.download-app-hero {
+    background: url(../images/download-app-mockup.png) no-repeat right bottom/70%,
+      linear-gradient(148.21deg, #132239 4.88%, #344d6f 112.07%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include small(min-width) {
+      background: url(../images/download-app-mockup.png) no-repeat right bottom/80%,
+        linear-gradient(148.21deg, #132239 4.88%, #344d6f 112.07%);
+      height: 100vh;
+    }
+    @include large(min-width) {
+      background: url(../images/download-app-mockup.png) no-repeat right bottom/80%,
+        url(../images/d-app-hero-elements.png) no-repeat right 130px center,
+        linear-gradient(148.21deg, #132239 4.88%, #344d6f 112.07%);
+      height: 100vh;
+    }
+    @include xLarge(min-width) {
+      background: url(../images/download-app-mockup.png) no-repeat right bottom,
+        url(../images/d-app-hero-elements.png) no-repeat right 130px center,
+        linear-gradient(148.21deg, #132239 4.88%, #344d6f 112.07%);
+    }
+
+    h1 {
+      color: var(--Plain-White);
+      margin-bottom: 16px;
+      font-size: calc(clamp(2.5rem, 2.1056rem + 1.6828vw, 4.125rem));
+    }
+    p {
+      color: var(--Plain-White);
+      margin-bottom: 40px;
+      font-size: 20px;
+      line-height: initial;
+      font-family: var(--Magistral-Light);
+    }
+
+    .apk-download-btn-wrappper {
+      > small {
+        font-size: 14px;
+        display: block;
+        margin-top: 10px;
+        color: var(--Primary-60);
+      }
+      .download-apk-btn {
+        display: inline-flex;
+        align-items: center;
+        background-color: #3ad580;
+        padding: 13px 24px;
+        &:hover {
+          background-color: #2cab65;
+        }
+        img {
+          margin-right: 24px;
+        }
+        .apk-btn-text {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-family: var(--Magistral-Book);
+            font-size: 16px;
+            color: var(--Plain-White);
+            margin-bottom: 4px;
+          }
+          strong {
+            font-family: var(--Magistral-Medium);
+            font-size: 18px;
+            color: var(--Plain-White);
           }
         }
       }
@@ -1585,8 +1703,7 @@ header {
   &.game-story-section {
     background: #fafafa;
     @include medium(min-width) {
-      background: url(../images/jangla.svg) no-repeat top center,
-        url(../images/arena-bottom.svg) no-repeat bottom right,
+      background: url(../images/jangla.svg) no-repeat top center, url(../images/arena-bottom.svg) no-repeat bottom right,
         url(../images/arena-left.svg) no-repeat top left;
       background-size: inherit;
       background-position: 100% 100%, 98% 98%, 3% 0%;
@@ -1657,54 +1774,14 @@ header {
           border: 0;
           width: 100%;
           height: 100%;
-          background: linear-gradient(
-                to right,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 0,
-            linear-gradient(
-                to right,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 100%,
-            linear-gradient(
-                to left,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 0,
-            linear-gradient(
-                to left,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 100%,
-            linear-gradient(
-                to bottom,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 0,
-            linear-gradient(
-                to bottom,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 0,
-            linear-gradient(
-                to top,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              0 100%,
-            linear-gradient(
-                to top,
-                var(--Video-Edges) 5px,
-                var(--Transparent-Color) 5px
-              )
-              100% 100%;
+          background: linear-gradient(to right, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 0,
+            linear-gradient(to right, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 100%,
+            linear-gradient(to left, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 0,
+            linear-gradient(to left, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 100%,
+            linear-gradient(to bottom, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 0,
+            linear-gradient(to bottom, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 0,
+            linear-gradient(to top, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 0 100%,
+            linear-gradient(to top, var(--Video-Edges) 5px, var(--Transparent-Color) 5px) 100% 100%;
           background-repeat: no-repeat;
           background-size: 20px 20px;
           padding: 2px;
@@ -2267,8 +2344,7 @@ header {
     background: transparent;
     @include medium(min-width) {
       background: url(../images/jangla.svg) no-repeat center,
-        url(../images/bg-element-3.svg) no-repeat left
-          calc((100vw - 1440px + 683px) / 2) top 5px;
+        url(../images/bg-element-3.svg) no-repeat left calc((100vw - 1440px + 683px) / 2) top 5px;
     }
   }
 
@@ -2322,7 +2398,7 @@ header {
     text-align: center;
     background-size: cover;
     @include medium(min-width) {
-      background: url(../images/cummunity-bg.png) no-repeat top center;
+      background: url(../images/jangla.svg) no-repeat top center;
       padding: calc(clamp(48px, 6vw + 6px, 60px)) 0;
     }
     .inr-community {
@@ -2466,26 +2542,20 @@ header {
   @include xLarge(min-width) {
     height: 100vh;
     min-height: 100vh;
-    background: url(../images/footer-right-align.svg) no-repeat center right
-        20px,
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px,
       url(../images/footer-top-align.png) no-repeat top right 270px,
-      url(../images/footer-logo-vertical.png) no-repeat center left 45%,
-      var(--Footer-Bg-Color);
+      url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
   }
   @include xxLarge(min-width) {
-    background: url(../images/footer-right-align.svg) no-repeat center right
-        20px,
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px,
       url(../images/footer-top-align.png) no-repeat top right 270px,
-      url(../images/footer-logo-vertical.png) no-repeat center left 45%,
-      var(--Footer-Bg-Color);
+      url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
     padding: 90px 0 0;
   }
   @include xxxLarge(min-width) {
-    background: url(../images/footer-right-align.svg) no-repeat center right
-        20px,
+    background: url(../images/footer-right-align.svg) no-repeat center right 20px,
       url(../images/footer-top-align.png) no-repeat top right 270px,
-      url(../images/footer-logo-vertical.png) no-repeat center left 45%,
-      var(--Footer-Bg-Color);
+      url(../images/footer-logo-vertical.png) no-repeat center left 45%, var(--Footer-Bg-Color);
   }
   &.nitro-section {
     @include xLarge(min-width) {
@@ -2888,17 +2958,11 @@ header {
   padding: 0 !important;
 }
 
-.ml-form-formContent.horozintalForm
-  .ml-form-horizontalRow
-  .ml-input-horizontal {
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal {
   width: 100% !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-  .ml-form-embedWrapper
-  .ml-form-embedBody
-  .ml-form-horizontalRow
-  input {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
   padding: 22px 120px 20px 24px !important;
   background-color: #2a2f38 !important;
   border-color: #2a2f38 !important;
@@ -2912,11 +2976,7 @@ header {
   }
 }
 
-#mlb2-5160863.ml-form-embedContainer
-  .ml-form-embedWrapper
-  .ml-form-embedBody
-  .ml-form-horizontalRow
-  button.primary {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button.primary {
   position: absolute;
   top: 50%;
   right: 20px;
@@ -2927,10 +2987,7 @@ header {
   border-radius: 2px !important;
 }
 
-#mlb2-5160863.ml-form-embedContainer
-  .ml-form-embedWrapper
-  .ml-form-embedBody
-  .ml-form-formContent.horozintalForm {
+#mlb2-5160863.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
   padding: 0 0 !important;
 }
 
@@ -2953,9 +3010,6 @@ header {
     }
   }
 }
-
-
-
 
 // General CSS
 // OL Style 1 START
@@ -3466,13 +3520,13 @@ ol.styled-list-1 {
 
   &.button--style1 {
     background: none;
-    
-    >span {
-      padding:1.2rem 2.5rem;
+
+    > span {
+      padding: 1.2rem 2.5rem;
       display: block;
 
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         width: 10px;
         height: 10px;
         display: block;
@@ -3484,8 +3538,8 @@ ol.styled-list-1 {
         z-index: 99;
         transition: all 0.3s cubic-bezier(0.2, 1, 0.7, 1);
       }
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         width: 10px;
         height: 10px;
         display: block;
@@ -3497,7 +3551,7 @@ ol.styled-list-1 {
         z-index: 99;
         transition: all 0.3s cubic-bezier(0.2, 1, 0.7, 1);
       }
-      >small{
+      > small {
         display: inline-block;
         position: relative;
         color: var(--Plain-White);
@@ -3532,22 +3586,22 @@ ol.styled-list-1 {
         transform: scale3d(0.85, 0.65, 1);
       }
     }
-    &:hover{
-      > span{
-        &:before{
+    &:hover {
+      > span {
+        &:before {
           right: 30px;
           top: 30px;
         }
-        &:after{
+        &:after {
           left: 30px;
           bottom: 30px;
         }
       }
     }
   }
-  &.on-light-bg{
+  &.on-light-bg {
     &::after {
-      content:'';
+      content: "";
       border: 1px solid var(--Primary-30);
     }
   }

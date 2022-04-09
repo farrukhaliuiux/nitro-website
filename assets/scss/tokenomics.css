@@ -2775,6 +2775,10 @@ header.token-header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.na
   color: var(--Plain-White);
 }
 
+header.token-header .navbar .nitro-container .inr-nitro-wrap .navbar-collapse.navbar-listing .navbar-nav li a.nav-link:hover {
+  color: var(--Torch-Red);
+}
+
 @media (min-width: 1200px) {
   header.token-header .navbar .nitro-container .inr-nitro-wrap:hover .navbar-collapse.navbar-listing .navbar-nav li a {
     color: var(--Regular-text-color);

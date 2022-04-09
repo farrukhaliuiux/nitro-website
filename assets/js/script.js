@@ -515,12 +515,16 @@ $(document).ready(function () {
     // freeMode: true,
     // centeredSlides: true,
     breakpoints: {
+      320: {
+        slidesPerView: 7,
+        spaceBetween: 8,
+      },
       768: {
         slidesPerView: 3.5,
         spaceBetween: 10,
       },
       992: {
-        slidesPerView: 7,
+        slidesPerView: 5.5,
         spaceBetween: 10,
       },
       1200: {
